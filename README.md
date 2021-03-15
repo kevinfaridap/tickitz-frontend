@@ -24,13 +24,15 @@ This web application created using react.js, node.js and express.js. In this cas
 <br>
 
 # How to run
+<h4> Backend </h4>
 <ol>
-  <li> For Server </li>
   <li> Run server 'npm run try'  </li>
-  <li> Port = 3001  </li>
-  
-  <li> For Frontend </li>
-  <li> 'npm start' </li>
-  
+  <li> Port = 3001  </li> 
+</ol>
+
+<h4> Frontend </h4>
+<ol>
+  <li> Run 'npm strat'  </li>
+  <li> Port = 3000  </li> 
 </ol>
 
