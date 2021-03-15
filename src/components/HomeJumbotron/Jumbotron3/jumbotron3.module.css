@@ -1,0 +1,312 @@
+
+
+
+.jumbotron-3 h4.title-upcoming{
+font-size: 18px;
+font-family: 'Mulish';
+font-weight: 500;
+color: rgba(95, 46, 234, 1);
+text-align: left;
+}
+
+.jumbotron-3 h4.view-upcoming{
+font-size: 18px;
+font-family: 'Mulish';
+font-weight: 500;
+color: rgba(95, 46, 234, 1);
+text-align: right;
+}
+.jumbotron-3 .btn-sept{
+background-color: rgba(95, 46, 234, 1);
+font-family: 'Mulish';
+font-weight: 500;
+font-size: 14px;
+text-align: center;
+color: rgba(255, 255, 255, 1);
+width: 127px;
+height: 42px;
+}
+.jumbotron-3 .btn-oct{
+background-color: rgba(255, 255, 255, 1);
+font-family: 'Mulish';
+font-weight: 500;
+font-size: 14px;
+text-align: center;
+color: rgba(95, 46, 234, 1);
+border: 1px solid rgba(95, 46, 234, 1);
+width: 127px;
+height: 42px;
+}
+.jumbotron-3 .btn-month{
+background-color: rgba(255, 255, 255, 1);
+font-family: 'Mulish';
+font-weight: 500;
+font-size: 14px;
+text-align: center;
+color: rgba(95, 46, 234, 1);
+border: 1px solid rgba(95, 46, 234, 1);
+width: 127px;
+height: 42px;
+}
+
+
+
+.jumbotron-3 .join-now{
+width: 1106px;
+height: 372px;
+margin-left: auto;
+margin-right: auto;
+box-shadow: 0px 8px 24px 0px rgba(186, 186, 186, 0.3);
+
+}
+
+.jumbotron-3 .join-now h3.teks1{
+color:rgba(160, 163, 189, 1);
+font-size: 18px;
+text-align: center;
+font-weight: 200;
+font-family: 'Mulish';
+margin-top: 48px;
+}
+.jumbotron-3 .join-now h2.teks2{
+color: #5F2EEA;
+font-size: 46px;
+font-weight: 600;
+font-family: 'Mulish';
+text-align: center;
+}
+
+.jumbotron-3 .form-join{
+margin: auto;
+margin-top: 50px;
+}
+
+.jumbotron-3 .last-paragraph{
+margin-bottom: 50px;
+text-align: center;
+color: rgba(110, 113, 145, 1);
+font-family: 'Mulish';
+font-weight: 400;
+font-size: 14px;
+}
+
+
+/* Mobile Version*/
+@media (max-width: 992px) {
+  .jumbotron-3 .btn-desktop{
+    display: none;
+  }
+  .jumbotron-3 .btn-month{
+    display: none;
+  }
+  .jumbotron-3 .btn-sept{
+    display: none;
+  }
+  .jumbotron-3 .btn-oct{
+    display: none;
+  }
+
+  .jumbotron-3 .btn-mobile-set{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    margin: auto;
+
+  }
+  .jumbotron-3 .btn-sept-mobile{
+    background-color: rgba(95, 46, 234, 1);
+    font-family: 'Mulish';
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    width: 127px;
+    height: 42px;
+  }
+  .jumbotron-3 .btn-oct-mobile{
+    background-color: rgba(255, 255, 255, 1);
+    font-family: 'Mulish';
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    color: rgba(95, 46, 234, 1);
+    border: 1px solid rgba(95, 46, 234, 1);
+    width: 127px;
+    height: 42px;
+  }
+  
+  .jumbotron-3 .upcoming-movies{
+    display: none;
+  }
+
+  .jumbotron-3 .mobile-upcoming{
+    background-image: url(./assets/mobile-mobile.png);
+    width: 120px;
+    height: 185px;
+    margin: auto;
+  }
+  .jumbotron-3 .mobile-upcoming2{
+    background-image: url(./assets/mobile-mobile2.png);
+    width: 120px;
+    height: 185px;
+    margin: auto;
+  }
+  .jumbotron-3 .card-upcoming{
+    width: 152px;
+    height: 330px;
+  }
+  .jumbotron-3 .upcoming-movies-mobile{
+    /* margin: auto;
+    display: flex;
+    justify-content: center; */
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-left: 22%; */
+  }
+  .jumbotron-3 .card-upcoming h5{
+    font-family: 'Mulish';
+    color: rgba(0, 0, 0, 1);
+    font-size: 14px;
+    text-align: center;
+    font-weight: 300;
+  }
+  .jumbotron-3 .card-upcoming p{
+    font-family: 'Mulish';
+    color: rgba(160, 163, 189, 1);
+    font-size: 11px;
+    text-align: center;
+    font-weight: 300;
+  }
+  .jumbotron-3 .btn-upcoming-mobile{
+    width: 120px;
+    height: 25px;
+    margin: auto;
+    
+    background-color:rgba(255, 255, 255, 1);
+    border: 1px solid rgba(95, 46, 234, 1);
+  }
+  .jumbotron-3 .card-upcoming .details-teks{
+    color: rgba(95, 46, 234, 1);
+  }
+
+  .jumbotron-3 .joinnow-card{
+    display: none;
+  }
+
+  .jumbotron-3 .join-now-mobile{
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .jumbotron-3 .join-now-mobile h5{
+    font-family: 'Mulish';
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 48px;
+  }
+  .jumbotron-3 .join-now-mobile h4{
+    font-family: 'Mulish';
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 34px;
+    color: rgba(95, 46, 234, 1);
+    text-align: center;
+  }
+  .jumbotron-3 .join-card{
+    width: 327px;
+    height: 401px;
+    box-shadow: 0px 8px 24px 0px rgba(186, 186, 186, 0.3);
+  }
+  .jumbotron-3 .form-join{
+    width: 263px;
+    height: 46px;
+  }
+  .jumbotron-3 .btn-join-mobile{
+    background-color: rgba(95, 46, 234, 1);
+    color: rgba(255, 255, 255, 1);
+    width: 263px;
+    height: 46px;
+    margin-top: 20px;
+    font-family: 'Mulish';
+  }
+  .jumbotron-3 .join-now-mobile p{
+    color: rgba(110, 113, 145, 1);
+    font-family: 'Mulish';
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 32px;
+    /* width: 220px; */
+  }
+
+  .jumbotron-3 .form-control{
+    margin: auto;
+    display: flex;
+    content: '';
+    justify-content: center;
+  }
+
+
+}
+
+
+/* Desktop Version */
+@media (min-width: 992px) {
+    .jumbotron-3{
+      margin-top: 50px;
+    }
+    
+    .jumbotron-3 .btn-mobile-set{
+     display: none;
+    }
+    
+    .jumbotron-3 .upcoming-movies-mobile{
+     display: none;
+    }
+    
+    .jumbotron-3 .upcoming-movies h5{
+      color: rgba(20, 20, 43, 1);
+      font-size: 18px;
+      font-family: 'Mulish';
+      font-weight: 500;
+      text-align: center;
+      margin-top: 25px;
+    }
+    .jumbotron-3 .upcoming-movies p{
+      color: rgba(160, 163, 189, 1);
+      font-family: 'Open Sans';
+      font-size: 12px;
+      font-weight: 400;
+      text-align: center;
+    }
+    .jumbotron-3 .btn-upcoming{
+      color: rgba(95, 46, 234, 1);
+      background-color: rgba(255, 255, 255, 1);
+      border: 1px solid rgba(95, 46, 234, 1);
+      width: 159px;
+      height: 33px;
+    }
+    .jumbotron-3 .upcoming1{
+      background-image: url(./assets/upcoming-1.png);
+      width: 159px;
+      height: 244px;
+    }
+    .jumbotron-3 .upcoming2{
+      background-image: url(./assets/upcoming2.png);
+      width: 159px;
+      height: 244px;
+    }
+    .jumbotron-3 .upcoming3{
+      background-image: url(./assets/upcoming3.png);
+      width: 159px;
+      height: 244px;
+    }
+
+    .jumbotron-3 .join-now-mobile{
+      display: none;
+    }
+
+
+}

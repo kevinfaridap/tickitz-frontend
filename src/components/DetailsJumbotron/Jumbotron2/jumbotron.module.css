@@ -1,0 +1,265 @@
+  .jumbotron-2 .btn{
+    width: 284px;
+    height: 56px; 
+  }
+  
+  
+  .jumbotron-2 .card .img-showtime1{
+    background-image: url(./assets/mov-1.png);
+    width: 106px;
+    height: 41px;
+    margin-top: 12px;
+    margin-left: 15px;
+  }
+
+  .jumbotron-2 .card .img-showtime2{
+    background-image: url(./assets/mov-2.png);
+    width: 111px;
+    height: 19px;
+    margin-top: 22px;
+    margin-left: 15px;
+  }
+  .jumbotron-2 .card .img-showtime3{
+    background-image: url(./assets/mov-3.png);
+    width: 110px;
+    height: 37px;
+    margin-top: 22px;
+    margin-left: 15px;
+  }
+  
+  .jumbotron-2 .card h5{
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Mulish';
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 600;
+  }
+  
+  .jumbotron-2 .card p{
+    color: rgba(110, 113, 145, 1);
+    font-family: 'Mulish';
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  
+  .jumbotron-2 .card .img-show-line{
+    background-image: url(./assets/Line\ 29.png);
+    height: 1px;
+    width: 381px;
+    margin-left: -8px;
+  }
+  
+  .jumbotron-2 .card h4{
+    font-family: 'Mulish';
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 23px;
+    color: rgba(78, 75, 102, 1);
+  }
+  
+  .jumbotron-2 .card h3{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Mulish';
+    line-height: 32px;
+    color: rgba(107, 107, 107, 1);
+  }
+  
+  .jumbotron-2 .card h2{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Mulish';
+    line-height: 32px;
+    color: rgba(0, 0, 0, 1);
+    margin-left: 55px;
+  }
+
+
+
+
+/* MOBILE VERSION */
+@media (max-width: 992px) {
+
+  .jumbotron-2 h1.display-4{
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Mulish';
+    color: 000000;
+    line-height: 34px;
+    text-align: center;
+  }
+
+  .jumbotron-2 .dropdown{
+    /* margin-top: 10px; */
+    /* margin-left: 223px;  */
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .jumbotron-2 button.btn{
+    background-color: #EFF0F6;
+    color: #4E4B66;
+  }
+
+  .jumbotron-2 .card{
+    width: 327px;
+    height: 350px;
+    border: white solid;
+    border-radius: 8px;
+    margin-top: 72px;
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  .jumbotron-2 .card-2{
+    display: none;
+  }
+  .jumbotron-2 .card-3{
+    display: none;
+  }
+  .jumbotron-2 .card-5{
+    display: none;
+  }
+  .jumbotron-2 .card-6{
+    display: none;
+  }
+
+  .jumbotron-2 .card-1{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -25px;
+  }
+
+  .jumbotron-2 .card-4{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .jumbotron-2 .card .btn2{
+    background-color: #5F2EEA;
+    width: 134px;
+    height: 40px;
+    border: 1px #5F2EEA solid;
+    border-radius: 4px;
+    color: #F7F7FC;
+    font-family: 'Mulish';
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+   
+  }
+
+  .jumbotron-2 .card .btn3{
+    background-color: white;
+    width: 134px;
+    height: 40px;
+    border: 1px #5F2EEA solid;
+    border-radius: 1px;
+    color: #5F2EEA;
+    font-family: 'Mulish';
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .jumbotron-2 .view-more-line{
+    background-image: url(./assets/Line\ 13.png);
+    width: 95px;
+    height: 1px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .jumbotron-2 h2.view{
+    text-align: center;
+    font-family: 'Mulish';
+    font-weight: 600;
+    font-size: 16px;
+    color: #5F2EEA;
+  }
+
+
+
+}
+
+
+
+/* DESKTOP VERSION */
+@media (min-width: 992px) {
+  
+  .jumbotron-2 h1.display-4{
+    text-align: center;
+    font-family: 'Mulish';
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    color: rgba(20, 20, 43, 1);
+    margin-top: -5px;
+  }
+  
+  .jumbotron-2 .dropdown{
+    margin-top: 30px;
+    margin-left: 223px;
+    margin-bottom: 30px; 
+  }
+  
+  
+  .jumbotron-2 .card{
+    width: 351px;
+    height: 350px;
+    border: white solid;
+    border-radius: 8px;
+    margin-top: 72px;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  
+  .jumbotron-2 .card .btn2{
+    background-color: #5F2EEA;
+    width: 134px;
+    height: 40px;
+    border: 1px #5F2EEA solid;
+    border-radius: 4px;
+    color: #F7F7FC;
+    font-family: 'Mulish';
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 25px;
+  }
+  
+  .jumbotron-2 .card .btn3{
+    background-color: white;
+    width: 134px;
+    height: 40px;
+    border: 1px #5F2EEA solid;
+    border-radius: 1px;
+    color: #5F2EEA;
+    font-family: 'Mulish';
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 25px;
+    margin-left: 32px;
+  }
+  
+  .jumbotron-2 .view-more-line{
+    background-image: url(./assets/Line\ 13.png);
+    width: 400px;
+    margin-top: 5px;
+    height: 1px;
+  }
+  
+  .jumbotron-2 h2.view{
+    text-align: center;
+    font-family: 'Mulish';
+    font-weight: 600;
+    font-size: 16px;
+    color: #5F2EEA;
+  }
+}
+
+

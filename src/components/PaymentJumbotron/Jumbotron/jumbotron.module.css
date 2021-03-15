@@ -1,0 +1,406 @@
+  /* .jumbotron-1{
+    background-color: red;
+    margin-top: 100px; 
+  } */
+
+  .jumbotron-1 h4.order-teks{
+    margin-left: 610px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+    color:black;
+    
+  }
+
+  .jumbotron-1 .tittle{
+    margin-left: 5px;
+    color: rgba(20, 20, 43, 1);
+  }
+
+  .jumbotron-1 .tittle h3{
+    color: #14142b;
+    font-family: 'Mulish';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .jumbotron-1 .paymentinfo h5.info1{
+    color: #6B6B6B;
+    font-family: 'Mulish';
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 25px;
+    margin-left: 10px;
+  }
+
+  .jumbotron-1 .paymentinfo h5.info2{
+    color: black;
+    font-family: 'Mulish';
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: right;
+    margin-right: 15px;
+  }
+
+  .jumbotron-1 .paymentinfo .info-1{
+    margin-top: 21px;
+  }
+  .jumbotron-1 .paymentinfo .line-payment{
+    margin-top: 11px;
+    margin-left: 8px;
+  }
+
+  .jumbotron-1 .tittle2{
+    margin-left: 5px;
+    color: rgba(20, 20, 43, 1);
+    margin-top: -40px;
+  }
+
+  .jumbotron-1 .tittle2 h3{
+    color: #14142b;
+    font-family: 'Mulish';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .jumbotron-1 .card2 .or{
+    color: rgba(160, 163, 189, 1);
+    font-family: 'Mulish';
+    font-weight: 200;
+    font-size: 16px;
+    text-align: center;
+  }
+
+
+/* MOBILE VERSION */
+@media (max-width: 992px) {
+  .jumbotron-1 .tittle{
+    display: none;
+  }
+  .jumbotron-1 .paymentinfo .info-1{
+    display: none;
+  }
+  .jumbotron-1 .paymentinfo .line-payment{
+    display: none;
+  }
+  .jumbotron-1 .card-del{
+    display: none;
+  }
+
+  .jumbotron-1 .paymentinfo .totalpayment h4{
+    font-size: 16px;
+    font-family: 'Mulish';
+    text-align: left;
+    margin-top: 9px;
+  }
+
+  .jumbotron-1 .paymentinfo .totalpayment h3{
+    font-size: 20px;
+    font-family: 'Mulish';
+    text-align: right;
+    margin-top: 9px;
+    color: rgba(20, 20, 43, 1);
+  }
+
+  .jumbotron-1 .tittle2 h3{
+    display: none;
+  }
+  .jumbotron-1 h4.title-paymethod{
+    color: rgba(20, 20, 43, 1);
+    font-size: 20px;
+    font-family: 'Mulish';
+    font-weight: 300;
+    margin-top: 56px;
+    margin-left: -10px;
+  }
+
+  .jumbotron-1 .card2{
+    margin-top: 46px;
+  }
+
+  .jumbotron-1 .card2 .payment{
+    width: 80px;
+    height: 32px;
+  }
+  .jumbotron-1 .card2 .google-payment{
+    width: 35px;
+    height: 14px;
+    margin: auto;
+  }
+  .jumbotron-1 .card2 .visa-payment{
+    width: 38px;
+    height: 12px;
+    margin: auto;
+  }
+  .jumbotron-1 .card2 .gopay-payment{
+    width: 50px;
+    height: 16px;
+    margin: auto;
+  }
+  .jumbotron-1 .card2 .paypal-payment{
+    width: 15px;
+    height: 18px;
+    margin: auto;
+  }
+  .jumbotron-1 .card2 .dana-payment{
+    width: 51px;
+    height: 14px;
+    margin: auto;
+  }
+  .jumbotron-1 .card2 .bca-payment{
+    width: 43px;
+    height: 14px;
+    margin: auto;
+  }
+  .jumbotron-1 .card2 .bri-payment{
+    width: 43px;
+    height: 18px;
+    margin: auto;
+  }
+  .jumbotron-1 .card2 .ovo-payment{
+    width: 43px;
+    height: 14px;
+    margin: auto;
+  }
+  .jumbotron-1 .card2 .line-1{
+    width: 88px;
+    /* margin: auto; */
+    margin-left: 50px;
+    margin-top: 25px;
+  }
+  .jumbotron-1 .card2 .line-2{
+    width: 88px;
+    margin-right: 50px;
+    margin-top: 25px;
+  }
+ 
+  .jumbotron-1 .card2 .or{
+    margin-top: 25px;
+  }
+
+  .jumbotron-1 .card2 .pay-teks{
+    color: rgba(160, 163, 189, 1);
+    /* text-align: center; */
+    font-weight: 200;
+    font-size: 16px;
+    margin-left: 110px;
+    margin-top: 20px;
+    font-family: 'Mulish';
+  }
+  
+  .jumbotron-1 .card2 .pay-teks2{
+    color: #5F2EEA;
+    /* text-align: center; */
+    font-family: 'Mulish';
+    font-size: 16px;
+    font-size: 200;
+    margin-top: 20px;
+  }
+
+  .jumbotron-1 .card-mobile{
+    margin-top: 55px;
+  }
+  .jumbotron-1 .card-mobile h5.title{
+    font-family: 'Mulish';
+    font-weight: 300;
+    font-size: 18px;
+    color: rgba(20, 20, 43, 1);
+    margin-left: 6px;
+  }
+
+  .jumbotron-1 .card-personalinfo h5.title-personalinfo{
+      color: #696F79;
+      font-size: 16px;
+      font-family: 'Mulish';
+      font-weight: 200;
+      margin-top: 20px;
+      margin-left: 52px;
+    }
+
+    .jumbotron-1 .card-personalinfo .card-info{
+      width: 302px;
+      height: 35px;
+      margin-left: 69px;
+      margin-top: 5px;
+    }
+
+    .jumbotron-1 .card-personalinfo .card-info h5{
+      color: #4E4B66;
+      font-size: 14px;
+      line-height: 23px;
+      font-family: 'Mulish';
+      font-weight: 200;
+      margin-left: 19px;
+      margin-top: 7px;
+    }
+
+    .jumbotron-1 .card-personalinfo .button-fill-data{
+      margin-top: 42px;
+      margin-left: 54px;
+    }
+
+    .jumbotron-1 .card-personalinfo .btn-fill{
+      width: 302px;
+      height: 64px;
+      background-color: rgba(244, 183, 64, 0.3);
+      margin-bottom: 25px;
+    }
+
+    .jumbotron-1 .card-personalinfo .btn-personal-info{
+      margin-left: -50px;
+      margin-bottom: 2px;
+      margin-right: 25px;  
+    }
+
+
+  
+}
+
+
+
+
+/* DESKTOP VERSION */
+@media (min-width: 992px) {
+  .jumbotron-1 .totalpayment h4{
+    color: #000000;
+    font-size: 18px;
+    line-height: 34px;
+    font-family: 'Mulish';
+    font-weight: 600; 
+    text-align: left;
+    margin-left: 15px;
+  }
+
+  .jumbotron-1 .totalpayment{
+    margin-top: 20px;
+  }
+  .jumbotron-1 .totalpayment h3{
+    color: #5F2EEA;
+    font-size: 24px;
+    line-height: 30px;
+    font-family: 'Mulish';
+    font-weight: 600;
+    text-align: right;
+    margin-right: 15px;
+  }
+
+  .jumbotron-1 .title-paymethod{
+    display: none;
+  }
+
+  
+  .jumbotron-1 .card2 .payment{
+    width: 146px;
+    height: 56px;
+  }
+  .jumbotron-1 .card2 .google-payment{
+    width: 74px;
+    height: 30px;
+    margin: auto;
+  }
+  .jumbotron-1 .card2 .visa-payment{
+    width: 80px;
+    height: 25px;
+    margin: auto;
+  }
+  .jumbotron-1 .card2 .gopay-payment{
+    width: 106px;
+    height: 35px;
+    margin: auto;
+  }
+  .jumbotron-1 .card2 .paypal-payment{
+    width: 31px;
+    height: 37px;
+    margin: auto;
+  }
+  .jumbotron-1 .card2 .dana-payment{
+    width: 108px;
+    height: 31px;
+    margin: auto;
+  }
+  .jumbotron-1 .card2 .bca-payment{
+    width: 85px;
+    height: 28px;
+    margin: auto;
+  }
+  .jumbotron-1 .card2 .bri-payment{
+    width: 45px;
+    height: 38px;
+    margin: auto;
+  }
+  .jumbotron-1 .card2 .ovo-payment{
+    width: 92px;
+    height: 30px;
+    margin: auto;
+  }
+
+  .jumbotron-1 .card2 .pay-teks{
+    color: rgba(160, 163, 189, 1);
+    text-align: center;
+    font-weight: 200;
+    font-size: 16px;
+    margin-left: 254px;
+    font-family: 'Mulish';
+  }
+  
+  .jumbotron-1 .card2 .pay-teks2{
+    color: #5F2EEA;
+    text-align: center;
+    font-family: 'Mulish';
+    font-size: 16px;
+    font-size: 200;
+  }
+
+  .jumbotron-1 .card-mobile{
+    display: none;
+  }
+
+  .jumbotron-1 .card-personalinfo h5.title-personalinfo{
+    color: #696F79;
+    font-size: 16px;
+    font-family: 'Mulish';
+    font-weight: 200;
+    margin-top: 20px;
+  }
+  
+  .jumbotron-1 .card-personalinfo .card-info{
+    width: 302px;
+    height: 35px;
+    margin-left: 17px;
+    margin-top: 5px;
+  }
+  
+  .jumbotron-1 .card-personalinfo .card-info h5{
+    color: #4E4B66;
+    font-size: 14px;
+    line-height: 23px;
+    font-family: 'Mulish';
+    font-weight: 200;
+    margin-left: 19px;
+    margin-top: 7px;
+  }
+  
+  .jumbotron-1 .card-personalinfo .button-fill-data{
+    margin-top: 42px;
+    margin-left: 2px;
+  }
+  
+  .jumbotron-1 .card-personalinfo .btn-fill{
+    width: 302px;
+    height: 64px;
+    background-color: rgba(244, 183, 64, 0.3);
+    margin-bottom: 25px;
+  }
+  
+  .jumbotron-1 .card-personalinfo .btn-personal-info{
+    margin-left: -50px;
+    margin-bottom: 2px;
+    margin-right: 25px;  
+  }
+
+
+  
+}

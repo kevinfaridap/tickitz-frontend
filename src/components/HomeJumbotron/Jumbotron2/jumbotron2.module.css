@@ -1,0 +1,65 @@
+.jumbotron-2 h4.title-showing{
+    font-size: 18px;
+    font-family: 'Mulish';
+    font-weight: 500;
+    color: rgba(95, 46, 234, 1);
+    text-align: left;
+  }
+  
+  .jumbotron-2 h4.view-teks{
+    font-size: 18px;
+    font-family: 'Mulish';
+    font-weight: 500;
+    color: rgba(95, 46, 234, 1);
+    text-align: right;
+  }
+  
+  .jumbotron-2 .spiderman-movie{
+    background-image: url(./assets/movie1.png);
+    width: 223px;
+    height: 308px;
+  }
+  .jumbotron-2 .lion-movie{
+    background-image: url(./assets/lion-movie.png);
+    width: 223px;
+    height: 308px;
+  }
+  .jumbotron-2 .human-movie{
+    background-image: url(./assets/humanMovie.png);
+    width: 223px;
+    height: 308px;
+  }
+
+
+
+
+
+/* Mobile Version */
+@media (max-width: 992px) {
+
+  .jumbotron-2 .movie-desktop{
+  display: none;
+  }
+  .jumbotron-2 .movie-mobile{
+  margin-bottom: 50px;
+  }
+  
+  
+  
+}
+  
+  /* DESKTOP VERSION */
+  @media (min-width: 992px) {
+    
+    .jumbotron-2 .movie-mobile{
+        display: none;
+      }
+
+    .jumbotron-2{
+    height: 555px;
+    background-color: #F5F6F8;
+    }
+    
+    
+    
+  }

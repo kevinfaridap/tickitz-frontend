@@ -1,0 +1,278 @@
+  .jumbotron-4{
+    margin-top: 120px;
+    /* background-color: #FFFFFF; */
+    background-color: white;
+  }
+  
+  .jumbotron-4 .logo-last{
+    background-image: url(./assets/img-last.png);
+    width: 170px;
+    height: 44px;
+    
+  }
+  
+  .jumbotron-4 p.last-paragraph{
+    font-family: 'Mulish';
+    font-size: 16px;
+    line-height: 36px;
+    color: #6E7191;
+    margin-top: 30px;
+  }
+  
+  .jumbotron-4 h5{
+    font-family: 'Mulish';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: 000000;
+    margin-bottom: 40px;
+    
+  }
+  
+  .jumbotron-4 p{
+    font-family: 'Mulish';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #4E4B66;
+    margin-top: 15px;
+  }
+
+  
+  .jumbotron-4 .sponsor .img-mov-1{
+    background-image: url(./assets/mov-1.png);
+    width: 105px;
+    height: 40px;
+    margin-top: 30px;
+  }
+
+  .jumbotron-4 .sponsor .img-mov-2{
+    background-image: url(./assets/oneone.png);
+    width: 173px;
+    height: 26px;
+    margin-top: 25px;
+  }
+
+  .jumbotron-4 .sponsor .img-mov-3{
+    background-image: url(./assets/niflix.png);
+    width: 79px;
+    height: 24px;
+    margin-top: 25px;
+  }
+
+  .jumbotron-4 img{
+    margin-bottom: 25px;
+  }
+  
+  .footer p{
+    color: #4E4B66;
+    font-family: 'Mulish';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+  }
+  
+ 
+
+
+
+/* MOBILE VERSION */
+@media (max-width: 992px) {
+  .jumbotron-4 img.logo-last{
+    margin-bottom: -10px;
+  }
+
+  .jumbotron-4 p.last-paragraph{
+    width: 283px;
+    margin-bottom: 20px;
+  }
+
+  .jumbotron-4 h5{
+    margin-top: 15px;
+    margin-bottom: 1px;
+  }
+
+  .jumbotron-4 .desktop1{
+    display: none;
+  }
+  .jumbotron-4 .explore-desktop{
+    display: none;
+  }
+
+  .jumbotron-4 .explore-mobile h5{
+    /* margin-left: 35px; */
+    position: relative;
+    content: '';
+    left: 35px;
+  }
+
+  .jumbotron-4 .explore-mobile p{
+    /* margin-left: 35px; */
+    position: relative;
+    content: '';
+    left: -20px;
+    top: 30px;
+  }
+
+  .jumbotron-4 .sponsor h5{
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  .jumbotron-4 .followus-list{
+    margin-left: -25px;
+  }
+
+  .jumbotron-4 .followus-list h5{
+    margin-left: 25px;
+    margin-bottom: 25px;
+  }
+
+  .jumbotron-4 .followus-list h4{
+    display: none;
+  }
+  .jumbotron-4 .followus-list .img-fb {
+    display: none;
+  }
+  .jumbotron-4 .followus-list .img-ig {
+    display: none;
+  }
+  .jumbotron-4 .followus-list .img-twitter {
+    display: none;
+  }
+  .jumbotron-4 .followus-list .img-youtube {
+    display: none;
+  }
+
+  .jumbotron-4 .followus-list h5{
+    margin-top: 40px;
+  }
+  
+  .jumbotron-4 .followus-list .img1-mobileFooter{
+    background-image: url(./assets/fb.png);
+    width: 13px;
+    height: 20px;
+    position: relative;
+    content: '';
+    top: -10px;
+    left: 40px;
+  }
+  .jumbotron-4 .followus-list .img2-mobileFooter{
+    background-image: url(./assets/bx_bxl-instagram.png);
+    width: 21px;
+    height: 21px;
+    position: relative;
+    content: '';
+    top: -30px;
+    left: 90px;
+  }
+  .jumbotron-4 .followus-list .img3-mobileFooter{
+    background-image: url(./assets/eva_twitter-outline.png);
+    width: 21px;
+    height: 20px;
+    position: relative;
+    content: '';
+    top: -51px;
+    left: 145px;
+  }
+  .jumbotron-4 .followus-list .img4-mobileFooter{
+    background-image: url(./assets/feather_youtube.png);
+    width: 24px;
+    height: 22px;
+    position: relative;
+    content: '';
+    top: -71px;
+    left: 200px;
+  }
+
+  /* .jumbotron-4 .followus-list img{
+    margin-left: 40px;
+  } */
+
+  .jumbotron-4 h4{
+    font-family: 'Mulish';
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    margin-left: 20px;
+  }
+
+  .footer{
+    margin-top: 10px;
+  }
+}
+
+
+
+
+/* DESKTOP VERSION */
+@media (min-width: 992px) {
+
+  .jumbotron-4 .explore-mobile{
+    display: none;
+  }
+  
+  .jumbotron-4 .explore-desktop{
+    width: 140px;
+    margin-left: 60px;
+  }
+  .jumbotron-4 .sponsor{
+    margin-left: 50px;
+  }
+  .jumbotron-4 .followus-list{
+    margin-left: -60px;
+    position: relative;
+    content: '';
+    right: -100px;
+  }
+
+  .jumbotron-4 .followus-list .followus-mobile{
+    display: none;
+  }
+
+  .jumbotron-4 .followus-list .img-fb{
+    background-image: url(./assets/fb.png);
+    width: 13px;
+    height: 21px;
+    margin-left: 5px;
+  }
+
+  .jumbotron-4 .followus-list .img-ig{
+    background-image: url(./assets/bx_bxl-instagram.png);
+    width: 21px;
+    height: 22px;
+
+  }
+
+  .jumbotron-4 .followus-list .img-twitter{
+    background-image: url(./assets/eva_twitter-outline.png);
+    width: 21px;
+    height: 22px;
+  }
+
+  .jumbotron-4 .followus-list .img-youtube{
+    background-image: url(./assets/feather_youtube.png);
+    width: 24px;
+    height: 22px;
+  }
+
+  .jumbotron-4 .followus-list h5{
+    margin-left: 25px;
+  }
+
+  .jumbotron-4 h4{
+    font-family: 'Mulish';
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    margin-left: auto;
+    position: relative;
+    left: -240px;
+  }
+
+  .footer{
+    margin-top: 70px;
+  }
+
+}

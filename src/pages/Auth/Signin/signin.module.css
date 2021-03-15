@@ -1,0 +1,285 @@
+
+/* Mobile Version */
+@media (max-width: 992px) {
+
+
+  main section .h2{
+      display: none;
+  }
+
+  main aside .img-mobile{
+      background-image: url(./assets/tictiz-mobile.png);
+      width: 78px;
+      height: 20px;
+      margin-top: 55px;
+      /* margin-left: 10%;   */
+  }
+
+  main section{
+      display: none;
+  }
+
+  main aside h1{
+    color: rgba(18, 18, 18, 1);
+    font-family: 'Mulish';
+    font-size: 26px;
+    line-height: 32px;
+    margin-top: 45px;
+    /* margin-left: 10%; */
+  }
+  
+  main aside p.teks1{
+      display: none;
+  }
+
+  main aside h2.forget-teks{
+    font-family: 'Mulish';
+    font-size: 16px;
+    font-weight: 600;
+    color: #6E7191;
+    margin-top: 5%;
+    text-align: center;
+  }
+  
+  main aside .or{
+    border: 0.5px rgba(222, 222, 222, 1) solid;
+    height: 1px;
+    width: 25%;
+    position: relative;
+    content: '';
+    top: -27px;
+    left: 90px;
+    }
+   
+  main aside .or2{
+    border: 0.5px rgba(222, 222, 222, 1) solid;
+    height: 1px;
+    width: 25%;
+    position: relative;
+    content: '';
+    top: -29px;
+    left: 290px;
+    }
+    
+  main aside p.or-teks{
+    color: #AAAAAA;
+    font-family: 'Inter';
+    line-height: 22px;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 25px;
+    position: relative;
+  }
+
+  main aside .box{
+    width: 64px;
+    height: 64px;
+    background:white;
+    box-shadow:  0px 4px 10px rgba(0, 0, 0, 0.08);
+    position: relative;
+    margin: auto;
+    
+  }
+
+  main aside .google{
+    background-image: url(./assets/google-small.png);
+    width: 24px;
+    height: 24px;
+    position: relative;
+    content: '';
+    top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main aside a.googleTeks{
+    display: none; 
+  }
+
+  main aside .fb{
+    background-image: url(./assets/fb-small.png);
+    width: 20px;
+    height: 20px;
+    position: relative;
+    content: '';
+    top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main aside a.fbTeks{
+    display: none;
+  }
+
+}
+
+
+/* DESKTOP VERSION */
+@media (min-width: 992px) {
+  
+  main{
+      height: 695px;
+      width: 1366px;
+      display: flex;
+      flex-direction: row;
+  }
+  
+  main section{
+      background-image: url(./assets/img-1.jpg);
+      /* background-color: darkslategray; */
+      height: 100%;
+      width: 55%;
+      position: relative;
+  }
+  
+  main section::before{
+      content: "";
+      display: block; 
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: rgba(43, 21, 107, 0.8);
+      opacity: 0.8;
+      margin-left: -15px;
+  }
+  
+  main section .img::after{
+      background-image: url(./assets/tickitz\ 1.png);
+      width: 500px;
+      height: 190px;
+      /* margin-top: 203px; */
+      margin-top: 0px;
+      top: 170px;
+      left: 150px;
+      content: "";
+      display: block;
+      position: relative;
+  
+  }
+  main section h2{
+      color: #FFFFFF;
+      margin-top: 170px;
+      opacity: 0.8;
+      text-align: center;
+  }    
+
+
+  main aside .img-mobile{
+    display: none;
+  }
+
+  
+  main aside h1{
+    color: #121212;
+    font-family: 'Inter';
+    font-size: 48px;
+    line-height: 58,09px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-weight: 600;
+    margin-left: 54px;
+  }
+  
+  main aside p.teks1{
+    color: #AAAAAA;
+    font-family: 'Inter';
+    line-height: 22px;
+    font-size: 18px;
+    margin-top: -30px;
+    letter-spacing: 0.007em;
+    width: 344px;
+    margin-bottom: 15px;
+    margin-left: 54px;
+  }
+
+  main aside h2{
+    color: #8692A6;
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  main aside .or{
+    border: 0.5px rgba(222, 222, 222, 1) solid;
+    height: 1px;
+    width: 25%;
+    position: relative;
+    content: '';
+    top: -27px;
+    left: 90px;
+    }
+   
+  main aside .or2{
+    border: 0.5px rgba(222, 222, 222, 1) solid;
+    height: 1px;
+    width: 25%;
+    position: relative;
+    content: '';
+    top: -29px;
+    left: 290px;
+    }
+    
+  main aside p.or-teks{
+    color: #AAAAAA;
+    font-family: 'Inter';
+    line-height: 22px;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+    position: relative;
+  }
+
+  main aside .box{
+    width: 182px;
+    height: 64px;
+    background:white;
+    box-shadow:  0px 4px 10px rgba(0, 0, 0, 0.08);
+    position: relative;
+  }
+
+  main aside .google{
+    background-image: url(./assets/google-small.png);
+    width: 24px;
+    height: 24px;
+    position: relative;
+    content: '';
+    top: 20px;
+    margin-left: 24px;
+  }
+
+  main aside a.googleTeks{
+    color: rgba(160, 163, 189, 1);
+    font-family: 'Mulish';
+    font-weight: 600;
+    font-size: 18px;
+    position: relative;
+    content: '';
+    top: -7px;
+    margin-left: 72px;
+  }
+
+  main aside .fb{
+    background-image: url(./assets/fb-small.png);
+    width: 20px;
+    height: 20px;
+    position: relative;
+    content: '';
+    top: 20px;
+    margin-left: 24px;
+  }
+
+  main aside a.fbTeks{
+    color: rgba(160, 163, 189, 1);
+    font-family: 'Mulish';
+    font-weight: 600;
+    font-size: 18px;
+    position: relative;
+    content: '';
+    top: -3px;
+    margin-left: 72px;
+  }
+
+
+}

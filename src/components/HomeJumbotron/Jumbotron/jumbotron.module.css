@@ -1,0 +1,202 @@
+.jumbotron1{
+  background-color: white;
+}
+
+/* Mobile Version */
+@media (max-width: 992px) {
+
+    .jumbotron-1{
+      /* margin-left: 51px; */
+      height: 700px;
+    }
+  
+    /* .content-full{
+      margin-left: 15%;
+    } */
+  
+    .jumbotron-1 .teks{
+      margin-left: 10%;
+    }
+  
+    .jumbotron-1 p.lead{
+      color: #A0A3BD;
+      font-size: 24px;
+      font-weight: 200;
+      font-family: 'Mulish';
+      margin-top: 80px;
+    }  
+    .jumbotron-1 h1.display-4{
+      color: #5F2EEA;
+      font-size: 56px;
+      font-weight: 700;
+      font-family: 'Mulish';
+    }
+  
+    .jumbotron-1 .spiderman-img{
+      margin-left: 15%;
+    }
+  
+    .jumbotron-1 .spiderman1{
+      background-image: url(./assets/Rectangle33.png);
+      width: 107px;
+      height: 352px;
+      position: relative;
+      /* margin-left: 110px; */
+      margin-top: 94px;
+      box-shadow: 0px 30px 18px  #333;
+      
+    }
+    
+    .jumbotron-1 .spiderman1-cover::after{
+      background-image: url(./assets/Rectangle34.png);
+      width: 107px;
+      height: 352px;
+      content: '';
+      display: block;
+      position: relative;
+      top: -350px;
+      /* margin-left: 110px; */
+      
+    }
+    
+    .jumbotron-1 .lion{
+      background-image: url(./assets/lion.png);
+      width: 107px;
+      height: 352px;
+      position: relative;
+      margin-left: 50px;
+      margin-top: 62px;
+      box-shadow: 0px 30px 18px  #333;
+    }
+    
+    .jumbotron-1 .lion-cover::after{
+      background-image: url(./assets/lion-cover.png);
+      width: 107px;
+      height: 352px;
+      content: '';
+      display: block;
+      position: relative;
+      top: -350px;
+      margin-left: 50px;
+    }
+    
+    .jumbotron-1 .human{
+      background-image: url(./assets/human.png);
+      width: 107px;
+      height: 352px;
+      position: relative;
+      margin-left: 95px;
+      box-shadow: 0px 30px 18px  #333;
+      margin-top: 30px;
+    }
+    
+    .jumbotron-1 .human-cover::after{
+      background-image: url(./assets/human-cover-Copy.png);
+      width: 107px;
+      height: 352px;
+      content: '';
+      display: block;
+      position: relative;
+      top: -350px;
+      margin-left: 95px;
+    }
+  
+  
+  }
+  
+  /* DESKTOP VERSION */
+  @media (min-width: 992px) {
+    
+    .jumbotron-1{
+      height: 609px;
+      background-color: white;
+    }
+  
+    .content-full{
+      margin-top: 50px;
+    }
+  
+    .jumbotron-1 p.lead{
+      color: #A0A3BD;
+      font-size: 24px;
+      font-weight: 200;
+      font-family: 'Mulish';
+      margin-left: 70px;
+    }   
+    
+    .jumbotron-1 h1.display-4{
+      color: #5F2EEA;
+      font-size: 56px;
+      font-weight: 700;
+      font-family: 'Mulish';
+      margin-left: 70px;
+    }
+     .jumbotron-1 .teks{
+      margin-top: 120px;
+    }
+  
+    .jumbotron-1 .spiderman1{
+      background-image: url(./assets/Rectangle33.png);
+      width: 107px;
+      height: 352px;
+      position: relative;
+      margin-left: 110px;
+      margin-top: 64px;
+      box-shadow: 0px 30px 18px  #333;
+      
+    }
+    
+     .jumbotron-1 .spiderman1-cover::after{
+      background-image: url(./assets/Rectangle34.png);
+      width: 107px;
+      height: 352px;
+      content: '';
+      display: block;
+      position: relative;
+      top: -350px;
+      margin-left: 110px;
+      
+    }
+    
+    .jumbotron-1 .lion{
+      background-image: url(./assets/lion.png);
+      width: 107px;
+      height: 352px;
+      position: relative;
+      margin-left: 50px;
+      margin-top: 32px;
+      box-shadow: 0px 30px 18px  #333;
+    }
+    
+    .jumbotron-1 .lion-cover::after{
+      background-image: url(./assets/lion-cover.png);
+      width: 107px;
+      height: 352px;
+      content: '';
+      display: block;
+      position: relative;
+      top: -350px;
+      margin-left: 50px;
+    }
+    
+    .jumbotron-1 .human{
+      background-image: url(./assets/human.png);
+      width: 107px;
+      height: 352px;
+      position: relative;
+      margin-left: -10px;
+      box-shadow: 0px 30px 18px  #333;
+    }
+    
+    .jumbotron-1 .human-cover::after{
+      background-image: url(./assets/human-cover-Copy.png);
+      width: 107px;
+      height: 352px;
+      content: '';
+      display: block;
+      position: relative;
+      top: -350px;
+      margin-left: -10px;
+    } 
+    
+  }

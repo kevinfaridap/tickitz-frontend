@@ -1,0 +1,379 @@
+
+/* Mobile Version */
+@media (max-width: 992px) {
+
+
+  main section .h2{
+      display: none;
+  }
+
+  main aside .img-mobile{
+      background-image: url(./assets/tictiz-mobile.png);
+      width: 78px;
+      height: 20px;
+      margin-top: 55px;
+      /* margin-left: 10%;   */
+  }
+
+  main aside .contain-signup h1{
+    display: none;
+  }
+
+  main section{
+      display: none;
+  }
+
+  main aside h1{
+    color: rgba(18, 18, 18, 1);
+    font-family: 'Mulish';
+    font-size: 26px;
+    line-height: 32px;
+    margin-top: 45px;
+    /* margin-left: 10%; */
+  }
+  
+  main aside p.teks1{
+      display: none;
+  }
+
+
+
+  main aside h2.forget-teks{
+    font-family: 'Mulish';
+    font-size: 16px;
+    font-weight: 600;
+    color: #6E7191;
+    margin-top: 5%;
+    text-align: center;
+  }
+  
+  main aside .or{
+    border: 0.5px rgba(222, 222, 222, 1) solid;
+    height: 1px;
+    width: 25%;
+    position: relative;
+    content: '';
+    top: -27px;
+    left: 90px;
+    }
+   
+  main aside .or2{
+    border: 0.5px rgba(222, 222, 222, 1) solid;
+    height: 1px;
+    width: 25%;
+    position: relative;
+    content: '';
+    top: -29px;
+    left: 290px;
+    }
+    
+  main aside p.or-teks{
+    color: #AAAAAA;
+    font-family: 'Inter';
+    line-height: 22px;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 25px;
+    position: relative;
+  }
+
+  main aside .box{
+    width: 64px;
+    height: 64px;
+    background:white;
+    box-shadow:  0px 4px 10px rgba(0, 0, 0, 0.08);
+    position: relative;
+    margin: auto;
+    
+  }
+
+  main aside .google{
+    background-image: url(./assets/google-small.png);
+    width: 24px;
+    height: 24px;
+    position: relative;
+    content: '';
+    top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main aside a.googleTeks{
+    display: none; 
+  }
+
+  main aside .fb{
+    background-image: url(./assets/fb-small.png);
+    width: 20px;
+    height: 20px;
+    position: relative;
+    content: '';
+    top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main aside a.fbTeks{
+    display: none;
+  }
+
+}
+
+
+/* DESKTOP VERSION */
+@media (min-width: 992px) {
+  
+  main{
+      height: 695px;
+      width: 1366px;
+      display: flex;
+      flex-direction: row;
+  }
+  
+  main section{
+      background-image: url(./assets/img-1.jpg);
+      height: 100%;
+      width: 55%;
+      position: relative;
+  }
+  
+  main section::before{
+      content: "";
+      display: block; 
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: rgba(43, 21, 107, 0.8);
+      opacity: 0.8;
+      margin-left: -15px;
+  }
+  
+  main section .img::after{
+      background-image: url(./assets/ticktiz-singup.png);
+      width: 276px;
+      height: 104px;
+      margin-top: 0px;
+      top: 80px;
+      left: 105px;
+      content: "";
+      display: block;
+      position: relative;
+  
+  }
+  main section h2.teks{
+      color: white;
+      font-family: 'Mulish';
+      /* font-weight: ; */
+      margin-top: 100px;
+      opacity: 0.8;
+      margin-left: -165px; 
+  }    
+
+
+  main aside .img-mobile{
+    display: none;
+  }
+
+  
+
+  
+  main aside h1{
+    color: #121212;
+    font-family: 'Inter';
+    font-size: 26px;
+    line-height: 58,09px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-weight: 600;
+    margin-left: 54px;
+  }
+
+  main section p.paragraph1{
+    font-family: 'Mulish';
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.7);;
+    font-weight: 400;
+    line-height: 30px;
+    margin-left: 115px;
+    margin-top: 20px;
+    position: relative;
+    content: '';
+
+  }
+
+  main section .rowCircle{
+    margin-left: 112px;
+    margin-top: 30px;
+  }
+
+  main section .circle1{
+    background-color: #FFFFFF;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  main section .circle1 h5{
+    position: relative;
+    content: '';
+    color: black;
+    left: 21px;
+    top: 11px;
+  }
+
+  main section .rowCircle h4{
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Mulish';
+    font-size: 24px;
+    font-weight: 400;
+    position: relative;
+    content: '';
+    top: -45px;
+    left: 100px;
+  }
+
+  main section .rowCircle2{
+    margin-left: 112px;
+    /* margin-top: -20px; */
+  }
+
+  main section .circle2{
+    /* background-color: #FFFFFF; */
+    width: 50px;
+    height: 50px;
+    border: 2px white solid;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  main section .circle2 h5{
+    position: relative;
+    content: '';
+    color: white;
+    left: 18px;
+    top: 10px;
+  }
+
+  main section .rowCircle2 h4{
+    color: rgba(255, 255, 255, 0.6);
+    font-family: 'Mulish';
+    font-size: 24px;
+    font-weight: 400;
+    position: relative;
+    content: '';
+    top: -45px;
+    left: 100px;
+  }
+
+  main section .rowCircle2 .line{
+    border: 1px solid white;
+    height: 1px;
+    width: 40px;
+    transform: rotate(90deg);
+    position: relative; 
+    left: 6px;
+    top: -105px;   
+
+  }
+
+  main aside .form-check-signup{
+    margin-left: 72px;
+    position: relative;
+    content: '';
+    top: -95px;
+  }
+
+  main aside h2.forget-teks{
+    color: #8692A6;
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  main aside .or{
+    border: 0.5px rgba(222, 222, 222, 1) solid;
+    height: 1px;
+    width: 25%;
+    position: relative;
+    content: '';
+    top: -27px;
+    left: 90px;
+    }
+   
+  main aside .or2{
+    border: 0.5px rgba(222, 222, 222, 1) solid;
+    height: 1px;
+    width: 25%;
+    position: relative;
+    content: '';
+    top: -29px;
+    left: 290px;
+    }
+    
+  main aside p.or-teks{
+    color: #AAAAAA;
+    font-family: 'Inter';
+    line-height: 22px;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+    position: relative;
+  }
+
+  main aside .box{
+    width: 182px;
+    height: 64px;
+    background:white;
+    box-shadow:  0px 4px 10px rgba(0, 0, 0, 0.08);
+    position: relative;
+  }
+
+  main aside .google{
+    background-image: url(./assets/google-small.png);
+    width: 24px;
+    height: 24px;
+    position: relative;
+    content: '';
+    top: 20px;
+    margin-left: 24px;
+  }
+
+  main aside a.googleTeks{
+    color: rgba(160, 163, 189, 1);
+    font-family: 'Mulish';
+    font-weight: 600;
+    font-size: 18px;
+    position: relative;
+    content: '';
+    top: -7px;
+    margin-left: 72px;
+  }
+
+  main aside .fb{
+    background-image: url(./assets/fb-small.png);
+    width: 20px;
+    height: 20px;
+    position: relative;
+    content: '';
+    top: 20px;
+    margin-left: 24px;
+  }
+
+  main aside a.fbTeks{
+    color: rgba(160, 163, 189, 1);
+    font-family: 'Mulish';
+    font-weight: 600;
+    font-size: 18px;
+    position: relative;
+    content: '';
+    top: -3px;
+    margin-left: 72px;
+  }
+
+  
+
+
+}

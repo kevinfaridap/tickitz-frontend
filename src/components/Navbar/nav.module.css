@@ -1,0 +1,126 @@
+/* Mobile Version */
+@media (max-width: 992px) {
+
+  .nav-bar{
+    box-shadow: 0px 8px 24px 0px rgba(186, 186, 186, 0.16);
+  
+  }
+
+  .nav-link{
+      margin-top: 5%;
+      font-family: 'Mulish';
+      color: rgba(65, 65, 65, 1);
+      position: relative;
+      content:'';
+      display: flex;
+      justify-content: center;
+      border-bottom:rgba(222, 222, 222, 1) 0.5px solid;
+      border-width: 100%;
+    }
+
+  .dropdown-toggle{
+    position: relative;
+    content: '';
+  } 
+
+  .img1{
+    background-image: url(./assets/Vector.png);
+    width: 120px;
+    height: 32px;
+  }
+
+  .img2 {
+    display: none;
+  }
+
+  button.btn-nav{
+    display: none;
+  }
+  
+  .form-search{
+    height: 48px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+  }
+
+  .searchMobile h5{
+    color: rgba(110, 113, 145, 1);
+    font-family: 'Mulish';
+    font-weight: 400;
+    font-size: 13px;
+    text-align: center;
+  }
+
+    
+
+
+
+}
+
+
+/* DESKTOP VERSION */
+@media (min-width: 992px) {
+  
+  .nav-bar{
+    box-shadow: 0px 8px 24px 0px rgba(186, 186, 186, 0.16);
+    
+  }
+
+  /* Margin content navbar keseluruhan */
+  .nav-bar .contain-nav{
+    margin-left: 170px;
+  }
+  
+  .nav-link{
+      font-family: 'Mulish';
+      margin-right: 76px;
+      color: rgba(65, 65, 65, 1);
+      position: relative;
+      content:'';
+      top: 13px;
+  
+    }
+  
+  .dropdown-toggle{
+    margin-left: 55px;
+    position: relative;
+    content: '';
+  } 
+  
+  .img1{
+    background-image: url(./assets/Vector.png);
+    width: 120px;
+    height: 32px;
+    margin-left: -30px;
+  }
+  
+  .img2 {
+    background-image: url(./assets/search.png );
+    width: 18px;
+    height: 18px;
+    position: relative;
+    top: 5px;
+    right: 10px;
+    /* margin-left: 50px; */
+  }
+  
+  button.btn-nav{
+    background-color: rgba(95, 46, 234, 1);
+    color: white;
+    font-family: 'Mulish';
+    font-size: 14px;
+    font-weight: 100;
+    margin-left: 45px;
+  }
+
+    
+  .searchMobile{
+    display: none;
+  }
+  
+
+
+
+ }

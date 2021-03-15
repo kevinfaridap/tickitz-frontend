@@ -1,0 +1,8 @@
+form input.form-control{
+    width: 100%;
+    height: 64px;
+    padding-left: 10px;
+    background-color: #FCFDFE;
+    border: 1px solid #DEDEDE;
+    border-radius: 10px;
+}

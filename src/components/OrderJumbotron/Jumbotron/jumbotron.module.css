@@ -1,0 +1,457 @@
+.jumbotron-1{
+    background-color: #F5F6F8;
+  }
+  
+  .jumbotron-1 .card1{
+    /* width: 822px; */
+    height: 106px;
+    background: white;
+  }
+  
+  .jumbotron-1 .card1 h3{
+    font-family: 'Mulish';
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    margin-top: 17px;
+    margin-left: 27px;
+  }
+  
+  .jumbotron-1 .card1 .button{
+    background-color: #EFF0F7;
+    width: 164px;
+    height: 50px;
+    border: 2px #EFF0F7 solid;
+    border-radius: 10px;
+    color: #5F2EEA;
+    font-family: 'Mulish';
+    margin-top: 10px;
+    margin-left: 200px;
+  }
+  
+  .jumbotron-1 h3{
+    margin-left: 18px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+  
+  .jumbotron-1 h4.order-teks{
+    margin-left: 590px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+  
+  .jumbotron-1 .order-img{
+    background-image: url(./assets/order-img.png);
+    width: 132px;
+    height: 23px;
+    margin-left: 105px;
+  }
+  .jumbotron-1 h5.order-title{
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Mulish';
+    font-size: 20px;
+    color: #14142B;
+    font-weight: 600;
+  }
+  .jumbotron-1 .card-order-info{
+    width: 384px;
+  }
+  .jumbotron-1 .order-information h5{
+    font-family: 'Mulish';
+    font-size: 13px;
+    line-height: 24px;
+    color: #6B6B6B;
+  }
+  .jumbotron-1 .order-detail h5{
+    font-family: 'Mulish';
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 600;
+    text-align: right;
+  }
+  .jumbotron-1 .totalpayment h4{
+    color: #000000;
+    font-size: 18px;
+    line-height: 34px;
+    font-family: 'Mulish';
+    font-weight: 600; 
+    text-align: left;
+  }
+  
+  .jumbotron-1 .totalpayment{
+    margin-top: 20px;
+  }
+  .jumbotron-1 .totalpayment h3{
+    color: #5F2EEA;
+    font-size: 24px;
+    line-height: 30px;
+    font-family: 'Mulish';
+    font-weight: 600;
+    text-align: center; 
+    margin-right: -90px;
+  }
+
+
+
+
+
+/* VERSI MOBILE */
+@media (max-width: 992px) {
+  .jumbotron-1 .tittle{
+    display: none;
+  }
+  .jumbotron-1 .movieAndOrder{
+    display: none;
+  }
+
+  .jumbotron-1 .chooseyourseat{
+    margin-top: 20px;
+  }
+
+  .jumbotron-1 .chooseyourseat h3{
+    font-family: 'Mulish';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 34px;
+  }
+  .jumbotron-1 .card2 h5.screen-tittle{
+    display: none;
+  }
+  .jumbotron-1 .card2 .img-line{
+    display: none;
+  }
+  .jumbotron-1 .card2 img.line-mobile{
+    background-image: url(./assets/line-mobile.png);
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin-top: 41px;
+    margin-bottom: 5px;
+  }
+  .jumbotron-1 .card2 .seat{
+    display: none;
+  }
+  .jumbotron-1 .card2 .seat-mobile{
+    background-image: url(./assets/seat-mobile.PNG);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    width: 340px;
+    height: 165px;
+  }
+  .jumbotron-1 .card2 h4.seatingkey{
+    color: black;
+    font-family: 'Mulish';
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 88px;
+    margin-top: 24px;
+  }
+
+  .jumbotron-1 .card2 .keyseat{
+    display: none;
+  }
+
+  .jumbotron-1 .card2 .keyseat-mobile{
+    margin-left: 30px;
+  }
+
+  .jumbotron-1 .card2 .keyseat-mobile .icon1{
+    margin-right: auto;
+    margin-left: 0px;
+  }
+
+  .jumbotron-1 .card2 .keyseat-mobile h5{
+    color: #4E4B66;
+    font-size: 13px;
+    font-family: 'Mulish';
+    font-weight: 600;
+    line-height: 22px;
+    margin-left: 15px;
+  }
+  .jumbotron-1 .card2 .keyseat-mobile-img{
+    background-image: url(./assets/Forward\ Arrow.png);
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+  }
+
+  .jumbotron-1 .card2 .keyseat-mobile-img-arrow2{
+    background-image: url(./assets/r-arrow.png);
+    width: 20px;
+    height: 20px;
+    margin-left: 45px;
+  }
+
+  .jumbotron-1 .card2 .keyseat-mobile-icon2{
+    /* background-image: url(./assets/available.png); */
+    background-color: rgb(230, 230, 230);
+    width: 20px;
+    height: 20px;
+    /* margin-right: auto; */
+    margin-left: 35px;
+  }
+  
+
+  .jumbotron-1 .card2 .keyseat-mobile-icon3{
+    background-image: url(./assets/selected.png);
+    width: 20px;
+    height: 20px;
+    /* margin-right: auto; */
+    margin-left: 20px;
+  }
+
+  .jumbotron-1 .card2 .keyseat-mobile-icon4{
+    background-image: url(./assets/lovenest.png);
+    width: 20px;
+    height: 20px;
+    /* margin-right: auto; */
+    margin-left: 35px;
+  }
+
+  .jumbotron-1 .card2 .keyseat-mobile-icon5{
+    background-image: url(./assets/sold.png);
+    width: 20px;
+    height: 20px;
+    /* margin-right: auto; */
+    margin-left: 18px;
+  }
+
+  .jumbotron-1 .card3 button{
+    width: 120px;
+    /* height: 56px; */
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    background-color: #EFF0F7;
+  }
+
+  .jumbotron-1 .card3 .choose-seat-border{
+    border-radius: 8px;
+    border:  0.5px solid #DEDEDE;
+    height: 88px;
+    margin-top: 20px;
+  }
+
+  .jumbotron-1 .card3 .set-btn-choose{
+    margin-top: 20px;
+  }
+
+  .jumbotron-1 .card3 .img-dropdown{
+    margin-top: 10px;
+    
+  }
+
+  .jumbotron-1 .card3 .img-dropdown2{
+    margin-top: 10px;
+  }
+
+  .jumbotron-1 .card3 h5.in-teks2{
+    margin-right: auto;
+  }
+
+  .jumbotron-1 .card3 h5.in-teks{
+    margin-right: auto;
+  }
+
+  .jumbotron-1 .card3 .drop-full{
+    margin-top: 40px;
+  }
+
+  .jumbotron-1 .card3 .button-seat{
+    margin-top: 32px;
+  }
+
+  .jumbotron-1 .card3 .button-new-seat{
+    width: 80%;
+    height: 56px;
+    background-color: white;
+    border: 1px solid #5F2EEA;
+    border-radius: 4px;
+    margin-top: 20px;
+
+    color: #5F2EEA;
+    font-family: 'Mulish';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+
+  }
+
+  /* .jumbotron-1 .card3 .button-seat .teks-last{
+    color: #5F2EEA;
+    font-family: 'Mulish';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+    margin-top: 5px;
+  } */
+
+  .jumbotron-1 .last-button .button1{
+    display: none;
+  }
+
+  .jumbotron-1 .last-button .button2{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin-top: 50px;
+    
+  }
+
+  .jumbotron-1 .last-button .button-check{
+    width: 327px;
+    height: 56px;
+    background-color: #5F2EEA;
+    font-family: 'Mulish';
+    font-size: 16px;
+    line-height: 28px;
+    color: #F7F7FC;
+  }
+  
+}
+
+
+
+
+/* VERSI DESKTOP */
+@media (min-width: 992px) {
+  .jumbotron-1 .card2{
+    width: 730px;
+    height: 661px;
+  }
+
+  .jumbotron-1 .order-line16{
+    border-radius: 10px;
+    border: 1px #E6E6E6 solid;
+    width: 382px;
+  }
+
+  .jumbotron-1 .chooseyourseat{
+    margin-top: -160px;
+  }
+  .jumbotron-1 .card2 h5.screen-tittle{
+    color: #4E4B66;
+    font-family: 'Mulish';
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .jumbotron-1 .card2 .img-line{
+    border: 5px rgba(235, 234, 234, 0.726) solid;
+    border-radius: 4px;
+    width: 532px;
+    height: 8px;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+  }
+  .jumbotron-1 .card2 .seat{
+    background-image: url(./assets/seat.PNG);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+    width: 430px;
+    height: 200px;
+  }
+  .jumbotron-1 .card2 h4.seatingkey{
+    color: black;
+    font-size: 18px;
+    font-family: 'Mulish';
+    font-weight: 600;
+    line-height: 34px;
+    margin-left: 119px;
+    margin-top: 44px;
+  }
+  .jumbotron-1 .keyseat{
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .jumbotron-1 .keyseat h5{
+    color: #4E4B66;
+    font-family: 'Mulish';
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 600;
+    margin-left: 16px;
+  }
+  .jumbotron-1 .keyseat-img1{
+    background-image: url(./assets/available.png);
+    margin-left: 35px;
+    height: 26px;
+    width: 26px;
+  }
+  .jumbotron-1 .keyseat-img2{
+    background-image: url(./assets/selected.png);
+    margin-left: 35px;
+    height: 26px;
+    width: 26px;
+  }
+  .jumbotron-1 .keyseat-img3{
+    background-image: url(./assets/lovenest.png);
+    margin-left: 35px;
+    height: 26px;
+    width: 26px;
+  }
+  .jumbotron-1 .keyseat-img4{
+    background-image: url(./assets/sold.png);
+    margin-left: 35px;
+    height: 26px;
+    width: 26px;
+  }
+  .jumbotron-1 .last-button button.button-change{
+    background-color: #F5F6F8 ;
+    border: 2px solid #5F2EEA;
+    border-radius: 4px;
+    font-family: 'Mulish';
+    font-size: 15px;
+    font-weight: 700;
+    width: 300px;
+    height: 56px;
+    color: #5F2EEA;
+  }
+  
+  .jumbotron-1 .button1{
+    justify-content: center;
+    margin-top: 40px;
+  }
+  
+  .jumbotron-1 .last-button button.button-check{
+    background-color:  #5F2EEA;
+    border: 2px solid #F5F6F8;
+    border-radius: 4px;
+    font-family: 'Mulish';
+    font-size: 15px;
+    font-weight: 700;
+    width: 300px;
+    height: 56px;
+    color: #F7F7FC;
+   
+  }
+  .jumbotron-1 .button2{
+    justify-content: center;
+    margin-top: 40px;
+    margin-right: 280px;
+  }
+  .jumbotron-1 .card2 .line-mobile{
+    display: none;
+  }
+  .jumbotron-1 .card2 .seat-mobile{
+    display: none;
+  }
+  .jumbotron-1 .card2 .keyseat-mobile{
+    display: none;
+  }
+  .jumbotron-1 .card3{
+    display: none;
+  }
+}
