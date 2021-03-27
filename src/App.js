@@ -6,7 +6,8 @@ import Signup from './pages/Auth/Signup'
 import Details from './pages/Main/Details'
 import Order from './pages/Main/Order'
 import Payment from './pages/Main/Payment'
-import TestCRUD from './pages/Main/TestCRUD'
+import Update from './pages/Main/Update'
+import Profile from './pages/Main/Profile';
 
 
 function App() {
@@ -17,10 +18,12 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route path="/signin" component={Signin} />
         <Route path="/signup" component={Signup} />
-        <Route path="/details" component={Details} />
+        <Route path="/details/:idmovie" component={Details} />
         <Route path="/order" component={Order} />
         <Route path="/payment" component={Payment} />
-        <Route path="/testcrud" component={TestCRUD} />
+        <Route path="/update" component={Update} />
+        <Route path="/profile" component={Profile}  />
+
       </Switch>
     </BrowserRouter>
   )

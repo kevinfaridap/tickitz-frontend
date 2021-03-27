@@ -30,7 +30,7 @@ function Navbarin() {
                   <Link className={Style['nav-link']} to="/"> Movies <span className="sr-only">(current)</span></Link>
                 </li>
                 <li className="nav-item">
-                  <Link className={Style['nav-link']} to="/details"> Cinemas</Link>
+                  <Link className={Style['nav-link']} to="/"> Cinemas</Link>
                 </li>
                 <li className="nav-item">
                   <Link className={Style['nav-link']} to="/order"> Buy Ticket</Link>

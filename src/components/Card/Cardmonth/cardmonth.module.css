@@ -1,0 +1,73 @@
+     h4.title-upcoming{
+    font-size: 18px;
+    font-family: 'Mulish';
+    font-weight: 500;
+    color: rgba(95, 46, 234, 1);
+    text-align: left;
+    }
+    
+    h4.view-upcoming{
+    font-size: 18px;
+    font-family: 'Mulish';
+    font-weight: 500;
+    color: rgba(95, 46, 234, 1);
+    text-align: right;
+    }
+
+    .wraps{
+        display: flex;
+        overflow-x: auto;
+        margin-top: 15px;
+    }
+    .wraps::-webkit-scrollbar{
+        border: 0.5px rgba(95, 46, 234, 1) solid;
+        border-radius: 8px;
+    }
+    .wraps::-webkit-scrollbar-thumb {
+      background: rgba(95, 46, 234, 1);
+      border-radius: 8px;
+    }
+    .wraps::-webkit-scrollbar-thumb:hover {
+      background:rgb(0, 0, 0);
+    }
+
+    .wrap{
+        display:inline-flex;
+        min-width : 127px;
+        height: 42px;
+        margin-left: 15px;
+        margin-bottom: 10px;
+    }
+
+    button.btn-sept{
+      background-color: rgba(95, 46, 234, 1);
+      font-family: 'Mulish';
+      font-weight: 500;
+      font-size: 14px;
+      text-align: center;
+      color: rgba(255, 255, 255, 1);
+      width: 127px;
+      height: 42px;
+      }
+    button.btn-oct{
+      background-color: rgba(255, 255, 255, 1);
+      font-family: 'Mulish';
+      font-weight: 500;
+      font-size: 14px;
+      text-align: center;
+      color: rgba(95, 46, 234, 1);
+      border: 1px solid rgba(95, 46, 234, 1);
+      width: 127px;
+      height: 42px;
+    }
+    button.btn-month{
+      background-color: rgba(255, 255, 255, 1);
+      font-family: 'Mulish';
+      font-weight: 500;
+      font-size: 14px;
+      text-align: center;
+      color: rgba(95, 46, 234, 1);
+      border: 1px solid rgba(95, 46, 234, 1);
+      width: 127px;
+      height: 42px;
+    }

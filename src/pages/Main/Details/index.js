@@ -7,6 +7,7 @@ import Navbarin from '../../../components/NavbarIn'
 
 export class Details extends Component {
     render() {
+  
         return (
             <div>
               <Navbarin />

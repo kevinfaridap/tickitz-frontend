@@ -1,36 +1,35 @@
 import React from 'react'
-import Style from './jumbotron3.module.css'
-import CardMovie from './../../Card/CardMovies'
+import Style from './jumbotron.module.css'
 
-function Jumbotron3() {
+function Jumbotron3update() {
     return (
         <div >
            {/* <!-- AWAL JUMBOTRON3 --> */}
           <div className={[Style['jumbotron'], ['jumbotron-fluid'], Style['jumbotron-3']].join(' ')}>
             <div className="container">
 
-              <div className={[['row'], Style['teks-upcoming']].join(' ')}>
+              {/* <div className={[['row'], Style['teks-upcoming']].join(' ')}>
                 <div className="col">
                   <h4 className={Style['title-upcoming']} >Upcoming Movies</h4>
                 </div>
                 <div className="col">
                   <h4 className={Style['view-upcoming']} > view all</h4>
                 </div>
-              </div>
+              </div> */}
 
               {/* <!-- btn month Mobile Version --> */}
-              <div className={[['row'], Style['btn-mobile-set'], ['mt-5']].join(' ')}>
+              {/* <div className={[['row'], Style['btn-mobile-set'], ['mt-5']].join(' ')}>
                 <div className="col-4">
                   <button type="button" className={[['btn'], Style['btn-sept-mobile']].join(' ')}>September</button>
                 </div>
                 <div className="col-4">
                   <button type="button" className={[['btn'], Style['btn-oct-mobile']].join(' ')}>October</button>
                 </div>
-              </div>
+              </div> */}
               {/* <!-- Akhir btn month --> */}
 
 
-              <div className={[['row'], ['mt-5'], Style['btn-dekstop']].join(' ')}>
+              {/* <div className={[['row'], ['mt-5'], Style['btn-dekstop']].join(' ')}>
                 <div className="col">
                   <button type="button" className={[['btn'], Style['btn-sept']].join(' ')}>September</button>
                 </div>
@@ -51,74 +50,14 @@ function Jumbotron3() {
                 </div>
                 <div className="col">
                   <button type="button" className={[['btn'], Style['btn-month']].join(' ')}>March</button>
-                </div>
-              
-              
-                
-                {/* <div className={[['row'], ['mt-5'], Style['upcoming-movies']].join(' ')}>
-
-                  <div className="col">
-                    <div className="card">
-                      <div className="card-body">
-                        <div className={Style.upcoming1}></div>
-                        <h5>Black Widow</h5>
-                        <p>Action, Adventure, Sci-Fi</p>
-                        <button type="button" className={[['btn'], Style['btn-upcoming']].join(' ')}>Details</button>
-                      </div>
-                    </div>
-                  </div>
-                  
-
-                  <div className="col">
-                    <div className="card">
-                      <div className="card-body">
-                        <div className={Style.upcoming2}></div>
-                        <h5>The Witches</h5>
-                        <p>Action, Adventure, Family</p>
-                        <button type="button" className={[['btn'], Style['btn-upcoming']].join(' ')}>Details</button>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="col">
-                    <div className="card">
-                      <div className="card-body">
-                        <div className={Style.upcoming3}></div>
-                        <h5>Tenet</h5>
-                        <p>Action, Sci-Fi</p>
-                        <button type="button" className={[['btn'], Style['btn-upcoming']].join(' ')}>Details</button>
-                      </div>
-                    </div>
-                  </div>
-
-
-                  <div className="col">
-                    <div className="card">
-                      <div className="card-body">
-                        <div className={Style.upcoming1}></div>
-                        <h5>Black Widow</h5>
-                        <p>Action, Adventure, Sci-Fi</p>
-                        <button type="button" className={[['btn'], Style['btn-upcoming']].join(' ')}>Details</button>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div className="col">
-                    <div className="card">
-                      <div className="card-body">
-                        <div className={Style.upcoming2}></div>
-                        <h5>The Witches</h5>
-                        <p>Action, Adventure, Family</p>
-                        <button type="button" className={[['btn'], Style['btn-upcoming']].join(' ')}>Details</button>
-                      </div>
-                    </div>
-                  </div>
-
-
                 </div> */}
+              
+              
+                
+              
 
                 {/* <!-- Awal Card-mobile-version --> */}
-                <div className={[['row'], Style['upcoming-movies-mobile']].join(' ')}>
+                {/* <div className={[['row'], Style['upcoming-movies-mobile']].join(' ')}>
                   
                   <div className="col-6">
                     <div className={[['card'], Style['card-upcoming']].join(' ')}>
@@ -142,7 +81,7 @@ function Jumbotron3() {
                       </button>
                     </div>
                   </div>
-                </div>
+                </div> */}
                 {/* <!-- Akhir card-mobile-version --> */}
 
 
@@ -215,9 +154,9 @@ function Jumbotron3() {
             </div>
           </div>
           </div>
-          {/* <!-- AKHIR JUMBOTRON3 --></div>     */}
-        </div>
+        //   {/* <!-- AKHIR JUMBOTRON3 --></div>     */}
+        // </div>
     )
 }
 
-export default Jumbotron3
+export default Jumbotron3update
