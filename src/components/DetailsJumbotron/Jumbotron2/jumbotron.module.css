@@ -4,8 +4,8 @@
   }
   
   
-  .jumbotron-2 .card .img-showtime1{
-    background-image: url(./assets/mov-1.png);
+  .jumbotron-2 .card img.img-showtime1{
+    /* background-image: url(./assets/mov-1.png); */
     width: 106px;
     height: 41px;
     margin-top: 12px;

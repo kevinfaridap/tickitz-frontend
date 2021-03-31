@@ -57,7 +57,7 @@
 
 /* MOBILE VERSION */
 @media (max-width: 992px){
-  .jumbotron-1 .poster .img-1{
+  .jumbotron-1 .poster img.img-1{
     background-image: url(./assets/spiderman-mobile.png);
     position: relative;
     width: 159px ;
@@ -112,7 +112,7 @@
     background-color: white;
   }
 
-  .jumbotron-1 .poster .img-1{
+  .jumbotron-1 .poster img.img-1{
     background-image: url(./assets/Rectangle\ 119.png);
     width: 236px;
     height: 362px;

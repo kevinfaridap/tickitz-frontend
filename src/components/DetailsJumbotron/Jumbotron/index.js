@@ -4,22 +4,32 @@ import {useParams} from 'react-router-dom'
 import Axios from 'axios'
 
 function Jumbotron() {
-    const params = useParams()
-  // console.log(params);
+  const params = useParams()
 
-  const [movieList, setMovieList] = useState([]);
-  
+  const [movieState, setStateMovie] = useState({
+    moviebyid: [],
+  })
+
+  // const moviebyid = movieList.data
 
     useEffect(()=>{
-      const id = params.idmovie
+      const idMovie = params.idmovie
       
-      Axios.get(`http://localhost:3001/api/get/${id}`)
+      Axios.get(`http://localhost:8000/v1/movies/${idMovie}`)
       .then((res)=>{
         // console.log(res.data);
-        setMovieList(res.data)
-      }) 
-    })
+        setStateMovie({
+          moviebyid: res.data.data
+        })
 
+      }) 
+    }, []);
+    // console.log(movieState.moviebyid);
+
+    // const mm = moviebyid[0];
+    // console.log(movieList);
+    // console.log(moviebyid);
+    
     return (
         <div>
             {/* AWAL JUMBOTRON */}
@@ -27,18 +37,23 @@ function Jumbotron() {
               <div className="container">
                 <div className="row">
                   <div className="col-lg-4">
+                  {movieState.moviebyid.map((item)=>{
+                    return( 
                     <div className={Style['poster']}>
-                      <div className={Style['img-1']}></div>
+                      {/* <div className={Style['img-1']}></div> */}
+                      <img className={Style['img-1']} src={item.image} alt=""/>
                       <div className={Style['img-2']}></div>
                      
                     </div>
+                     )   
+                    })}
                   </div>
                   <div className={[['col'], Style['full-teks']].join(' ')}>
                     <div className="row">
                       <div className="col">
 
-                      {movieList.map((item)=>{
-                        return(
+                      {movieState.moviebyid.map((item)=>{
+                         return( 
                           <>
                           <h3>  {item.movieTittle}  </h3>
                           <h5> {item.genre} </h5>
@@ -74,7 +89,7 @@ function Jumbotron() {
 
                         <div className="row">
                           <div className="col">
-                            <div className={Style['a-line']}></div>
+                            {/* <div className={Style['a-line']}></div> */}
                             {/* <img className="a-line" src="./assets/Line 12.png" alt=""/> */}
                           </div>
                         </div>
@@ -88,8 +103,8 @@ function Jumbotron() {
                         </div>
 
                           </>
-                        )
-                      })}
+                           )   
+                          })}  
 
 
                       </div>

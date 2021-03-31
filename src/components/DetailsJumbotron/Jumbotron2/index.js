@@ -1,8 +1,29 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import Style from './jumbotron.module.css'
 import {Link} from 'react-router-dom'
+import Axios from 'axios'
 
 function Jumbotron2() {
+
+  const [cinemaState, setStateCinema] = useState({
+    cinemaList: [],
+  })
+
+  useEffect(()=>{
+    Axios.get(`http://localhost:8000/v1/cinema/`)
+      .then((res)=>{
+        setStateCinema({
+          cinemaList: res.data.data
+        })
+      }) 
+  }, []);
+
+
+  console.log(cinemaState);
+
+
+
+
     return (
         <div>
           {/* <!-- JUMBOTRON 2 --> */}
@@ -37,17 +58,21 @@ function Jumbotron2() {
 
                 {/* <!-- Cards1 --> */}
                 <div className="row">
+                  {cinemaState.cinemaList.map((item)=>{
+                    return( 
+                    <>
                   <div className={[['col-lg-4'], Style['card-1']].join(' ')}>
                     <div className={Style.card}>
                       <div className="card-body">
                         <div className="row">
                           <div className="col">
-                            <div className={Style['img-showtime1']}></div>
-                            {/* <img className="img-showtime1" src="./assets/mov-1.png" alt=""> */}
+                            {/* <div className={Style['img-showtime1']}></div> */}
+                            <img className={Style['img-showtime1']} src={item.image} alt=""/>
                           </div>
                           <div className="col">
-                            <h5 className={Style['card-title']}>ebv.id</h5>
-                            <p>Whatever street No.12, South Purwokerto</p>
+                            {/* <h5 className={Style['card-title']}>ebv.id</h5> */}
+                            <h5 className={Style['card-title']}>{item.cinemaName}</h5>
+                            <p>{item.cinemaAddress}</p>
                           </div>
                         </div>
 
@@ -90,7 +115,8 @@ function Jumbotron2() {
                             <h3>Price</h3>
                           </div>
                           <div className="col">
-                            <h2>$10.00/seat</h2>
+                            {/* <h2>$10.00/seat</h2> */}
+                            <h2>${item.price}/seat</h2>
                           </div>
                         </div>
                         <button type="button" className={Style.btn2}>Book Now</button>
@@ -99,13 +125,13 @@ function Jumbotron2() {
                     </div>
                   </div>
 
-                  <div className={[['col-4'], Style['card-2']].join(' ')}>
+                  {/* <div className={[['col-4'], Style['card-2']].join(' ')}>
                     <div className={Style.card}>
                       <div className="card-body">
                         <div className="row">
                           <div className="col">
                             <div className={Style['img-showtime2']}></div>
-                            {/* <img className="img-showtime1" src="./assets/mov-2.png" alt=""> */}
+                            
                           </div>
                           <div className="col">
                             <h5 className={Style['card-title']}>CineOne2</h5>
@@ -115,7 +141,7 @@ function Jumbotron2() {
 
                         <div className="row">
                           <div className={Style['img-show-line']}></div>
-                          {/* <img className="img-show-line" src="./assets/Line 29.png" alt=""> */}
+                         
                         </div>
                         
                         <div className="row mt-2">
@@ -159,15 +185,15 @@ function Jumbotron2() {
                         <button type="button" className={Style.btn3}>Add to cart</button>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
-                  <div className={[['col-4'], Style['card-3']].join(' ')}>
+                  {/* <div className={[['col-4'], Style['card-3']].join(' ')}>
                     <div className={Style.card}>
                       <div className="card-body">
                         <div className="row">
                           <div className="col">
                             <div className={Style['img-showtime3']}></div>
-                            {/* <img className="img-showtime1" src="./assets/mov-3.png" alt=""> */}
+                            
                           </div>
                           <div className="col">
                             <h5 className={Style['card-title']}>hiflix Cinema</h5>
@@ -177,7 +203,7 @@ function Jumbotron2() {
 
                         <div className="row">
                           <div className={Style['img-show-line']}></div>
-                          {/* <img className="img-show-line" src="./assets/Line 29.png" alt=""> */}
+                         
                         </div>
                         
                         <div className="row mt-2">
@@ -221,19 +247,23 @@ function Jumbotron2() {
                         <button type="button" className={Style.btn3}>Add to cart</button>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
+                  </>
+                    )   
+                    })}
                 </div>
                 {/* <!-- Akhir Cards1 --> */}
-
+              
+             
                 {/* <!-- Cards2 --> */}
-                <div className="row ">
+                {/* <div className="row ">
                   <div className={[['col-lg-4'], Style['card-4']].join(' ')}>
                     <div className={Style.card}>
                       <div className="card-body">
                         <div className="row">
                           <div className="col">
                             <div className={Style['img-showtime1']}></div>
-                            {/* <img className="img-showtime1" src="./assets/mov-1.png" alt=""> */}
+                        
                           </div>
                           <div className="col">
                             <h5 className={Style['card-title']}>ebv.id</h5>
@@ -243,7 +273,7 @@ function Jumbotron2() {
 
                         <div className="row">
                           <div className={Style['img-show-line']}></div>
-                          {/* <img className="img-show-line" src="./assets/Line 29.png" alt=""> */}
+                      
                         </div>
                         
                         <div className="row mt-2">
@@ -295,7 +325,7 @@ function Jumbotron2() {
                         <div className="row">
                           <div className="col">
                             <div className={Style['img-showtime2']}></div>
-                            {/* <img className="img-showtime1" src="./assets/mov-2.png" alt=""> */}
+                          
                           </div>
                           <div className="col">
                             <h5 className={Style['card-title']}>CineOne2</h5>
@@ -305,7 +335,7 @@ function Jumbotron2() {
 
                         <div className="row">
                           <div className={Style['img-show-line']}></div>
-                          {/* <img className="img-show-line" src="./assets/Line 29.png" alt=""> */}
+                        
                         </div>
                         
                         <div className="row mt-2">
@@ -357,7 +387,7 @@ function Jumbotron2() {
                         <div className="row">
                           <div className="col">
                             <div className={Style['img-showtime3']}></div>
-                            {/* <img className="img-showtime1" src="./assets/mov-3.png" alt=""> */}
+                           
                           </div>
                           <div className="col">
                             <h5 className={Style['card-title']}>hiflix Cinema</h5>
@@ -367,7 +397,7 @@ function Jumbotron2() {
 
                         <div className="row">
                           <div className={Style['img-show-line']}></div>
-                          {/* <img className="img-show-line" src="./assets/Line 29.png" alt=""> */}
+                          
                         </div>
                         
                         <div className="row mt-2">
@@ -412,7 +442,7 @@ function Jumbotron2() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
                 {/* <!-- Akhir Cards2 --> */}
 
                 {/* <!-- VIEW MORE --> */}

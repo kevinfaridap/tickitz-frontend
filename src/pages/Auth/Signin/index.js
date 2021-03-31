@@ -3,17 +3,19 @@ import style from './signin.module.css'
 // import FormSign from '../../../components/FormSingup'
 import FormSignin from './../../../components/FormSignin'
 
-class Signin extends Component {
-  constructor(){
-    super()
-    this.state ={
-      email: '',
-      password: ''
-    }
-  }
+function Signin () {
+// class Signin extends Component {
+  // File lama
+  // constructor(){
+  //   super()
+  //   this.state ={
+  //     email: '',
+  //     password: ''
+  //   }
+  // }
 
 
-  render() {
+  // render() {
     let url = "https://www.google.com/";
       return (
         <div>
@@ -65,7 +67,7 @@ class Signin extends Component {
           </main>
         </div>
       )
-    }
+    // }
 }
 
 export default Signin

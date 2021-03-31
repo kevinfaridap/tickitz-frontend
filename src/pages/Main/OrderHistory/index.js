@@ -1,16 +1,16 @@
 import React from 'react'
 import Footer from '../../../components/Footer'
 import Navbarin from '../../../components/NavbarIn'
-import Jumbotron from '../../../components/ProfileJumbotron/Jumbotron'
+import OrderHistoryJumbotron from  '../../../components/OrderHistoryJumbotron'
 
-function Profile() {
+function OrderHistory() {
     return (
         <div>
             <Navbarin />
-            <Jumbotron />
+            <OrderHistoryJumbotron/>
             <Footer />
         </div>
     )
 }
 
-export default Profile
+export default OrderHistory
