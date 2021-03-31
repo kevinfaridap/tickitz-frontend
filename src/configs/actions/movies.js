@@ -37,11 +37,26 @@ export const getAllMovies = () => {
 // } 
 
 
-export const postMovies = (data) => {
-  return(dispatch)=>{
-    axios.put('http://localhost:8000/v1/movies', data)
-     .then((res)=>{
-       dispatch ({ type: 'POST_MOVIES', payload: res.data})
-     })   
-  }
-} 
+// export const postMovies = (data) => {
+//   return(dispatch)=>{
+//     axios.put('http://localhost:8000/v1/movies', data)
+//      .then((res)=>{
+//        const result = res.data
+//        dispatch ({ type: 'POST_MOVIES', payload: result})
+//      })   
+//   }
+// } 
+
+export const postMovies = (data) => dispatch=>{
+  return new Promise((resolve, reject)=>{
+    axios.post('http://localhost:8000/v1/movies', data)
+    .then((res)=>{
+      const result = res.data 
+      dispatch({type: 'INSERT_MOVIE'})
+      resolve(result)
+    })
+    .catch((err)=>{
+      reject(err)
+    })
+  })
+}

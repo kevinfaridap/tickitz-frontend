@@ -10,152 +10,39 @@
 /* DESKTOP VERSION */
 @media (min-width: 992px) {
 
-
-    .card-profile{
-      width: 328px;
-      height: 783px;
+    .card-profile2{
+      width: 750px;
+      height: 801px;
       background: white;
-      box-shadow: 0px 8px 32px rgba(186, 186, 186, 0.08);
       border-radius: 6px;
+      
+    }
+    .poster-border{
+      border: 1.5px solid black;
+      box-sizing: border-box;
+      border-radius: 6px;
+      width: 249px;
+      height: 344px;
+      display: flex;
       position: absolute;
+      left: 55px;
+      top: 56px;
+    }
+
+    input.form-img{
+      background-color: transparent;
+      border: none;
+      position: relative;
+      left: 400px;
     }
 
     img.movie-poster{
         width: 177px;
         height: 272px;
-        border: 1.5px solid black;
-        box-sizing: border-box;
-        border-radius: 6px;
-        border-width: 249px;
-        
         margin-top: 92px;
         margin-left: 76px;
     }
   
-    .card-profile2{
-      width: 750px;
-    
-      height: 871px;
-      background: white;
-      border-radius: 6px;
-      
-    }
-  
-    /* .img-profile{
-      width: 156px;
-      height: 136px;
-      background-image: url(./assets/Ellipse\ 11.png);
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 25px;
-    } */
-  
-    h5.teks1{
-      color: rgba(20, 20, 43, 1);
-      font-family: Mulish;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 20px;
-      line-height: 34px;
-      text-align: center;
-      margin-top: 20px;
-    }
-  
-    h6.teks2{
-      color: rgba(78, 75, 102, 1);
-      font-family: Mulish;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 24px;
-      text-align: center;
-      margin-top: -9px;
-    }
-  
-    .line{
-      width: 328px;
-      border: 1px solid #DEDEDE;
-      margin-top: 25px;
-    }
-  
-    h5.teks3{
-      margin-top: 35px;
-      margin-left: -145px;
-      font-family: Mulish;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 28px;
-      color: rgba(78, 75, 102, 1);
-      
-    }
-  
-    /* .img-card{
-      background-image: url(./assets/Rectangle\ 571.png);
-      width: 298px;
-      height: 165px;
-      margin-left: 13px;
-    } */
-  
-    h5.teks4{
-      font-family: 'Mulish';
-      font-style: normal;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 32px;
-      color: #4E4B66;
-      margin-top: 30px;
-      margin-left: 0px;
-    }
-  
-    .line-2{
-      background: #F5F6F8;
-      box-shadow: inset 0px 2px 4px rgba(17, 17, 17, 0.16);
-      border-radius: 8px;
-      width: 248px;
-      height: 16px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .line-3{
-      background: #5F2EEA;
-      box-shadow: inset 0px 2px 4px rgba(17, 17, 17, 0.16);
-      border-radius: 8px;
-      width: 126px;
-      height: 16px;
-      position: relative;
-      top: -15px;
-      left: 40px;
-    }
-    h5.title-card{
-      font-family: 'Mulish';
-      font-style: bold;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 34px;
-      color: black;
-      margin-left: -552px;
-      padding-top: 36px;
-      /* margin-top: 32px; */
-    }
-  
-    h5.title-orderhistory{
-      font-family: 'Mulish';
-      font-style: normal;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 34px;
-      color: #AAAAAA;
-      position: absolute;
-      top: 36px;
-      left: 250px;
-    }
-  
-    .line-4{
-      width: 750px;
-      border: 1px solid #DEDEDE;
-      margin-top: 25px;
-    }
   
     h5.title-detail{
       font-family: Mulish;
@@ -183,8 +70,19 @@
       font-size: 16px;
       line-height: 20px;
       color: #4E4B66;
-      margin-left: -300px;
-      margin-bottom: 20px;
+      margin-left: -450px;
+      margin-bottom: 10px;
+    }
+
+    h5.text-date{
+      font-family: Mulish;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      color: #4E4B66;
+      margin-left: -180px;
+      margin-bottom: 10px;
     }
   
     h5.text-form-phone{
@@ -194,32 +92,24 @@
       font-size: 16px;
       line-height: 20px;
       color: #4E4B66;
-      margin-left: -275px;
-      margin-bottom: 20px;
+      margin-left: -395px;
+      margin-bottom: 10px;
     }
-  
-    h5.text-password{
+
+    h5.text-duration{
       font-family: Mulish;
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
       line-height: 20px;
       color: #4E4B66;
-      margin-left: -265px;
-      margin-bottom: 20px;
+      margin-left: -100px;
+      /* margin-right: auto; */
+      margin-bottom: 10px;
+      position: relative;
+      left: 110px;
     }
-  
-    h5.text-password2{
-      font-family: Mulish;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 20px;
-      color: #4E4B66;
-      margin-left: -250px;
-      margin-bottom: 20px;
-    }
-  
+
   
     input{
       width: 320px;
@@ -229,8 +119,77 @@
       box-sizing: border-box;
       border-radius: 4px;
       padding-left: 20px;
-      margin-left: -25px !important;
+      margin-left: -120px !important;
+      margin-bottom: 10px !important;
     }
+
+    input.form-control-sm{
+      width: 182px;
+    }
+    input.form-control-sm2{
+      width: 88px;
+      position: relative;
+      left: 130px;
+    }
+    input.form-control-sm3{
+      width: 88px;
+      position: relative;
+      left: 260px;
+    }
+
+    input.form-detail{
+      /* margin-left: 40px; */
+      position: relative;
+      left: 170px;
+      width: 248px;
+    } 
+    input.form-detail2{
+      /* margin-left: 40px; */
+      position: relative;
+      left: 70px;
+      width: 350px;
+    } 
+
+    h5.text-director{
+      font-family: Mulish;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      color: #4E4B66;
+      margin-left: -185px;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+  
+    h5.text-casts{
+      font-family: Mulish;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      color: #4E4B66;
+      margin-left: -400px;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    h5.text-synopsis{
+      font-family: Mulish;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      color: #4E4B66;
+      margin-left: -570px;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    input.form-synopsis{
+      /* margin-left: 40px; */
+      position: relative;
+      left: 170px;
+      width: 640px;
+    } 
   
     button.btn-update{
       border: 1px solid #DEDEDE;
@@ -246,21 +205,28 @@
       width: 360px;
       height: 56px;
       margin-top: 56px;
-      margin-left: 29px;
+      margin-left: 45px;
     }
   
-    p.premium-teks{
-      color:#F5F6F8;
-      font-family: Mulish;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 24px;
-      line-height: 38px;
+
+    .card-profile{
+      width: 328px;
+      height: 397px;
+      background: white;
+      box-shadow: 0px 8px 32px rgba(186, 186, 186, 0.08);
+      border-radius: 6px;
+      position: absolute;
+    }
+    .card-profile3{
+      width: 328px;
+      height: 251px;
+      background: white;
+      box-shadow: 0px 8px 32px rgba(186, 186, 186, 0.08);
+      border-radius: 6px;
       position: relative;
-      top: -130px;
-      
+      top: 500px;
     }
-  
+
   
   
   
