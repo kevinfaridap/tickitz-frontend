@@ -3,8 +3,13 @@ import Style from './admin.module.css'
 import {useDispatch} from 'react-redux'
 import {postMovies} from '../../configs/actions/movies'
 import swal from 'sweetalert'
+import {Link} from 'react-router-dom'
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
 
 function AdminJumbotron() {
+  const [startDate, setStartDate] = useState(new Date());
   const dispatch = useDispatch()
   const imageRef = useRef(null)
   const [formMovie, setFormMovie] = useState({
@@ -58,7 +63,8 @@ function AdminJumbotron() {
       swal('Success Insert Movie')
     })
     .catch((err)=>{
-      swal('Failed!')
+      // swal('Failed Post Movie, Check Token or Something Else!')
+      console.log(err);
     })
     // console.log(formMovie);
   }
@@ -200,16 +206,51 @@ function AdminJumbotron() {
 
 
 
-
+                {/* AWAL PREMIERE LOCATION */}
                 <div className="col-lg">
                   <h3 className={Style['tittle-movie-desc']} >Premiere Location</h3>
                   <div className={Style['card-profile']}>
-                    
-                  </div>
-                  <div className={Style['card-profile3']}>
-                        
-                  </div>
+                    <div className="dropdown">
+                      <button className={[['btn'], ['btn-light'], ['dropdown-toggle'], Style['btn-city']].join(' ')} type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Select City
+                      </button>
+                      <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <Link className="dropdown-item" href="#">Bengkulu</Link>
+                        <Link className="dropdown-item" href="#">Palembang</Link>
+                        <Link className="dropdown-item" href="#">Something else here</Link>
+                      </div>
+                    </div>
 
+                    <div className={Style['cinema-box']}>
+                      <img className={Style['img-cinema1']} src="http://localhost:8000/image/1616933213454-cinema21.png" alt=""/>
+                    </div>
+                    <div className={Style['cinema-box']}>
+                      <img className={Style['img-cinema1']} src="http://localhost:8000/image/1616933213454-cinema21.png" alt=""/>
+                    </div>
+                    <div className={Style['cinema-box']}>
+                      <img className={Style['img-cinema1']} src="http://localhost:8000/image/1616933213454-cinema21.png" alt=""/>
+                    </div>
+                  </div>
+                  {/* AKHIR PREMIERE LOC */}
+
+                  {/* AWAL SHOWTIMES */}
+                  <div className={Style['card-profile3']}>
+                    <h3 className={Style['title-showtime']} >Showtimes</h3>   
+                    
+                    
+                    <div className="dropdown">
+                      <button className={[['btn'], ['btn-light'], ['dropdown-toggle'], Style['btn-date']].join(' ')} type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Select a date
+                      </button>
+                      
+                      <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <DatePicker selected={startDate} onChange={date => setStartDate(date)} />
+                        {/* <Link className="dropdown-item" href="#">Palembang</Link>
+                        <Link className="dropdown-item" href="#">Something else here</Link> */}
+                      </div>
+                    </div>
+                  </div>
+                  {/* AKHIR SHOWTIMES */}
                 </div>
 
               </div>

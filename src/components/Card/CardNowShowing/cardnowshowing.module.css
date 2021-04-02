@@ -1,0 +1,56 @@
+.nowshowing-box{
+  /* background-color: black; */
+  border: 0.5px solid #DEDEDE;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 221px;
+  height: 413px;
+}
+
+img.img-nowshowing{
+  width: 159px;
+  height: 244px;
+  margin-top: 20px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h5.title-now-showing-movie{
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.15px;
+  color: #14142B;
+  margin-top: 25px;
+}
+
+h6.genre-now-showing-movie{
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.4px;
+  color: #535353;
+}
+
+button.btn-now-showing-movie{
+  border: 1px solid #5F2EEA;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 157px;
+  height: 31px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  justify-content: center;
+  background-color: white;
+  color: #5F2EEA;
+  font-weight: 400;
+}

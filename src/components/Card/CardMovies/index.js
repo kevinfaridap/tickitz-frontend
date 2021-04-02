@@ -5,7 +5,7 @@ import {Link, useHistory} from 'react-router-dom'
 import {useDispatch, useSelector} from 'react-redux'
 import {getAllMovies} from '../../../configs/actions/movies'
 
-function CardMovies({idMovie, movieTittle, genre, image}) {
+function CardMovies() {
   const dispatch = useDispatch()
   const {movies} = useSelector(state => state.movies)
 
@@ -41,7 +41,7 @@ function CardMovies({idMovie, movieTittle, genre, image}) {
               return (
                 <div className={Style['box']}>
                   <div className={Style['content-box']} >
-                    {/* <div className={Style.upcoming1}> </div> */}
+                    
                     <img className={Style['img-movie']} src={item.image} alt=""/>
                     <h5 className="" >{item.movieTittle}</h5>
                     <p>{item.genre}</p>

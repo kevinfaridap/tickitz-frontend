@@ -1,0 +1,35 @@
+div.jumbotron-now-showing-page{
+  background-color: white;
+}
+
+
+h1.tittle-now-showing-page{
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 114%;
+  text-align: center;
+  letter-spacing: 0.25px;
+  color: rgba(95, 46, 234, 1);
+  /* margin-top: 55px; */
+  margin-bottom: 20px;
+}
+
+button.btn-page-now-showing{
+  background: #5F2EEA;
+  width: 40px;
+  height: 40px;
+  border: none;
+  box-shadow: 0px 8px 16px rgba(95, 46, 234, 0.24);
+  border-radius: 8px;
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 34px;
+  letter-spacing: 0.75px;
+  color: #FFFFFF;
+  
+  /* margin-left: 10px; */
+}

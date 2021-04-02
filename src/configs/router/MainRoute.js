@@ -6,7 +6,7 @@ import Signup from '../../pages/Auth/Signup'
 import Details from '../../pages/Main/Details'
 import Order from '../../pages/Main/Order'
 import Payment from '../../pages/Main/Payment'
-import Update from '../../pages/Main/Update'
+import AllMovies from '../../pages/Main/AllMovies'
 import Profile from '../../pages/Main/Profile'
 import OrderHistory from '../../pages/Main/OrderHistory'
 import PrivateRoute from './module/PrivateRoute'
@@ -24,10 +24,10 @@ function MainRoute() {
           <PrivateRoute path="/details/:idmovie" component={Details} />
           <PrivateRoute path="/order" component={Order} />
           <Route path="/payment" component={Payment} />
-          <Route path="/update" component={Update} />
+          <Route path="/allmovies" component={AllMovies} />
           <Route path="/profile" component={Profile}  />
           <Route path="/orderhistory" component={OrderHistory}  />
-          <Route path="/admin" component={Admin} />
+          <PrivateRoute path="/admin" component={Admin} />
 
         </Switch>
       </BrowserRouter>

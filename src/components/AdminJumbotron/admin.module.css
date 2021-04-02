@@ -111,7 +111,7 @@
     }
 
   
-    input{
+   .profile-jumbo input{
       width: 320px;
       height: 45px;
       background: #FCFDFE;
@@ -211,7 +211,7 @@
 
     .card-profile{
       width: 328px;
-      height: 397px;
+      height: 437px;
       background: white;
       box-shadow: 0px 8px 32px rgba(186, 186, 186, 0.08);
       border-radius: 6px;
@@ -219,7 +219,7 @@
     }
     .card-profile3{
       width: 328px;
-      height: 251px;
+      height: 284px;
       background: white;
       box-shadow: 0px 8px 32px rgba(186, 186, 186, 0.08);
       border-radius: 6px;
@@ -227,8 +227,72 @@
       top: 500px;
     }
 
+    .card-profile button.btn-city{
+      background: #EFF0F6;
+      border-radius: 16px;
+      width: 230px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 56px;
+    }
   
-  
+    .card-profile .cinema-box{
+      background: #FCFDFE;
+      box-shadow: 0px 8px 16px rgba(17, 17, 17, 0.08);
+      border-radius: 16px;
+      width: 118px;
+      height: 74px;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .card-profile .img-cinema1{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      /* margin-top: 18px; */
+      padding-top: 18px;
+    }
+
+    .card-profile3 h3.title-showtime{
+      position: relative;
+      top: -40px;
+      font-family: Mulish;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 30px;
+      letter-spacing: 0.25px;
+      color: #000000;
+      margin-top: 25px;
+    }
+
+    .card-profile3 button.btn-date{
+      background: #EFF0F6;
+      border-radius: 16px;
+      width: 230px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
+    }
+
+    form.date-pick DatePicker{
+      width: 100px !important;
+    }
+
+    /* DatePicker[date-pick]{
+      background-color: red;
+    } */
   
   
   } 

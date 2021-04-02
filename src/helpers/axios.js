@@ -21,8 +21,8 @@ axiosApiInstance.interceptors.response.use((response)=>{
 }, async function (error){
     if (error.response.status === 401) {
         if(error.response.data.error.message === 'Invalid Signature!'){
-            localStorage.removeItem('token')
             swal('Invalid Token !')
+            localStorage.removeItem('token')
         }
         if(error.response.data.error.message === 'Jwt expired'){
             localStorage.removeItem('token')
