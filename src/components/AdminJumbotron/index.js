@@ -63,7 +63,7 @@ function AdminJumbotron() {
       swal('Success Insert Movie')
     })
     .catch((err)=>{
-      // swal('Failed Post Movie, Check Token or Something Else!')
+      // swal('Failed Post Movie, Need Token or Something Else!')
       console.log(err);
     })
     // console.log(formMovie);
@@ -215,9 +215,9 @@ function AdminJumbotron() {
                         Select City
                       </button>
                       <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <Link className="dropdown-item" href="#">Bengkulu</Link>
-                        <Link className="dropdown-item" href="#">Palembang</Link>
-                        <Link className="dropdown-item" href="#">Something else here</Link>
+                        <Link className="dropdown-item" to="#">Bengkulu</Link>
+                        <Link className="dropdown-item" to="#">Palembang</Link>
+                        <Link className="dropdown-item" to="#">Something else here</Link>
                       </div>
                     </div>
 

@@ -24,7 +24,7 @@ function FormSignin () {
     .then((res)=>{
       // console.log(res.data);
       const dataLogin = res.data
-      // console.log(dataLogin);
+      // console.log(dataLogin, 'isidataloginnyaaaaaaa');
       if(dataLogin == null){
         swal('Email and Password are incorect')
       } else  {

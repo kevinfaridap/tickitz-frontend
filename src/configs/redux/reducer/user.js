@@ -33,6 +33,11 @@ const userReducer = (state = initialState, action) =>{
         loading: false,
         error: action.payload
       }
+    case 'USER_REGISTER' :
+      return{
+        ...state,
+        user: action.payload
+      }
   
     default:
       return state

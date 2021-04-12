@@ -11,6 +11,11 @@ const nowShowingReducer = (state = initialState, action) =>{
         ...state,
         nowshowingmovies: action.payload
     }
+    // case 'SORT_NOWSHOWING_MOVIES' :
+    //   return{
+    //     ...state,
+    //     nowshowingmovies: action.payload
+    // }
     default:
         return state;
     }

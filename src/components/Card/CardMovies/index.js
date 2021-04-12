@@ -32,7 +32,7 @@ function CardMovies() {
   const detailsHandling = (idMovie) => {
     history.push(`/details/${idMovie}`)
   }
-
+  
     return ( 
       <div>
         <div className="container">

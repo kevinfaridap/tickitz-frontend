@@ -79,8 +79,29 @@
         color: rgba(65, 65, 65, 1);
         position: relative;
         content:'';
-        top: 13px;
-    
+        top: 43px;
+      }
+      .nav-link .img2{
+        font-family: 'Mulish';
+        margin-right: 76px;
+        color: rgba(65, 65, 65, 1);
+        background-color: red;
+      }
+
+      .nav-link-logined{
+        font-family: 'Mulish';
+        margin-right: 76px;
+        color: rgba(65, 65, 65, 1);
+        position: relative;
+        content:'';
+        top: 15px;
+      }
+      .nav-link-logined div.img2{
+        font-family: 'Mulish';
+        margin-right: 76px;
+        color: rgba(65, 65, 65, 1);
+        position: relative;
+        top: 3px;
       }
     
     .dropdown-toggle{
@@ -101,9 +122,8 @@
       width: 18px;
       height: 18px;
       position: relative;
-      top: 5px;
+      top: 35px;
       right: 10px;
-      /* margin-left: 50px; */
     }
     
     button.btn-nav{
@@ -111,8 +131,9 @@
       color: white;
       font-family: 'Mulish';
       font-size: 14px;
+      font-weight: 600;
       font-weight: 100;
-      margin-left: 45px;
+      margin-left: -65px;
     }
   
       
@@ -126,6 +147,8 @@
         width: 56px;
         height: 56px;
         margin-top: -10px;
+        position: relative;
+        top: -35px;
         margin-left: 25px;
         /* position: relative;
         top: -20px; */

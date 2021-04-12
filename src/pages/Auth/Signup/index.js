@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import styleSingup from './signup.module.css'
 import FormSign from '../../../components/FormSingup'
+import {Link} from 'react-router-dom'
 
 class Signup extends Component {
     render() {
-        let url = "https://www.google.com/";
+        // let url = "https://www.google.com/";
 
         return (
             <div>
@@ -57,8 +58,15 @@ class Signup extends Component {
                       <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
                       <label class="form-check-label" for="exampleCheck1">I agree to tems & condition</label>
                     </div>
+                    <h2 className={styleSingup['signnow-teks']}>
+                      Already have an account ?
+                      <Link to="/signin"> Signin Now</Link> 
+                    </h2>
 
-                    <h2 className={styleSingup['forget-teks']}>Forgot your password? <a href={url}>Reset Now</a> </h2>
+                    <h2 className={styleSingup['forget-teks']}>
+                      Forgot your password? 
+                      <Link to="#"> Reset Now</Link> 
+                    </h2>
                                     
                     <p className={styleSingup['or-teks']}>or</p>
                     <div className={styleSingup.or}></div> 
@@ -67,18 +75,18 @@ class Signup extends Component {
                     <div className="row justify-content-center">
                       <div className="col-lg-5 col-5">
                         <div className={styleSingup.box}> 
-                          <a href={url}> 
+                          <Link to="#"> 
                               <div className={styleSingup.google}> </div>
-                          </a>
-                          <a className={styleSingup.googleTeks} href={url}>Google</a> 
+                          </Link>
+                          <Link className={styleSingup.googleTeks} to="#">Google </Link> 
                         </div>
                       </div>
                       <div className="col-lg-5 col-5">
                         <div className={styleSingup.box}> 
-                          <a href={url}>
+                          <Link to="#">
                               <div className={styleSingup.fb}> </div>
-                          </a>
-                          <a className={styleSingup.fbTeks} href={url}>Facebook</a>
+                          </Link>
+                          <Link className={styleSingup.fbTeks} to="#">Facebook</Link>
                         </div>
                      </div>
                     </div>

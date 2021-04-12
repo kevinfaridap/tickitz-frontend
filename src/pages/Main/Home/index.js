@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Navbar from './../../../components/Navbar'
+// import Navbar from './../../../components/Navbar'
 import Jumbotron1 from './../../../components/HomeJumbotron/Jumbotron'
 import Jumbotron2 from './../../../components/HomeJumbotron/Jumbotron2'
 // import Jumbotron3 from './../../../components/HomeJumbotron/Jumbotron3'
@@ -8,6 +8,7 @@ import Cardmonth from './../../../components/Card/Cardmonth'
 import CardMovie from '../../../components/Card/CardMovies'
 import Jumbotron3update from './../../../components/HomeJumbotron/Jumbotron3Updated'
 import {useSelector} from 'react-redux'
+import Navbarin from '../../../components/NavbarIn'
 
 
 function Home() {
@@ -16,7 +17,8 @@ function Home() {
     // console.log('isiiiiiiiiiiiiii', name);
     return (
       <div>
-        <Navbar />
+        {/* <Navbar /> */}
+        <Navbarin />
         <Jumbotron1 />
         <Jumbotron2 />
         <Cardmonth />

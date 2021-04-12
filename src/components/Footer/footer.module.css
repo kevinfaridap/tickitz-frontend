@@ -17,6 +17,7 @@
     line-height: 36px;
     color: #6E7191;
     margin-top: 30px;
+    text-align: left !important;
   }
   
   .jumbotron-4 h5{
@@ -213,18 +214,39 @@
     display: none;
   }
   
-  .jumbotron-4 .explore-desktop{
+  .jumbotron-4 .explore-desktop h5{
     width: 140px;
     margin-left: 60px;
+    position: relative;
+    left: -20px;
+    text-align: left !important;
+  }
+  .jumbotron-4 .explore-desktop p{
+    width: 140px;
+    margin-left: 60px;
+    position: relative;
+    left: -20px;
+    text-align: left !important;
   }
   .jumbotron-4 .sponsor{
     margin-left: 50px;
+    position: relative;
+    left: -40px;
+  }
+  .jumbotron-4 .sponsor h5{
+    margin-left: 50px;
+    position: relative;
+    left: -40px;
+    text-align: left !important;
   }
   .jumbotron-4 .followus-list{
     margin-left: -60px;
     position: relative;
     content: '';
     right: -100px;
+  }
+  .jumbotron-4 .followus-list h5{
+    text-align: left !important;
   }
 
   .jumbotron-4 .followus-list .followus-mobile{

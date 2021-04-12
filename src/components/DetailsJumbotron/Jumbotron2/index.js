@@ -1,9 +1,14 @@
 import React, {useEffect, useState} from 'react'
 import Style from './jumbotron.module.css'
-import {Link} from 'react-router-dom'
+import {Link, useParams} from 'react-router-dom'
 import Axios from 'axios'
 
 function Jumbotron2() {
+  const params = useParams()
+
+  const [movieState, setStateMovie] = useState({
+    moviebyid: [],
+  })
 
   const [cinemaState, setStateCinema] = useState({
     cinemaList: [],
@@ -16,13 +21,27 @@ function Jumbotron2() {
           cinemaList: res.data.data
         })
       }) 
+
+    const idMovie = params.idmovie 
+    Axios.get(`http://localhost:8000/v1/movies/${idMovie}`)
+    .then((res)=>{
+      // console.log(res.data);
+      setStateMovie({
+        moviebyid: res.data.data
+      })
+
+    })  
   }, []);
 
 
-  console.log(cinemaState);
+  // console.log(cinemaState);
+  const adaMovie = movieState.moviebyid;
+  const schdulee = adaMovie.schedule
 
-
-
+  // console.log("kkk", schdulee[0].cinemaName);
+  // if(schdulee[0].cinemaName != schdulee[1].cinemaName){
+  //   console.log('sasas');
+  // }
 
     return (
         <div>
@@ -58,9 +77,12 @@ function Jumbotron2() {
 
                 {/* <!-- Cards1 --> */}
                 <div className="row">
-                  {cinemaState.cinemaList.map((item)=>{
+                  {/* {cinemaState.cinemaList.map((item)=>{
                     return( 
-                    <>
+                    <> */}
+                  {schdulee !== undefined  ?  schdulee.map((item)=>{
+                        return( 
+                        <>
                   <div className={[['col-lg-4'], Style['card-1']].join(' ')}>
                     <div className={Style.card}>
                       <div className="card-body">
@@ -80,35 +102,45 @@ function Jumbotron2() {
                           <div className={Style['img-show-line']}></div>
                           {/* <img className="img-show-line" src="./assets/Line 29.png" alt=""> */}
                         </div>
-                        
+
+                        {/* {schdulee !== undefined ? schdulee.map((item)=>{
+                          return( 
+                          <> */}
                         <div className="row mt-2">
                           <div className="col">
-                            <h4>08:30am</h4>
+                            <h4>{item.time}</h4>
+                          </div>
+                          {/* <div className="col">
+                            <h4>{item.time}</h4>
                           </div>
                           <div className="col">
-                            <h4>10:30pm</h4>
+                            <h4>{item.time}</h4>
+                          </div> */}
+                          {/* <div className="col">
+                            <h4>{item.time}</h4>
                           </div>
                           <div className="col">
-                            <h4>12:00pm</h4>
-                          </div>
-                          <div className="col">
-                            <h4>02:00pm</h4>
-                          </div>
+                            <h4>{item.time}</h4>
+                          </div> */}
                         </div>
-                        <div className="row mt-2">
+                        {/* <div className="row mt-2">
                           <div className="col">
-                            <h4>04:30pm</h4>
+                            <h4>{item.time}</h4>
                           </div>
                           <div className="col">
-                            <h4>07:00pm</h4>
+                            <h4>{item.time}</h4>
                           </div>
                           <div className="col">
-                            <h4>08:30pm</h4>
+                            <h4>{item.time}</h4>
                           </div>
                           <div className="col">
                             <h4> </h4>
                           </div>
-                        </div>
+                        </div> */}
+
+                        {/* </>
+                          )   
+                          }) :console.log('err') } */}
 
                         <div className="row">
                           <div className="col">
@@ -124,6 +156,15 @@ function Jumbotron2() {
                       </div>
                     </div>
                   </div>
+
+                  </>
+                  )   
+                  }) :console.log('err') }
+
+                  {/* </>
+                    )   
+                    })} */}
+                </div>
 
                   {/* <div className={[['col-4'], Style['card-2']].join(' ')}>
                     <div className={Style.card}>
@@ -248,10 +289,10 @@ function Jumbotron2() {
                       </div>
                     </div>
                   </div> */}
-                  </>
+                  {/* </>
                     )   
                     })}
-                </div>
+                </div> */}
                 {/* <!-- Akhir Cards1 --> */}
               
              

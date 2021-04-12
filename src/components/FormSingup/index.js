@@ -2,24 +2,48 @@ import React, { useState } from 'react'
 import Styleformsign from './formsign.module.css'
 import Input from './../Input'
 import Axios from 'axios'
-import {Link} from 'react-router-dom'
+
+import {register} from '../../configs/actions/user'
+import {useDispatch} from 'react-redux'
+import swal from 'sweetalert'
+import {useHistory} from 'react-router-dom'
 
 function FormSign() {
-
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-
-
-  const submitSignup = () =>{
-    Axios.post("http://localhost:3001/api/insert", {
-      email: email, 
-      password: password
-   })
-   .then(() => {
-     alert(`Email anda : ${email} password anda : ${password}`)
-   })
+  const dispatch = useDispatch()
+  const history = useHistory()
+  const [formUser, setFormUser] = useState({
+      firstName: '',
+      lastName: '',
+      email: '',
+      phoneNumber: '',
+      role: '',
+  })
+  
+  const handleChange = (e) => {
+    setFormUser({
+      ...formUser,
+      [e.target.name] : e.target.value
+    })
   }
 
+  const handleRegister = (e) => {
+    e.preventDefault()
+    dispatch(register(formUser))
+    .then((res)=>{
+      setFormUser({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phoneNumber: '',
+        role: '',
+      })
+      swal(`Registered \n Email : ${formUser.email} \n Password : ${formUser.password}`)
+      history.push('/signin')
+    })
+    .catch((err)=>{
+      console.log(err);
+    })
+  }
   
 
   return (
@@ -32,8 +56,8 @@ function FormSign() {
                   type="email"
                   name="email"
                   placeholder="Write email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  value={formUser.email}
+                  onChange={(e) => handleChange(e)}
                 />
               
             </div>
@@ -44,15 +68,15 @@ function FormSign() {
                 type= "password"
                 name= "password"
                 placeholder= "Write password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                value={formUser.password}
+                onChange={(e) => handleChange(e)}
               />
 
             </div>
             {/* <button type="submit" className={Styleformsign.btn} onClick={submitSignup} >Sign Up</button> */}
-            <Link to="/signin">
-            <button onClick={submitSignup} className={Styleformsign.btn}>Sign Up</button>
-            </Link>
+            {/* <Link to="/signin"> */}
+            <button onClick={handleRegister} className={Styleformsign['btn-signup']}>Sign Up</button>
+            {/* </Link> */}
           </form>
         </div>
 

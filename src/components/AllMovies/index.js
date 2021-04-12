@@ -11,26 +11,30 @@ function AllMoviesJumbotron() {
   const {nowshowingmovies} = useSelector(state => state.nowshowingmovies)
 
   // const pageNow = nowshowingmovies.currentPage
-  const [page, setPage] = useState(1)
+  const [page, setPage] = useState(1);
+  const [order, setOrder] = useState('DESC')
 
-
-  const getNowShowing = (page)=> {
-    dispatch(getNowShowingMovies(page))
-  }
+  
+  // const getNowShowing = (page, order)=> {
+  //   dispatch(getNowShowingMovies(page, order))
+  // }
 
   useEffect(()=>{
-    getNowShowing(page)
+    // getNowShowing(page)
+    // console.log(order);
+    dispatch(getNowShowingMovies(page))
     
   }, [page]);
+
   const nowMoviesPerPage = nowshowingmovies.MaxperPage
   const totalPage = nowshowingmovies.Items
   const nowPage = nowshowingmovies.currentPage
   const totalMovie = nowshowingmovies.totalMovies
 
-  // console.log(nowshowingmovies);
   const dataNowMovie = nowshowingmovies.data
 
-// const isNoData = dataNowMovie.length !== 0;
+
+  // const isNoData = dataNowMovie.length !== 0;
   // console.log(dataNowMovie);
   return (
     <div>
@@ -46,7 +50,9 @@ function AllMoviesJumbotron() {
             nowshowingmovies={nowshowingmovies}
           />
         
-          
+        <button className={Style['btn-page-now-showing']} onClick={()=>setOrder('DESC')} >DESC</button>
+        <a onClick={()=>setOrder('DESC')} href="">DESCC</a>
+
         {/* {dataNowMovie !== undefined ? dataNowMovie.map((item)=>{
         return (
           <>

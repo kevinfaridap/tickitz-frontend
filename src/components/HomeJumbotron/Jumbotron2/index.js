@@ -1,5 +1,6 @@
 import React from 'react'
 import Style from './jumbotron2.module.css'
+import {Link} from 'react-router-dom'
 
 function Jumbotron2() {
     return (
@@ -13,7 +14,10 @@ function Jumbotron2() {
                           <h4 className={Style['title-showing']} >Now Showing</h4>
                       </div>
                       <div className="col">
-                          <h4 className={Style['view-teks']} > view all</h4>
+                          <Link to="/allmovies">
+                            <h4 className={Style['view-teks']} > view all</h4>
+
+                          </Link>
                       </div>
                     </div>
 

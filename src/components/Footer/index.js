@@ -11,8 +11,7 @@ class Footer extends Component {
                         <div className="row">
                         <div className="col-lg-4 col">
                             <div className={Style['logo-last']}></div>
-                            <p className={Style['last-paragraph']}>Stop waiting in line. Buy tickets
-                            conveniently, watch movies quietly.</p>
+                            <p className={Style['last-paragraph']}>Stop waiting in line. Buy tickets conveniently, watch movies quietly.</p>
                         </div>
                         
                         <div className={[['row'], Style['desktop1']].join(' ')}>

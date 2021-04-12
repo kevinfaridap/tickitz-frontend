@@ -21,6 +21,7 @@ export const login = (data) => (dispatch) => {
         // dispatch({ type : 'POST_LOGIN', payload: dataUser })
         dispatch(loginSuccess(dataUser))
         localStorage.setItem('token', dataUser.data.token)
+        // console.log(dataUser, 'inidatausernya');
         resolve(dataUser)
       })
       .catch((err) => {
@@ -30,4 +31,20 @@ export const login = (data) => (dispatch) => {
       }) 
     })
   }
+
+
+export const register = (data) => dispatch=>{
+  return new Promise((resolve, reject)=>{
+    axios.post('http://localhost:8000/v1/users/register', data)
+    .then((res)=>{
+      const result = res.data 
+      dispatch({type: 'USER_REGISTER'})
+      resolve(result)
+    })
+    .catch((err)=>{
+      reject(err)
+    })
+  })
+}
+
   

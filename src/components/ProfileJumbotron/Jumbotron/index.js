@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import Style from './jumbotron.module.css'
 import Axios from 'axios'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
+import swal from 'sweetalert'
+const jwt = require('jsonwebtoken')
 
 function Jumbotron() {
   const [accountList, setAccountList] = useState([]);
@@ -13,17 +15,25 @@ function Jumbotron() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [role , setRole] = useState("");
 
+  const isAuthenticated = localStorage.getItem('token')
+  let decode = jwt.decode(isAuthenticated)
+  const idUser = decode.idUser;
+  
   useEffect(()=>{
-    Axios.get('http://localhost:8000/v1/users/994f063d-0d6d-427e-a340-fcd8970be4be').then((res)=>{
-        console.log(res);
+    // console.log(decode.idUser);
+    Axios.get(`http://localhost:8000/v1/users/${idUser}`)
+    .then((res)=>{
+        // console.log(res);
         setAccountList(res.data.data)
     })
+
+    
   }, []); 
  
   // const updateAccount = (id) =>{
   //   Axios.put(`http://localhost:8000/v1/users/${id}`, {
   const updateAccount = () =>{
-    Axios.put(`http://localhost:8000/v1/users/994f063d-0d6d-427e-a340-fcd8970be4be`, {
+    Axios.put(`http://localhost:8000/v1/users/${idUser}`, {
       firstName: firstName,
       lastName: lastName,
       email: email, 
@@ -31,7 +41,7 @@ function Jumbotron() {
       phoneNumber: phoneNumber,
       role: role
    })
-   setUpdateFirstName("")
+   swal('succes')
   }
 
     return (
@@ -100,7 +110,7 @@ function Jumbotron() {
                         </div>
                         <div className="col">
                           <h5 className={Style['text-form-phone']}>Phone Number</h5>
-                          <input type="text" class={Style['form-control']} 
+                          <input type="text" className={Style['form-control']} 
                           placeholder={item.phoneNumber}
                           onChange={(e)=>{ setPhoneNumber (e.target.value)}}
                           />
@@ -145,7 +155,7 @@ function Jumbotron() {
                 </div>
               </div>
 
-              {/* <h1 className="display-4">Fluid jumbotron</h1>
+              {/* <h1   ="display-4">Fluid jumbotron</h1>
               <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> */}
 
                 </div>
