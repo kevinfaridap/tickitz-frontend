@@ -23,6 +23,9 @@ This web application created using react.js, node.js and express.js. In this cas
 
 <br>
 
+# HOMEPAGE
+![home](https://user-images.githubusercontent.com/74039235/115293145-2b0c1f80-a181-11eb-96f7-dab557c92c18.jpg)
+
 # How to run
 <h4> Backend </h4>
 <ol>
