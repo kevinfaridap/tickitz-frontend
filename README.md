@@ -28,9 +28,11 @@ This web application created using react.js, node.js and express.js. In this cas
 
 # How to run
 <h4> Backend </h4>
+<p> Link : https://github.com/kevinfaridap/backend-beginner-arkademy </p>
 <ol>
   <li> Run server 'npm run try'  </li>
   <li> Port = 3001  </li> 
+  
 </ol>
 
 <h4> Frontend </h4>
