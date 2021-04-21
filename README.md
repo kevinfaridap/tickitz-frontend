@@ -1,4 +1,4 @@
-# week5-frontend-beginner
+# Ticktiz Ticket Frontend
 Learn REACT JS, CRUD
  <h5> by Kevin Farid Alpharisy </h5>
 
