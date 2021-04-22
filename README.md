@@ -1,5 +1,4 @@
 # Ticktiz Ticket Frontend
-Learn REACT JS, CRUD
  <h5> by Kevin Farid Alpharisy </h5>
 
 # About This Project 
@@ -36,6 +35,7 @@ This web application created using react.js, node.js and express.js. In this cas
 </ol>
 
 <h4> Frontend </h4>
+<p> Visit Website : https://ticktiz-ticket.netlify.app/ </p>
 <ol>
   <li> Run 'npm strat'  </li>
   <li> Port = 3000  </li> 
