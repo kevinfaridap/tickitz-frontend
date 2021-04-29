@@ -37,7 +37,7 @@ This web application created using react.js, node.js and express.js. In this cas
 <h4> Frontend </h4>
 <p> Visit Website : https://ticktiz-ticket.netlify.app/ </p>
 <ol>
-  <li> Run 'npm strat'  </li>
+  <li> Run 'npm start'  </li>
   <li> Port = 3000  </li> 
 </ol>
 
