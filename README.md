@@ -25,19 +25,12 @@ This web application created using react.js, node.js and express.js. In this cas
 # HOMEPAGE
 ![home](https://user-images.githubusercontent.com/74039235/115293145-2b0c1f80-a181-11eb-96f7-dab557c92c18.jpg)
 
-# How to run / Visit Project
+# Visit Project
 <h4> Backend </h4>
 <p> Link : https://github.com/kevinfaridap/backend-beginner-arkademy </p>
-<ol>
-  <li> Run server 'npm run try'  </li>
-  <li> Port = 3001  </li> 
-  
-</ol>
 
-<h4> Frontend </h4>
-<p> Visit Website : https://ticktiz-ticket.netlify.app/ </p>
-<ol>
-  <li> Run 'npm start'  </li>
-  <li> Port = 3000  </li> 
-</ol>
+
+<h4> Demo App </h4>
+<p> Link : https://ticktiz-ticket.netlify.app/ </p>
+
 
