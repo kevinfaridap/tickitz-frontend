@@ -31,7 +31,7 @@
 ## Upcoming Movies
 ## Payment Page
 ## Schedule
-## Ticket
+## Buy Ticket
 ## Edit Profile
 ## Create Movie
 
