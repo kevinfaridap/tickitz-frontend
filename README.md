@@ -20,29 +20,37 @@
 ##Fitur
 
 ## Signup
+##### Masukkan data dirimu dan daftar untuk menggunakan aplikasi ini !!
 ![signup](https://user-images.githubusercontent.com/74039235/117766030-1dfebf80-b259-11eb-93f3-9df6320b171b.jpg)
 
 ## Signin
+##### Masuk kehalaman login dengan email yang sudah terdaftar ya.
 ![signin](https://user-images.githubusercontent.com/74039235/117766053-2951eb00-b259-11eb-9d10-5453adfd139a.jpg)
 
 ## Homepage
+##### Kamu akan masuk ke halaman home setelah login. Klik details untuk melihat details movies.
 ![home](https://user-images.githubusercontent.com/74039235/115293145-2b0c1f80-a181-11eb-96f7-dab557c92c18.jpg)
 
 ## Movie Details
+##### Halaman ini berisikan informasi detail mengenai film yang kamu pilih ya.
 ![detail](https://user-images.githubusercontent.com/74039235/117770587-4d182f80-b25f-11eb-8747-986206545fcc.jpg)
 
 ## Upcoming Movies
 
 ## Order Page
+##### Jika anda menekan booknow dihalaman movie details, maka akan di lempar ke halaman order untuk memilih kursi.
 ![order](https://user-images.githubusercontent.com/74039235/117770758-851f7280-b25f-11eb-89f5-90c67e02b16d.png)
 
 ## Payment Page
+##### Setelah memilih kursi segera lakukan pembayaran.
 ![payment](https://user-images.githubusercontent.com/74039235/117770675-68833a80-b25f-11eb-8317-4d0a92a89cac.png)
 
 ## Ticket Result
+##### Hasil ticket yang dipesan.
 ![ticket-result](https://user-images.githubusercontent.com/74039235/117770885-aed89980-b25f-11eb-930d-52f2c518ce04.png)
 
 ## Edit Profile
+##### Anda dapat mengubah profile pada halaman edit profile. 
 ![profile](https://user-images.githubusercontent.com/74039235/117770826-99fc0600-b25f-11eb-8229-c758635200ed.png)
 
 ## Create Movie
