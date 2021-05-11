@@ -21,8 +21,20 @@
 
 <br>
 
-# Homepage
+## Signup
+## Signin
+
+## Homepage
 ![home](https://user-images.githubusercontent.com/74039235/115293145-2b0c1f80-a181-11eb-96f7-dab557c92c18.jpg)
+
+## Movie Details
+## Upcoming Movies
+## Payment Page
+## Schedule
+## Ticket
+## Edit Profile
+## Create Movie
+
 
 # Visit Project
 <h4> Backend </h4>
