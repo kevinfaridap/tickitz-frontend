@@ -1,9 +1,8 @@
-# Ticktiz Ticket Frontend
+# Ticktiz Ticket- Frontend
  <h5> by Kevin Farid Alpharisy </h5>
 
 # About This Project 
-<p> This web application created using react.js, node.js and express.js. In this case we try to convert the web application that have made by HTML, CSS before to React JS, we also try to make CRUD. there are still many shortcomings of the application, therefore we will fix and update it ASAP.
-</p> 
+<p> Ticktiz Ticket adalah aplikasi layanan pemesanan ticket film secara online yang memudahkan penggunanya untuk melihat film yang sedang tayang dan film yang akan tayang. Aplikasi ini membantu pengguna untuk melakukan pemesanan secara cepat, efektif dan aman. Aplikasi ini dibangun menggunakan reactJS, nodeJS, dan expressJS. </p> 
 
 <br>
 
