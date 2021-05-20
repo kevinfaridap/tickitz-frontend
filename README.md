@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Ticktiz Ticket- Frontend
+ <h5> by Kevin Farid Alpharisy </h5>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Tentang Project
+<p> Ticktiz Ticket adalah aplikasi layanan pemesanan ticket film secara online yang memudahkan penggunanya untuk melihat film yang sedang tayang dan film yang akan tayang. Aplikasi ini membantu pengguna untuk melakukan pemesanan secara cepat, efektif dan aman. Aplikasi ini dibangun menggunakan reactJS, nodeJS, dan expressJS. </p> 
 
-## Available Scripts
 
-In the project directory, you can run:
+# Komponen
+<ul>
+  <li> React.js </li>
+  <li> CSS </li>
+  <li> Node.js  </li>
+  <li> Express.js  </li>
+  <li> MYSQL2  </li>
+  <li> Cors  </li>
+  <li> Dotenv  </li>
+  <li> Nodemon  </li>
+</ul>
 
-### `npm start`
+##Fitur
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Signup
+##### Masukkan data dirimu dan daftar untuk menggunakan aplikasi ini !!
+![signup](https://user-images.githubusercontent.com/74039235/117766030-1dfebf80-b259-11eb-93f3-9df6320b171b.jpg)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Signin
+##### Masuk kehalaman login dengan email yang sudah terdaftar ya.
+![signin](https://user-images.githubusercontent.com/74039235/117766053-2951eb00-b259-11eb-9d10-5453adfd139a.jpg)
 
-### `npm test`
+## Homepage
+##### Kamu akan masuk ke halaman home setelah login. Klik details untuk melihat details movies.
+![home](https://user-images.githubusercontent.com/74039235/115293145-2b0c1f80-a181-11eb-96f7-dab557c92c18.jpg)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Movie Details
+##### Halaman ini berisikan informasi detail mengenai film yang kamu pilih ya.
+![detail](https://user-images.githubusercontent.com/74039235/117770587-4d182f80-b25f-11eb-8747-986206545fcc.jpg)
 
-### `npm run build`
+## Upcoming Movies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Order Page
+##### Jika anda menekan booknow dihalaman movie details, maka akan di lempar ke halaman order untuk memilih kursi.
+![order](https://user-images.githubusercontent.com/74039235/117770758-851f7280-b25f-11eb-89f5-90c67e02b16d.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Payment Page
+##### Setelah memilih kursi segera lakukan pembayaran.
+![payment](https://user-images.githubusercontent.com/74039235/117770675-68833a80-b25f-11eb-8317-4d0a92a89cac.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Ticket Result
+##### Hasil ticket yang dipesan.
+![ticket-result](https://user-images.githubusercontent.com/74039235/117770885-aed89980-b25f-11eb-930d-52f2c518ce04.png)
 
-### `npm run eject`
+## Edit Profile
+##### Anda dapat mengubah profile pada halaman edit profile. 
+![profile](https://user-images.githubusercontent.com/74039235/117770826-99fc0600-b25f-11eb-8229-c758635200ed.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Create Movie
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## VISIT PROJECT !!!
+- :white_check_mark: [Backend](https://github.com/kevinfaridap/backend-beginner-arkademy)
+- :rocket: [Ticktiz Ticket](https://ticktiz-ticket.netlify.app/)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
