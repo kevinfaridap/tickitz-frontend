@@ -1,62 +1,111 @@
-# Ticktiz Ticket- Frontend
- <h5> by Kevin Farid Alpharisy </h5>
+<p align="center">
 
-# Tentang Project
-<p> Ticktiz Ticket adalah aplikasi layanan pemesanan ticket film secara online yang memudahkan penggunanya untuk melihat film yang sedang tayang dan film yang akan tayang. Aplikasi ini membantu pengguna untuk melakukan pemesanan secara cepat, efektif dan aman. Aplikasi ini dibangun menggunakan reactJS, nodeJS, dan expressJS. </p> 
-
-
-# Komponen
-<ul>
-  <li> React.js </li>
-  <li> CSS </li>
-  <li> Node.js  </li>
-  <li> Express.js  </li>
-  <li> MYSQL2  </li>
-  <li> Cors  </li>
-  <li> Dotenv  </li>
-  <li> Nodemon  </li>
-</ul>
-
-##Fitur
-
-## Signup
-##### Masukkan data dirimu dan daftar untuk menggunakan aplikasi ini !!
-![signup](https://user-images.githubusercontent.com/74039235/117766030-1dfebf80-b259-11eb-93f3-9df6320b171b.jpg)
-
-## Signin
-##### Masuk kehalaman login dengan email yang sudah terdaftar ya.
-![signin](https://user-images.githubusercontent.com/74039235/117766053-2951eb00-b259-11eb-9d10-5453adfd139a.jpg)
-
-## Homepage
-##### Kamu akan masuk ke halaman home setelah login. Klik details untuk melihat details movies.
-![home](https://user-images.githubusercontent.com/74039235/115293145-2b0c1f80-a181-11eb-96f7-dab557c92c18.jpg)
-
-## Movie Details
-##### Halaman ini berisikan informasi detail mengenai film yang kamu pilih ya.
-![detail](https://user-images.githubusercontent.com/74039235/117770587-4d182f80-b25f-11eb-8747-986206545fcc.jpg)
-
-## Upcoming Movies
-
-## Order Page
-##### Jika anda menekan booknow dihalaman movie details, maka akan di lempar ke halaman order untuk memilih kursi.
-![order](https://user-images.githubusercontent.com/74039235/117770758-851f7280-b25f-11eb-89f5-90c67e02b16d.png)
-
-## Payment Page
-##### Setelah memilih kursi segera lakukan pembayaran.
-![payment](https://user-images.githubusercontent.com/74039235/117770675-68833a80-b25f-11eb-8317-4d0a92a89cac.png)
-
-## Ticket Result
-##### Hasil ticket yang dipesan.
-![ticket-result](https://user-images.githubusercontent.com/74039235/117770885-aed89980-b25f-11eb-930d-52f2c518ce04.png)
-
-## Edit Profile
-##### Anda dapat mengubah profile pada halaman edit profile. 
-![profile](https://user-images.githubusercontent.com/74039235/117770826-99fc0600-b25f-11eb-8229-c758635200ed.png)
-
-## Create Movie
+  <h3 align="center">Ticktiz Ticket</h3>
+  <p align="center">
+   by Kevin Farid Alpharisy
+  </p>
+ 
+  <p align="center">
+    <br />
+    <a href="https://github.com/kevinfaridap/week5-frontend-beginner"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://ticktiz-ticket.netlify.app/">View Demo</a>
+    ·
+    <a href="https://github.com/kevinfaridap/week5-frontend-beginner/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/kevinfaridap/week5-frontend-beginner/issues">Request Feature</a>
+  </p>
+</p>
 
 
-## VISIT PROJECT !!!
+
+<!-- ABOUT THE PROJECT -->
+## Tentang Project
+
+Ticktiz Ticket adalah aplikasi layanan pemesanan ticket film secara online yang memudahkan penggunanya untuk melihat film yang sedang tayang dan film yang akan tayang. Aplikasi ini membantu pengguna untuk melakukan pemesanan secara cepat, efektif dan aman. Aplikasi ini dibangun menggunakan reactJS, nodeJS, dan expressJS.
+
+
+
+### Built With
+
+* [ReactJS](https://reactjs.org/)
+* [Bootstrap V.4](https://getbootstrap.com/)
+* **JWT** for Authentication
+* **Nodemailer** for Mailer
+
+
+
+<!-- GETTING STARTED -->
+## Mulai Project
+
+### Pra Syarat
+
+Ini merupakan hal- hal yang diperlukan untuk memulai dan menginstall aplikasi ini.
+
+* [nodejs](https://nodejs.org/en/download/)
+
+
+### Installation
+
+1. Clone the repo
+```sh
+git clone https://github.com/kevinfaridap/week5-frontend-beginner.git
+```
+2. Install NPM packages
+```sh
+npm install
+```
+3. Add .env file at root folder project, and add following
+```sh
+REACT_APP_API=[Backend API]
+REACT_APP_SOCKET=[Backend API]
+```
+
+
+<!-- ROADMAP -->
+## Screenshots
+
+<p align='center'>
+  <span>
+      <image width="200" src='./screenshoot/home.png' />
+      <image width="200" src='./screenshoot/signup.png' />
+      <image width="200" src='./screenshoot/signin.png' />
+      <image width="200" src='./screenshoot/upcoming.png' />
+      <image width="200" src='./screenshoot/movie-details.png' />
+      <image width="200" src='./screenshoot/cinema.png' />
+      <image width="200" src='./screenshoot/select-seat.png' />
+      <image width="200" src='./screenshoot/payment.png' />    
+      <image width="200" src='./screenshoot/ticket-result.png' />
+      <image width="200" src='./screenshoot/profile.png' />
+      <image width="200" src='./screenshoot/admin.png' />
+   
+   
+   
+<!-- CONTRIBUTING -->
+## Berkontribusi
+
+Berkontibusi membuat komunitas open source menjadi tempat yang luar biasa untuk belajar, menginspirasi, dan berkreasi. Setiap kontribusi yang Anda berikan ** sangat dihargai **.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+
+
+## Related Project
 - :white_check_mark: [Backend](https://github.com/kevinfaridap/backend-beginner-arkademy)
 - :rocket: [Ticktiz Ticket](https://ticktiz-ticket.netlify.app/)
+ 
+
+
+<!-- CONTACT -->
+## Contact
+
+Email: kevinfaridap@gmail.com
+
+[My LinkedIn](https://linkedin.com/in/kevin-farid-alpharisy/)
+
 
