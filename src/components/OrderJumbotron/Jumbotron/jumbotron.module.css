@@ -26,7 +26,9 @@
     color: #5F2EEA;
     font-family: 'Mulish';
     margin-top: 10px;
-    margin-left: 200px;
+    position: absolute;
+    right: 40px;
+    /* margin-left: 200px; */
   }
   
   .jumbotron-1 h3{
@@ -44,10 +46,14 @@
   }
   
   .jumbotron-1 .order-img{
-    background-image: url(./assets/order-img.png);
+    /* background-image: url(./assets/order-img.png);
     width: 132px;
     height: 23px;
-    margin-left: 105px;
+    margin-left: 105px; */
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   .jumbotron-1 h5.order-title{
     text-align: center;
@@ -92,10 +98,32 @@
     font-family: 'Mulish';
     font-weight: 600;
     text-align: center; 
-    margin-right: -90px;
+    /* margin-right: -90px; */
   }
 
+  .jumbotron-1 button.button-seat{
+    width: 26px;
+    height: 26px;
+    background: #D6D8E7;
+    border-radius: 4px;
+    border: none;
+    /* margin-top: 50px; */
+    /* margin-left: 80px; */
 
+  }
+
+  .jumbotron-1 button.button-seat:focus{
+    background-color: #5F2EEA;
+    color: white;
+  }
+
+  .jumbotron-1 button.button-seat:hover{
+    background-color:teal;
+  }
+
+  div.seat-menu{
+    margin-left: 80px;
+  }
 
 
 

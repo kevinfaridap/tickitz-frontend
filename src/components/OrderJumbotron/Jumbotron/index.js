@@ -1,8 +1,68 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import Style from './jumbotron.module.css'
-import {Link} from 'react-router-dom'
+import {Link, useParams, useLocation} from 'react-router-dom'
+import Axios from 'axios'
+import {useHistory} from 'react-router-dom'
 
 function Jumbotron() {
+  const {search, pathname} = useLocation();
+  const history = useHistory()
+  const params = useParams()
+  // console.log(params);
+  const [movieState, setStateMovie] = useState({
+    moviebyid: [],
+  })
+
+  const [getSeatsA, setGetSeatsA] = useState()
+  const [getSeatsB, setGetSeatsB] = useState()
+
+  useEffect(()=>{
+    const idMovie = params.idmovie 
+    Axios.get(`${process.env.REACT_APP_API}/movies/${idMovie}`)
+    .then((res)=>{
+      setStateMovie({
+        moviebyid: res.data.data
+      })
+    })  
+
+    
+  }, []);
+
+  useEffect(()=>{
+    Axios.get(`${process.env.REACT_APP_API}/seat/getbycategory/A`)
+    .then((res)=>{
+      // console.log(res.data.data, 'llll');
+      const dataSeat = res.data.result
+      console.log(dataSeat, 'iniasdasd');
+      if(dataSeat !== undefined){
+        setGetSeatsA(dataSeat)
+      } else{
+        console.log(dataSeat);
+      }
+    })
+    .catch((err)=>{
+      console.log(err);
+    })
+
+    Axios.get(`${process.env.REACT_APP_API}/seat/getbycategory/B`)
+    .then((res)=>{
+      const dataSeatB = res.data.result
+      if(dataSeatB !== undefined){
+        setGetSeatsB(dataSeatB)
+      } else{
+        console.log(dataSeatB);
+      }
+    })
+    .catch((err)=>{
+      console.log(err);
+    })
+  }, [pathname]);
+
+  const idCinema = params.idcinema
+  const adaMovie = movieState.moviebyid;
+  const schdulee = adaMovie.schedule
+  // console.log(getSeatsA);
+
     return (
         <div>
            {/* <!-- JUMBOTRON --> */}
@@ -15,12 +75,16 @@ function Jumbotron() {
               </div>
 
               <div className={[['row'], Style['movieAndOrder']].join(' ')}>
+              {schdulee !== undefined  ?  schdulee.map((item)=>{
+              return( 
+              <>
                 <div className="col-md-8">
                   <div className={[['card'], Style['card1']].join(' ')} >
                     <div className="card-body">
                       <div className="row">    
-                        <h3>Spider-Man: Homecoming</h3>
-                        <Link to="#" className={[['btn'], Style['button']].join(' ')}>Change Movie</Link>
+                      {/* {item.idCinema} */}
+                        <h3>{item.idCinema==idCinema?item.movieTittle: ''}</h3>
+                        <Link to="/" className={[['btn'], Style['button']].join(' ')}>Change Movie</Link>
                       </div>
                     </div>
                   </div>
@@ -28,9 +92,9 @@ function Jumbotron() {
                 <div className="col-4">
                   <div className={[['card'], Style['card-order-info']].join(' ')} >
                     <div className="card-body">
-                      <div className={Style['order-img']}></div>
-                      {/* <img className="order-img" src="./assets/order-img.png" alt=""> */}
-                      <h5 className={Style['order-title']}>CineOne21 Cinema</h5>
+                      {/* <div className={Style['order-img']}></div> */}
+                      <img className={Style['order-img']} src={item.image} alt=""/>
+                      <h5 className={Style['order-title']}>{item.cinemaName}</h5>
                       
                       <div className="row">
                         <div className={[['col'], Style['order-information']].join(' ')}>
@@ -40,9 +104,9 @@ function Jumbotron() {
                           <h5>Seat Choosen</h5>
                         </div>
                         <div className={[['col'], Style['order-detail']].join(' ')}>
-                          <h5>Spider-Man: Homecoming</h5>
-                          <h5>02:00pm</h5>
-                          <h5>$10</h5>
+                          <h5>{item.movieTittle}</h5>
+                          <h5>{item.time}</h5>
+                          <h5>Rp.{item.price}</h5>
                           <h5>C4, C5, C6</h5>
                         </div>
                       </div>
@@ -57,14 +121,18 @@ function Jumbotron() {
                           <h4>Total Payment</h4>
                         </div>
                         <div className="col">
-                          <h3>$30</h3>
+                          <h3>Rp. {item.price}</h3>
                         </div>
                       </div>
 
                     </div>
                   </div>
                 </div>
+              </>
+              )   
+              }) :console.log('No data map') }
               </div>
+              
               {/* <!-- AKHIR MOVIE SELECTED & ORDER INFO --> */}
 
               {/* <!-- AWAL CHHOSE YOUR SEAT --> */}
@@ -79,17 +147,47 @@ function Jumbotron() {
                       <div className="row">    
                         <h5 className={Style['screen-tittle']}>Screen</h5>
                       </div>
-                      <div className="row">
+                      <div className="row mb-5">
                         <div className={Style['line-mobile']}></div>
                         <div className={Style['img-line']}></div>
                         {/* <img className="line-mobile" src="/assets/line-mobile.png" alt=""> */}
                         {/* <img className="line" src="./assets/Rectangle 536.png" alt=""> */}
                       </div>
-                      <div className="row">
-                        <div className={Style.seat}></div>
-                        <div className={Style['seat-mobile']}></div>
-                        {/* <img className="seat" src="./assets/seat.PNG" alt=""> */}
-                        {/* <img className="seat-mobile" src="./assets/seat-mobile.PNG" alt=""> */}
+                      <div className={[["row"], ["mb-3"], Style['seat-menu']].join(' ')}>
+                      {/* <p>{JSON.stringify(getSeatsA)}</p>   */}
+                      {getSeatsA !== undefined? getSeatsA.map((item)=>{
+                      return( 
+                      <>
+                        <div className="col-1">
+                          <button
+                            className={Style['button-seat']}
+                          > 
+                          {/* {item.seatName} */}
+                          </button>
+                        </div>
+                      </>
+                      )   
+                      }): null }
+                        
+                        {/* Hapus Sebentar */}
+                        {/* <div className={Style.seat}></div>
+                        <div className={Style['seat-mobile']}></div> */}
+                        
+                      </div>
+                      <div className={[["row"], Style['seat-menu']].join(' ')}>
+                        {getSeatsB !== undefined? getSeatsB.map((item)=>{
+                        return( 
+                        <>
+                          <div className="col-1">
+                            <button
+                              className={Style['button-seat']}
+                            >
+                              {/* {item.seatName} */}
+                            </button>
+                          </div>
+                        </>
+                        )   
+                        }): null }
                       </div>
                       
                       <div className="row">

@@ -13,7 +13,7 @@ const loginFailure = (error) =>{
 export const login = (data) => (dispatch) => {
   return new Promise((resolve, reject)=> {
     dispatch(loginRequest())
-      axios.post('http://localhost:8000/v1/users/login/', data)
+      axios.post(`${process.env.REACT_APP_API}/users/login/`, data)
       .then((res) => {
         const dataUser = res.data
         // console.log(dataUser);
@@ -35,10 +35,24 @@ export const login = (data) => (dispatch) => {
 
 export const register = (data) => dispatch=>{
   return new Promise((resolve, reject)=>{
-    axios.post('http://localhost:8000/v1/users/register', data)
+    axios.post(`${process.env.REACT_APP_API}/users/register`, data)
     .then((res)=>{
       const result = res.data 
       dispatch({type: 'USER_REGISTER'})
+      resolve(result)
+    })
+    .catch((err)=>{
+      reject(err)
+    })
+  })
+}
+
+export const updateImage = (data, iduser) => dispatch=>{
+  return new Promise((resolve, reject)=>{
+    axios.put(`${process.env.REACT_APP_API}/users/updateimage/`)
+    .then((res)=>{
+      const result = res.data 
+      dispatch({type: 'UPDATE_IMG', payload: result})
       resolve(result)
     })
     .catch((err)=>{

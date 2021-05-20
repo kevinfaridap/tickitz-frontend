@@ -37,7 +37,7 @@ function FormSign() {
         phoneNumber: '',
         role: '',
       })
-      swal(`Registered \n Email : ${formUser.email} \n Password : ${formUser.password}`)
+      swal(`Registered \n Email : ${formUser.email}`)
       history.push('/signin')
     })
     .catch((err)=>{

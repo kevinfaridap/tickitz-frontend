@@ -11,7 +11,7 @@ function Jumbotron2() {
                     
                     <div className={['row', Style['teks-show']].join(' ')}>
                       <div className="col">
-                          <h4 className={Style['title-showing']} >Now Showing</h4>
+                          <h4 className={Style['title-showing']} >Upcoming Movies</h4>
                       </div>
                       <div className="col">
                           <Link to="/allmovies">

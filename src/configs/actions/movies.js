@@ -15,7 +15,7 @@ import axiosApiInstance from '../../helpers/axios'
 
 export const getAllMovies = () => {
   return(dispatch)=>{
-    axios.get('http://localhost:8000/v1/movies?page=1&limit=10')
+    axios.get('http://localhost:8000/v1/movies?page=1&limit=5')
      .then((res)=>{
        const resData = res.data
        const dataMovie = resData.data

@@ -15,7 +15,7 @@ function Jumbotron() {
     useEffect(()=>{
       const idMovie = params.idmovie
       
-      Axios.get(`http://localhost:8000/v1/movies/${idMovie}`)
+      Axios.get(`${process.env.REACT_APP_API}/movies/${idMovie}`)
       .then((res)=>{
         // console.log(res.data);
         setStateMovie({

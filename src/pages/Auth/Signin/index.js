@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import style from './signin.module.css'
 // import FormSign from '../../../components/FormSingup'
 import FormSignin from './../../../components/FormSignin'
+import {Link} from 'react-router-dom'
 
 function Signin () {
 // class Signin extends Component {
@@ -36,7 +37,7 @@ function Signin () {
                 
                 {/* <FormSign /> */}
                 <FormSignin />
-                <h2 className={style['forget-teks']}>Forgot your password? <a href={url}>Reset Now</a> </h2>
+                <h2 className={style['forget-teks']}>Forgot your password? <Link to={url}>Reset Now</Link> </h2>
                                 
                 <p className={style['or-teks']}>or</p>
                 <div className={style.or}></div> 
@@ -45,18 +46,18 @@ function Signin () {
                 <div className="row justify-content-center">
                   <div className="col-lg-5 col-5">
                     <div className={style.box}> 
-                      <a href={url}> 
+                      <Link to={url}> 
                         <div className={style.google}> </div>
-                      </a>
-                      <a className={style.googleTeks} href={url}>Google</a> 
+                      </Link>
+                      <a className={style.googleTeks} href='/signup'>Google</a> 
                     </div>
                   </div>
                   <div className="col-lg-5 col-5">
                     <div className={style.box}> 
-                      <a href={url}>
+                      <Link to={url}>
                         <div className={style.fb}> </div>
-                      </a>
-                      <a className={style.fbTeks} href={url}>Facebook</a>
+                      </Link>
+                      <Link className={style.fbTeks} to='/signup'>Facebook</Link>
                     </div>
                   </div>
                 </div>

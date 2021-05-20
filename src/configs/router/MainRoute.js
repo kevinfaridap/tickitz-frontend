@@ -12,6 +12,7 @@ import OrderHistory from '../../pages/Main/OrderHistory'
 import PrivateRoute from './module/PrivateRoute'
 import Admin from '../../pages/Main/Admin/Index'
 import TicketResult from '../../pages/Main/TicketResult'
+import PublicRoute from './module/PublicRoute'
 
 function MainRoute() {
   return (
@@ -19,10 +20,10 @@ function MainRoute() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/signin" component={Signin} />
-          <Route path="/signup" component={Signup} />
+          <PublicRoute path="/signin" component={Signin} />
+          <PublicRoute path="/signup" component={Signup} />
           <PrivateRoute path="/details/:idmovie" component={Details} />
-          <PrivateRoute path="/order" component={Order} />
+          <PrivateRoute path="/order/:idmovie/:idcinema" component={Order} />
           <PrivateRoute path="/payment" component={Payment} />
           <PrivateRoute path="/allmovies" component={AllMovies} />
           <PrivateRoute path="/profile" component={Profile}  />

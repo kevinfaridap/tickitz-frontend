@@ -8,7 +8,7 @@ function Cardmonth() {
 
             <div className={[['row'], Style['teks-upcoming']].join(' ')}>
               <div className="col">
-                <h4 className={Style['title-upcoming']} >Upcoming Movies</h4>
+                <h4 className={Style['title-upcoming']} >Now Showing Movies</h4>
               </div>
               <div className="col">
                 <h4 className={Style['view-upcoming']} > view all</h4>

@@ -1,48 +1,51 @@
 import React, {useEffect, useState} from 'react'
 import Style from './jumbotron.module.css'
 import Axios from 'axios'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import swal from 'sweetalert'
 const jwt = require('jsonwebtoken')
 
 function Jumbotron() {
+  const history = useHistory()
   const [accountList, setAccountList] = useState([]);
-  
   const [firstName, setUpdateFirstName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [lastName, setLastName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [role , setRole] = useState("");
 
   const isAuthenticated = localStorage.getItem('token')
   let decode = jwt.decode(isAuthenticated)
   const idUser = decode.idUser;
   
   useEffect(()=>{
-    // console.log(decode.idUser);
     Axios.get(`http://localhost:8000/v1/users/${idUser}`)
     .then((res)=>{
-        // console.log(res);
         setAccountList(res.data.data)
     })
-
-    
   }, []); 
  
-  // const updateAccount = (id) =>{
-  //   Axios.put(`http://localhost:8000/v1/users/${id}`, {
+
   const updateAccount = () =>{
+    // e.preventDefault();
     Axios.put(`http://localhost:8000/v1/users/${idUser}`, {
       firstName: firstName,
       lastName: lastName,
-      email: email, 
-      password: password,
       phoneNumber: phoneNumber,
-      role: role
    })
+   .then((res) => {
+      if(res.data.message === "Succes update data"){
+        swal(`Success Update Profile`)
+        history.push(`/`)
+      } else{
+        swal(`Something Wrong !!`)
+      }
+    })
+    .catch((err) => {
+        console.log(err);
+    }) 
    swal('succes')
   }
+
+
 
     return (
         <div>
@@ -87,32 +90,39 @@ function Jumbotron() {
                       <div className="form-row mt-5">
                         <div className="col">
                           <h5 className={Style['text-form']} >First Name</h5>
-                          <input type="text" className={Style['form-control']} 
-                          placeholder={item.firstName} 
-                          onChange={(e)=>{ setUpdateFirstName(e.target.value)
+                          <input 
+                            type="text" 
+                            className={Style['form-control']} 
+                            placeholder={item.firstName} 
+                            onChange={(e)=>{ setUpdateFirstName(e.target.value)
                           }} />
                         </div>
                         <div className="col">
                           <h5 className={Style['text-form']}>Last Name</h5>
-                          <input type="text" className={Style['form-control']} 
-                          placeholder={item.lastName}
-                          onChange={(e)=>{ setLastName(e.target.value)}}
+                          <input 
+                            type="text" 
+                            className={Style['form-control']} 
+                            placeholder={item.lastName}
+                            onChange={(e)=>{ setLastName(e.target.value)}}
                           />
                         </div>
                       </div>
                       <div className="form-row mt-3 mb-3">
                         <div className="col">
                           <h5 className={Style['text-form']}>Your Email</h5>
-                          <input type="text" className={Style['form-control']} 
-                          placeholder={item.email}
-                          onChange={(e)=>{ setEmail(e.target.value)}}
+                          <input 
+                            type="text" 
+                            className={Style['form-control']} 
+                            value={item.email}
                           />
                         </div>
                         <div className="col">
                           <h5 className={Style['text-form-phone']}>Phone Number</h5>
-                          <input type="text" className={Style['form-control']} 
-                          placeholder={item.phoneNumber}
-                          onChange={(e)=>{ setPhoneNumber (e.target.value)}}
+                          <input 
+                            type="number" 
+                            className={Style['form-control']} 
+                            placeholder={item.phoneNumber}
+                            onChange={(e)=>{ setPhoneNumber (e.target.value)}}
                           />
                         </div>
                       </div>
@@ -125,15 +135,19 @@ function Jumbotron() {
                       <div className="form-row mt-5">
                         <div className="col">
                           <h5 className={Style['text-password']} >New Password</h5>
-                          <input type="text" className={Style['form-control']} 
-                          placeholder='Write Your Password' 
-                          onChange={(e)=>{ setPassword(e.target.value)
-                          }} />
+                          <input 
+                            type="text" 
+                            className={Style['form-control']} 
+                            placeholder='Write Your Password' 
+                            // onChange={(e)=>{ setPassword(e.target.value)}} 
+                          />
                         </div>
                         <div className="col">
                           <h5 className={Style['text-password2']}>Confirm Password</h5>
-                          <input type="text" className={Style['form-control']} 
-                          placeholder='Confirm Your password'
+                          <input 
+                            type="text" 
+                            className={Style['form-control']} 
+                            placeholder='Confirm Your password'
                           />
                         </div>
                       </div>

@@ -2,20 +2,23 @@ import React, {useEffect, useState} from 'react'
 import Style from './jumbotron.module.css'
 import {Link, useParams} from 'react-router-dom'
 import Axios from 'axios'
+import {useHistory} from 'react-router-dom'
 
 function Jumbotron2() {
+  const history = useHistory()
   const params = useParams()
 
   const [movieState, setStateMovie] = useState({
     moviebyid: [],
   })
 
+  // U/ Cinema nya di join dari moviebyid, jadi tidak pakai ini
   const [cinemaState, setStateCinema] = useState({
     cinemaList: [],
   })
 
   useEffect(()=>{
-    Axios.get(`http://localhost:8000/v1/cinema/`)
+    Axios.get(`${process.env.REACT_APP_API}/cinema/`)
       .then((res)=>{
         setStateCinema({
           cinemaList: res.data.data
@@ -23,9 +26,9 @@ function Jumbotron2() {
       }) 
 
     const idMovie = params.idmovie 
-    Axios.get(`http://localhost:8000/v1/movies/${idMovie}`)
+    Axios.get(`${process.env.REACT_APP_API}/movies/${idMovie}`)
     .then((res)=>{
-      // console.log(res.data);
+      // console.log(res.data, 'ddudu');
       setStateMovie({
         moviebyid: res.data.data
       })
@@ -34,14 +37,18 @@ function Jumbotron2() {
   }, []);
 
 
-  // console.log(cinemaState);
   const adaMovie = movieState.moviebyid;
   const schdulee = adaMovie.schedule
 
-  // console.log("kkk", schdulee[0].cinemaName);
+  const handlingBooking = (idMovie, idCinema) => {
+    history.push(`/order/${idMovie}/${idCinema}`)
+  }
+
   // if(schdulee[0].cinemaName != schdulee[1].cinemaName){
   //   console.log('sasas');
   // }
+
+
 
     return (
         <div>
@@ -51,7 +58,7 @@ function Jumbotron2() {
                 <h1 className={Style['display-4']}>Showtimes and Tickets</h1>
                 
                 {/* <!-- AWAL DROPDOWN --> */}
-                <div className="row">
+                {/* <div className="row">
                   <div className="col-lg-4">
                     <div className={Style['dropdown']}>
                       <button className={[Style['btn'], ['btn-secondary'], ['dropdown-toggle']].join(' ')} type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -72,7 +79,7 @@ function Jumbotron2() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
                 {/* <!-- AKHIR DROPDOWN --> */}
 
                 {/* <!-- Cards1 --> */}
@@ -81,8 +88,8 @@ function Jumbotron2() {
                     return( 
                     <> */}
                   {schdulee !== undefined  ?  schdulee.map((item)=>{
-                        return( 
-                        <>
+                  return( 
+                  <>
                   <div className={[['col-lg-4'], Style['card-1']].join(' ')}>
                     <div className={Style.card}>
                       <div className="card-body">
@@ -98,7 +105,7 @@ function Jumbotron2() {
                           </div>
                         </div>
 
-                        <div className="row">
+                        <div className="row mt-3">
                           <div className={Style['img-show-line']}></div>
                           {/* <img className="img-show-line" src="./assets/Line 29.png" alt=""> */}
                         </div>
@@ -106,38 +113,11 @@ function Jumbotron2() {
                         {/* {schdulee !== undefined ? schdulee.map((item)=>{
                           return( 
                           <> */}
-                        <div className="row mt-2">
+                        <div className="row mt-2 mt-lg-4">
                           <div className="col">
                             <h4>{item.time}</h4>
                           </div>
-                          {/* <div className="col">
-                            <h4>{item.time}</h4>
-                          </div>
-                          <div className="col">
-                            <h4>{item.time}</h4>
-                          </div> */}
-                          {/* <div className="col">
-                            <h4>{item.time}</h4>
-                          </div>
-                          <div className="col">
-                            <h4>{item.time}</h4>
-                          </div> */}
                         </div>
-                        {/* <div className="row mt-2">
-                          <div className="col">
-                            <h4>{item.time}</h4>
-                          </div>
-                          <div className="col">
-                            <h4>{item.time}</h4>
-                          </div>
-                          <div className="col">
-                            <h4>{item.time}</h4>
-                          </div>
-                          <div className="col">
-                            <h4> </h4>
-                          </div>
-                        </div> */}
-
                         {/* </>
                           )   
                           }) :console.log('err') } */}
@@ -148,10 +128,14 @@ function Jumbotron2() {
                           </div>
                           <div className="col">
                             {/* <h2>$10.00/seat</h2> */}
-                            <h2>${item.price}/seat</h2>
+                            <h2>Rp.{item.price}/seat</h2>
                           </div>
                         </div>
-                        <button type="button" className={Style.btn2}>Book Now</button>
+                        <button 
+                          type="button" 
+                          className={Style.btn2}
+                          onClick={() => {handlingBooking(params.idmovie, item.idCinema)}}
+                        >Book Now</button>
                         <button type="button" className={Style.btn3}>Add to cart</button>
                       </div>
                     </div>

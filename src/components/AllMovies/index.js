@@ -10,21 +10,17 @@ function AllMoviesJumbotron() {
   const dispatch = useDispatch()
   const {nowshowingmovies} = useSelector(state => state.nowshowingmovies)
 
-  // const pageNow = nowshowingmovies.currentPage
-  const [page, setPage] = useState(1);
-  const [order, setOrder] = useState('DESC')
-
+  const [page, setPage] = useState();
+  const [by, setBy] = useState();
+  const [order, setOrder] = useState( );
+  const [title, setTitle] = useState({
+    name: ''
+  });
   
-  // const getNowShowing = (page, order)=> {
-  //   dispatch(getNowShowingMovies(page, order))
-  // }
 
   useEffect(()=>{
-    // getNowShowing(page)
-    // console.log(order);
-    dispatch(getNowShowingMovies(page))
-    
-  }, [page]);
+    dispatch(getNowShowingMovies(page, by, order, title.name))
+  }, [page, by, order, title.name]);
 
   const nowMoviesPerPage = nowshowingmovies.MaxperPage
   const totalPage = nowshowingmovies.Items
@@ -34,14 +30,31 @@ function AllMoviesJumbotron() {
   const dataNowMovie = nowshowingmovies.data
 
 
+  const handleFormSearch = (e) =>{
+    setTitle({
+      ...title,
+      [e.target.name]: e.target.value
+    })
+  }
+
   // const isNoData = dataNowMovie.length !== 0;
   // console.log(dataNowMovie);
   return (
     <div>
       <div className={[['jumbotron'], ['jumbotron-fluid'], Style['jumbotron-now-showing-page']].join(' ')}>
         <div className="container">
-          <h1 className={Style['tittle-now-showing-page']}>All Now Showing Movies</h1>
-          
+          <h1 className={Style['tittle-now-showing-page']}>All Upcoming Movies</h1>
+          <form className="form d-flex justify-content-center mb-3">
+            <input 
+              className={[["form-control"], ["mr-sm-2"], Style["form-search"]].join(' ')} 
+              type="search" 
+              placeholder="Search receiver here" 
+              name="name"
+              id="name"
+              value={title.name}
+              onChange={(e)=>handleFormSearch(e)}
+            />
+          </form>
 
           <h5>Page: {nowPage} of {totalPage} | Total Page : {totalPage} | Total Movie : {totalMovie} </h5>
 
@@ -50,8 +63,8 @@ function AllMoviesJumbotron() {
             nowshowingmovies={nowshowingmovies}
           />
         
-        <button className={Style['btn-page-now-showing']} onClick={()=>setOrder('DESC')} >DESC</button>
-        <a onClick={()=>setOrder('DESC')} href="">DESCC</a>
+        {/* <button className={Style['btn-page-now-showing']} onClick={()=>setOrder('DESC')} >DESC</button>
+        <a onClick={()=>setOrder('DESC')} href="">DESCC</a> */}
 
         {/* {dataNowMovie !== undefined ? dataNowMovie.map((item)=>{
         return (
@@ -62,6 +75,13 @@ function AllMoviesJumbotron() {
           </>
           )
         }) : console.log("try again")} */}
+
+          <button className={Style['btn-asc']} onClick={()=>setOrder("ASC")} >
+            <img className={Style['up']} src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/sort-up-512.png" alt="" />
+          </button>
+          <button className={Style['btn-asc']} onClick={()=>setOrder("DESC")} >
+            <img className={Style['down']} src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/sort-up-512.png" alt="" />
+          </button>
 
         {/* AWAL BUTTON */}
         <div className="row display-flex justify-content-center mt-5">

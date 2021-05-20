@@ -38,7 +38,11 @@ const userReducer = (state = initialState, action) =>{
         ...state,
         user: action.payload
       }
-  
+    case 'UPDATE_IMG':
+      return{
+        ...state,
+        error: action.payload
+      }
     default:
       return state
   }

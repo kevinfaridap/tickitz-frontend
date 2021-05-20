@@ -228,7 +228,9 @@
     font-weight: bold;
     font-size: 14px;
     line-height: 24px;
-    margin-top: 25px;
+    /* margin-top: 25px; */
+    position: absolute;
+    bottom: 80px;
   }
   
   .jumbotron-2 .card .btn3{
@@ -242,8 +244,11 @@
     font-weight: bold;
     font-size: 14px;
     line-height: 24px;
-    margin-top: 25px;
+    /* margin-top: 25px; */
     margin-left: 32px;
+    position: absolute;
+    bottom: 80px;
+    right: 40px;
   }
   
   .jumbotron-2 .view-more-line{
