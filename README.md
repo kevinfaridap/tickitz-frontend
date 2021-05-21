@@ -68,17 +68,17 @@ REACT_APP_SOCKET=[Backend API]
 
 <p align='center'>
   <span>
-      <image width="200" src='./screenshoot/home.png' />
-      <image width="200" src='./screenshoot/signup.png' />
-      <image width="200" src='./screenshoot/signin.png' />
-      <image width="200" src='./screenshoot/upcoming.png' />
-      <image width="200" src='./screenshoot/movie-details.png' />
-      <image width="200" src='./screenshoot/cinema.png' />
-      <image width="200" src='./screenshoot/select-seat.png' />
-      <image width="200" src='./screenshoot/payment.png' />    
-      <image width="200" src='./screenshoot/ticket-result.png' />
-      <image width="200" src='./screenshoot/profile.png' />
-      <image width="200" src='./screenshoot/admin.png' />
+      <image width="400" src='./screenshoot/home.png' />
+      <image width="400" src='./screenshoot/signup.png' />
+      <image width="400" src='./screenshoot/signin.png' />
+      <image width="400" src='./screenshoot/upcoming.png' />
+      <image width="400" src='./screenshoot/movie-details.png' />
+      <image width="400" src='./screenshoot/cinema.png' />
+      <image width="400" src='./screenshoot/select-seat.png' />
+      <image width="400" src='./screenshoot/payment.png' />    
+      <image width="400" src='./screenshoot/ticket-result.png' />
+      <image width="400" src='./screenshoot/profile.png' />
+      <image width="400" src='./screenshoot/admin.png' />
    
    
    
