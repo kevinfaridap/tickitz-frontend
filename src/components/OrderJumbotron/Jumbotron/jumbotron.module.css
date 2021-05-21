@@ -482,4 +482,9 @@
   .jumbotron-1 .card3{
     display: none;
   }
+
+  .jumbotron-1 .order-information h5{
+    text-align: left !important;
+    margin-left: 15px;
+  }
 }

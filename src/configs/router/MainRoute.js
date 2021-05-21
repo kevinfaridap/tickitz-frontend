@@ -24,12 +24,12 @@ function MainRoute() {
           <PublicRoute path="/signup" component={Signup} />
           <PrivateRoute path="/details/:idmovie" component={Details} />
           <PrivateRoute path="/order/:idmovie/:idcinema" component={Order} />
-          <PrivateRoute path="/payment" component={Payment} />
+          <PrivateRoute path="/payment/:idmovie/:idcinema/:seatname/:ticketvalues" component={Payment} />
           <PrivateRoute path="/allmovies" component={AllMovies} />
           <PrivateRoute path="/profile" component={Profile}  />
           <PrivateRoute path="/orderhistory" component={OrderHistory}  />
           <PrivateRoute path="/admin" component={Admin} />
-          <PrivateRoute path="/ticketresult" component={TicketResult} />
+          <PrivateRoute path="/ticketresult/:idmovie/:idcinema/:seatname/:ticketvalues" component={TicketResult} />
 
         </Switch>
       </BrowserRouter>

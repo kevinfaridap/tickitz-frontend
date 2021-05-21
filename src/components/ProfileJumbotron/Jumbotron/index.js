@@ -15,9 +15,10 @@ function Jumbotron() {
   const isAuthenticated = localStorage.getItem('token')
   let decode = jwt.decode(isAuthenticated)
   const idUser = decode.idUser;
+  const email =decode.email
   
   useEffect(()=>{
-    Axios.get(`http://localhost:8000/v1/users/${idUser}`)
+    Axios.get(`http://localhost:8000/v1/users/${email}`)
     .then((res)=>{
         setAccountList(res.data.data)
     })
@@ -51,7 +52,7 @@ function Jumbotron() {
         <div>
           <div className={[['jumbotron'], ['jumbotron-fluid'], Style['profile-jumbo']].join(' ')}>
             <div className="container">
-            {accountList.map((item)=>{
+            {accountList!== undefined  ? accountList.map((item)=>{
             return (
               <div>
               <div className="row">
@@ -173,8 +174,8 @@ function Jumbotron() {
               <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> */}
 
                 </div>
-                )
-              })}
+               )   
+              }) :console.log('No data map') }
             </div>
           </div>
         </div>

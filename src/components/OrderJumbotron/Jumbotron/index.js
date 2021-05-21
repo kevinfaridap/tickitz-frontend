@@ -3,6 +3,7 @@ import Style from './jumbotron.module.css'
 import {Link, useParams, useLocation} from 'react-router-dom'
 import Axios from 'axios'
 import {useHistory} from 'react-router-dom'
+import swal from 'sweetalert'
 
 function Jumbotron() {
   const {search, pathname} = useLocation();
@@ -15,6 +16,8 @@ function Jumbotron() {
 
   const [getSeatsA, setGetSeatsA] = useState()
   const [getSeatsB, setGetSeatsB] = useState()
+  const [choosenSeat, setChoosenSeat] = useState([])
+  // console.log(choosenSeat, 'kursinya');
 
   useEffect(()=>{
     const idMovie = params.idmovie 
@@ -58,10 +61,26 @@ function Jumbotron() {
     })
   }, [pathname]);
 
+  // idcinema saya simpan diparam agar mudah ngemap data/kasih kondisi dibawah
   const idCinema = params.idcinema
   const adaMovie = movieState.moviebyid;
   const schdulee = adaMovie.schedule
-  // console.log(getSeatsA);
+  const idMovie = params.idmovie
+  const ticketValues =choosenSeat.length
+  // console.log(choosenSeat);
+
+  const handlingPayment = () => {
+    if(ticketValues===0){
+      swal(`You haven't choose any seat!`)
+    } else{
+      console.log(ticketValues);
+      history.push(`/payment/${idMovie}/${idCinema}/${choosenSeat}/${ticketValues}`)
+    }
+  }
+
+  const handlingChangeMovie = () => {
+    history.push(`/`)
+  }
 
     return (
         <div>
@@ -99,7 +118,8 @@ function Jumbotron() {
                       <div className="row">
                         <div className={[['col'], Style['order-information']].join(' ')}>
                           <h5>Movie selected</h5>
-                          <h5>Sunday, 06 March 2021</h5>
+                          <h5 >Time</h5>
+                          {/* <h5>Sunday, 06 March 2021</h5> */}
                           <h5>One Ticket Price</h5>
                           <h5>Seat Choosen</h5>
                         </div>
@@ -107,7 +127,8 @@ function Jumbotron() {
                           <h5>{item.movieTittle}</h5>
                           <h5>{item.time}</h5>
                           <h5>Rp.{item.price}</h5>
-                          <h5>C4, C5, C6</h5>
+                          <h5>{choosenSeat+` `}</h5>
+                          
                         </div>
                       </div>
 
@@ -121,7 +142,7 @@ function Jumbotron() {
                           <h4>Total Payment</h4>
                         </div>
                         <div className="col">
-                          <h3>Rp. {item.price}</h3>
+                          <h3>Rp. {choosenSeat.length*item.price}</h3>
                         </div>
                       </div>
 
@@ -139,7 +160,7 @@ function Jumbotron() {
               <div className={[['row'], Style['chooseyourseat']].join(' ')}>
                 <h3>Choose Your Seat</h3>
               </div>
-
+              
               <div className="row">
                 <div className="col">
                   <div className={[['card'], Style['card2']].join(' ')} >
@@ -150,30 +171,26 @@ function Jumbotron() {
                       <div className="row mb-5">
                         <div className={Style['line-mobile']}></div>
                         <div className={Style['img-line']}></div>
-                        {/* <img className="line-mobile" src="/assets/line-mobile.png" alt=""> */}
-                        {/* <img className="line" src="./assets/Rectangle 536.png" alt=""> */}
                       </div>
                       <div className={[["row"], ["mb-3"], Style['seat-menu']].join(' ')}>
-                      {/* <p>{JSON.stringify(getSeatsA)}</p>   */}
                       {getSeatsA !== undefined? getSeatsA.map((item)=>{
                       return( 
                       <>
                         <div className="col-1">
                           <button
                             className={Style['button-seat']}
+                            onClick={()=>{setChoosenSeat([...choosenSeat, item.seatName])}}
                           > 
-                          {/* {item.seatName} */}
                           </button>
                         </div>
                       </>
                       )   
                       }): null }
-                        
                         {/* Hapus Sebentar */}
                         {/* <div className={Style.seat}></div>
                         <div className={Style['seat-mobile']}></div> */}
-                        
                       </div>
+                    
                       <div className={[["row"], Style['seat-menu']].join(' ')}>
                         {getSeatsB !== undefined? getSeatsB.map((item)=>{
                         return( 
@@ -181,8 +198,8 @@ function Jumbotron() {
                           <div className="col-1">
                             <button
                               className={Style['button-seat']}
+                              onClick={()=>{setChoosenSeat([...choosenSeat, item.seatName])}}
                             >
-                              {/* {item.seatName} */}
                             </button>
                           </div>
                         </>
@@ -379,13 +396,25 @@ function Jumbotron() {
 
               <div className={[['row'], Style['last-button']].join(' ')}>
                 <div className={[['col'], Style['button1']].join(' ')}>
-                  <button type="button" className={[['btn'], Style['button-change']].join(' ')}>Change your movie</button>
+                  <button 
+                    type="button" 
+                    className={[['btn'], Style['button-change']].join(' ')}
+                    onClick={()=>{handlingChangeMovie()}}
+                  >
+                    Change your movie
+                  </button>
                 </div>
                 <div className={[['col'], Style['button2']].join(' ')}>
               
-                <Link to="/payment">
-                  <button type="button" className={[['btn'], Style['button-check']].join(' ')}>Checkout now</button>
-                </Link>
+                {/* <Link to="/payment"> */}
+                  <button 
+                    type="button" 
+                    className={[['btn'], Style['button-check']].join(' ')}
+                    onClick={() => {handlingPayment()}}
+                  >
+                    Checkout now
+                  </button>
+                {/* </Link> */}
                 </div>
               </div>
 

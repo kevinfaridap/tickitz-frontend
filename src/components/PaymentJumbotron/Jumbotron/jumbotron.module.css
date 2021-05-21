@@ -125,6 +125,9 @@
     width: 80px;
     height: 32px;
   }
+
+ 
+
   .jumbotron-1 .card2 .google-payment{
     width: 35px;
     height: 14px;
@@ -399,6 +402,77 @@
     margin-left: -50px;
     margin-bottom: 2px;
     margin-right: 25px;  
+  }
+
+  .jumbotron-1 .paymentinfo h5.info1{
+    text-align: left !important;
+    margin-left: 40px;
+  }
+
+  .jumbotron-1 .paymentinfo .totalpayment h4{
+    margin-left: 40px;
+  }
+
+  .jumbotron-1 .paymentinfo .line-payment{
+    border: 1px solid #E6E6E6;
+    margin-bottom: 0px;
+    width: 45vw;
+    margin-left: 40px;
+  }
+
+  .jumbotron-1 .paymentinfo h5.info2{
+    text-align: right !important;
+    margin-right: 40px;
+  }
+
+  .jumbotron-1 .paymentinfo .totalpayment h3{
+    margin-right: 40px;
+  }
+
+  .jumbotron-1  button.button-prev{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 28px;
+    align-items: left;
+    text-align: center;
+    letter-spacing: 0.75px;
+    color: #5F2EEA;
+    border: 2px solid #5F2EEA;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 20vw;
+ 
+    
+  }
+
+  .jumbotron-1 button.button-paynow{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 28px;
+    align-items: right;
+    float: right;
+    text-align: center !important;
+    letter-spacing: 0.75px;
+    color: #F7F7FC;
+    background: #5F2EEA;
+    border-radius: 4px;
+    width: 20vw;
+  }
+
+  .jumbotron-1 .payment:checked{
+    border: #5F2EEA solid;
+  }
+  .jumbotron-1 .payment:focus{
+    border: #5F2EEA solid;
+  }
+
+  .jumbotron-1 .payment:hover{
+    cursor: pointer;
+    border: #5F2EEA solid;
   }
 
 
