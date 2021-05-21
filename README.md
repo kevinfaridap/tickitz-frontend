@@ -1,7 +1,10 @@
 <p align="center">
 
-  <h3 align="center">Ticktiz Ticket</h3>
+  <h3 align="center">Tickitz </h3>
   <p align="center">
+   <br />
+   <image width="" src='https://user-images.githubusercontent.com/74039235/119124755-39d54300-ba5b-11eb-82f9-ab35478380c4.png' />
+   <br />
    by Kevin Farid Alpharisy
   </p>
  
