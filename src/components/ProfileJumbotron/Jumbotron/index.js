@@ -18,7 +18,7 @@ function Jumbotron() {
   const email =decode.email
   
   useEffect(()=>{
-    Axios.get(`http://localhost:8000/v1/users/${email}`)
+    Axios.get(`${process.env.REACT_APP_API}/users/${email}`)
     .then((res)=>{
         setAccountList(res.data.data)
     })
@@ -27,7 +27,7 @@ function Jumbotron() {
 
   const updateAccount = () =>{
     // e.preventDefault();
-    Axios.put(`http://localhost:8000/v1/users/${idUser}`, {
+    Axios.put(`${process.env.REACT_APP_API}/users/${idUser}`, {
       firstName: firstName,
       lastName: lastName,
       phoneNumber: phoneNumber,
@@ -59,7 +59,8 @@ function Jumbotron() {
                 <div className="col-lg">
                   <div className={Style['card-profile']}>
                     <h6 className="mt-5 ml-5 lead">INFO</h6>
-                    <div className={Style['img-profile']}></div>
+                    {/* <div className={Style['img-profile']}></div> */}
+                    <img className={Style['img-profile']} src={item.image} alt="" />
                     <h5 className={Style['teks1']}>{item.firstName + ' ' + item.lastName }</h5>
                     <h6 className={Style['teks2']} >Premium Member </h6>
 
@@ -80,7 +81,7 @@ function Jumbotron() {
                 <div className="col-lg">
                   <div className={Style['card-profile2'] }>
                     <h5 className={Style['title-card']} >Account Settings</h5>
-                    <Link to="/orderhistory">
+                    <Link to="#">
                       <h5 className={Style['title-orderhistory']} >Order History</h5>
                     </Link>
                     <div className={Style['line-4']}></div>

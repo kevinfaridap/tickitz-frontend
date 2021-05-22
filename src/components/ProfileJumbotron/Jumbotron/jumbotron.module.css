@@ -32,7 +32,9 @@
   .img-profile{
     width: 156px;
     height: 136px;
-    background-image: url(./assets/Ellipse\ 11.png);
+    /* background-image: url(./assets/Ellipse\ 11.png); */
+    display: flex;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
     margin-top: 25px;

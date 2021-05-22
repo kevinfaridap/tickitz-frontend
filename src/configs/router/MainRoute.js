@@ -29,7 +29,7 @@ function MainRoute() {
           <PrivateRoute path="/profile" component={Profile}  />
           <PrivateRoute path="/orderhistory" component={OrderHistory}  />
           <PrivateRoute path="/admin" component={Admin} />
-          <PrivateRoute path="/ticketresult/:idmovie/:idcinema/:seatname/:ticketvalues" component={TicketResult} />
+          <PrivateRoute path="/ticketresult/:idmovie/:idcinema/:seatname/:ticketvalues/:ticketresult" component={TicketResult} />
 
         </Switch>
       </BrowserRouter>

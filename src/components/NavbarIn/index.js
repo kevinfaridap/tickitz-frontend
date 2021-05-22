@@ -1,10 +1,10 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import Style from './navbar.module.css'
 import ButtonNav from './../Button/ButtonNav'
 import {Redirect} from 'react-router-dom'
 import swal from 'sweetalert'
-import axios from 'axios'
+import Axios from 'axios'
 const jwt = require('jsonwebtoken')
 
 function Navbarin() {
@@ -19,10 +19,20 @@ function Navbarin() {
   
 
  
-  
+  const [accountList, setAccountList] = useState([]);
   
   const isAuthenticated = localStorage.getItem('token')
+
   let decode = jwt.decode(isAuthenticated)
+  const idUser = decode.idUser;
+  const email =decode.email
+  
+  useEffect(()=>{
+    Axios.get(`${process.env.REACT_APP_API}/users/${email}`)
+    .then((res)=>{
+        setAccountList(res.data.data)
+    })
+  }, []); 
   // console.log(decode);
   if(!isAuthenticated){
     return (
@@ -68,7 +78,7 @@ function Navbarin() {
                     </div>
                   </li>
                   <li className="nav-item">
-                      <Link className={Style['nav-link-logined']} to="#">
+                      <Link className={Style['nav-link-logined']} to="/allmovies">
                         <div className={Style['img2']}></div>
                       </Link>
                   </li>
@@ -142,7 +152,7 @@ function Navbarin() {
                     <Link className={Style['nav-link']} to="/allmovies"> Cinemas</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className={Style['nav-link']} to="/order"> Buy Ticket</Link>
+                    <Link className={Style['nav-link-buy']} to="/details/1"> Buy Ticket</Link>
                   </li>
   
                   <li className="nav-item dropdown ml-lg-5 nav-right">
@@ -156,7 +166,7 @@ function Navbarin() {
                     </div>
                   </li>
                   <li className="nav-item">
-                      <Link className="nav-link" to="#">
+                      <Link className="nav-link" to="/allmovies">
                         <div className={Style.img2}></div>
                       </Link>
                   </li>
@@ -165,12 +175,19 @@ function Navbarin() {
                   {/* TEST LOGOUT */}
                   <li className="nav-item dropdown ml-lg-5 nav-right">
                     <Link className={[Style['nav-link'], Style['dropdown-toggle']].join(' ')} href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <ButtonNav 
+                      {accountList!== undefined  ? accountList.map((item)=>{
+                      return (
+                      <>
+                        <img className={['btn', Style['img-profile']].join(' ')} src={item.image} alt="" />
+                        {/* <ButtonNav 
                           type = "button"
                           className={['btn', Style['img-profile']].join(' ')}
                           value = ""
                           to = "#"
-                        />
+                         /> */}
+                      </>
+                      )   
+                      }) :console.log('No data map') }
                     </Link>
                     <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <Link className="dropdown-item" to="/profile">Profile</Link>

@@ -23,356 +23,47 @@ h3.ticket-result-title{
   padding-top: 56px;
 }
 
-.ticket-rectangle{
-  width: 834px;
-  height: 362px;
-  background-color: white;
-  border-radius: 16px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 48px;
-}
-
-.img-ticket-header{
-  background-image: url(./assets/headline-ticket.png);
-  width: 834px;
-  height: 77px;
-}
-
-h6.movie-text{
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 24px;
-  letter-spacing: 0.75px;
-  color: #AAAAAA;
-  margin-left: 56px;
-  margin-top: 32px;
-}
-
-h6.movie-title{
+button.download{
   font-family: Mulish;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
-  line-height: 38px;
+  line-height: 28px;
   letter-spacing: 0.75px;
-  color: #14142B;
-  margin-left: 56px;
-  margin-top: -10px;
-}
-
-h6.date-text{
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 24px;
-  letter-spacing: 0.75px;
-  color: #AAAAAA;
-  margin-left: 56px;
-}
-h6.date-value{
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 38px;
-  letter-spacing: 0.75px;
-  color: #14142B;
-  margin-left: 56px;
-  margin-top: -10px;
-}
-
-h6.count-text{
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 24px;
-  letter-spacing: 0.75px;
-  color: #AAAAAA;
-  margin-left: 56px;
-}
-h6.count-value{
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 38px;
-  letter-spacing: 0.75px;
-  color: #14142B;
-  margin-left: 56px;
-  margin-top: -10px;
-}
-
-
-div.time-date{
-  position: relative;
-  left: -50px;
-}
-
-h6.time-text{
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 24px;
-  letter-spacing: 0.75px;
-  color: #AAAAAA;
-}
-h6.time-value{
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 38px;
-  letter-spacing: 0.75px;
-  color: #14142B;
-  margin-top: -10px;
-}
-
-h6.seat-text{
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 24px;
-  letter-spacing: 0.75px;
-  color: #AAAAAA;
-}
-h6.seat-value{
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 38px;
-  letter-spacing: 0.75px;
-  color: #14142B;
-  margin-top: -10px;
-}
-
-
-div.category-price{
-  position: relative;
-  left: -150px;
-}
-
-h6.category-text{
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 24px;
-  letter-spacing: 0.75px;
-  color: #AAAAAA;
-}
-h6.category-value{
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 38px;
-  letter-spacing: 0.75px;
-  color: #14142B;
-  margin-top: -10px;
-}
-
-h6.price-text{
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 24px;
-  letter-spacing: 0.75px;
-  color: #AAAAAA;
-  /* margin-left: 56px; */
-}
-h6.price-value{
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 38px;
-  letter-spacing: 0.75px;
-  color: #14142B;
-  /* margin-left: 56px; */
-  margin-top: -10px;
-}
-
-div.ticket-result-line{
-   border: 1px dashed #DEDEDE;
-  transform: rotate(0deg);
-  width: 2px;
-  height: 285px;
-  position: relative;
-  top: -235px;
-  left: 570px;
-}
-
-
-div.small-ticket{
-  position: absolute;
-  top: 435px;
-  left: 850px;
-}
-h6.movie-text-2{
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 24px;
-  letter-spacing: 0.75px;
-  color: #AAAAAA;
-}
-h6.movie-title-2{
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0.75px;
-  color: #14142B;
-  margin-top: -10px;
-}
-
-h6.date-text-2{
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 24px;
-  letter-spacing: 0.75px;
-  color: #AAAAAA;
-}
-h6.date-title-2{
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0.75px;
-  color: #14142B;
-  margin-top: -10px;
-}
-
-h6.count-text-2{
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 24px;
-  letter-spacing: 0.75px;
-  color: #AAAAAA;
-}
-h6.count-title-2{
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0.75px;
-  color: #14142B;
-  margin-top: -10px;
-}
-
-div.small-ticket-texts{
-  position: relative;
-  left: 80px;
-  top: -120px;
-}
-h6.time-text-2{
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 24px;
-  letter-spacing: 0.75px;
-  color: #AAAAAA;
-}
-h6.time-title-2{
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0.75px;
-  color: #14142B;
-  margin-top: -10px;
-}
-h6.seat-text-2{
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 24px;
-  letter-spacing: 0.75px;
-  color: #AAAAAA;
-}
-h6.seat-title-2{
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0.75px;
-  color: #14142B;
-  margin-top: -10px;
-}
-h6.category-text-2{
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 24px;
-  letter-spacing: 0.75px;
-  color: #AAAAAA;
-}
-h6.category-title-2{
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0.75px;
-  color: #14142B;
-  margin-top: -10px;
-}
-
-div.img-scan-bar{
-  background-image: url(./assets/scanbar.png);
-  width: 56px;
-  height: 56px;
-  position: relative;
-  top: -480px;
-  left: 785px;
-}
-div.img-scan-bar-2{
-  background-image: url(./assets/scanbar.png);
-  width: 56px;
-  height: 56px;
-  position: relative;
-  top: -475px;
-  left: 785px;
-}
-div.img-scan-bar-3{
-  background-image: url(./assets/scanbar.png);
-  width: 56px;
-  height: 56px;
-  position: relative;
-  top: -470px;
-  left: 785px;
-}
-
-div.buttom-circle{
-  width: 43px;
-  height: 43px;
-  background-color: #F5F6F8;
-  border: 1px solid #F5F6F8;
+  color: #4E4B66;
+  border: 1px solid #4E4B66;
   box-sizing: border-box;
-  border-radius: 100%;
-  position: relative;
-  top: -430px;
-  left: 550px;
+  border-radius: 4px;
+  width: 10vw;
+  height: 3vw;
+  
+}
+
+button.download:hover{
+  background-color: #5F2EEA;
+  color: white;
+  border: none;
+}
+
+button.print{
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+  color: #4E4B66;
+  border: 1px solid #4E4B66;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-left: 30px;
+  width: 10vw;
+  height: 3vw;
+  
+}
+
+button.print:hover{
+  background-color: #5F2EEA;
+  color: white;
+  border: none;
 }

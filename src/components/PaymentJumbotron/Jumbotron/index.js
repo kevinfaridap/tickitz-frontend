@@ -18,8 +18,7 @@ function Jumbotron() {
 
   const [getDataUserLogin, setGetDataUserLogin] = useState([])
   const [choosePayment, setChoosePayment] = useState(null)
-
-
+  
   useEffect(()=>{
     const idMovie = params.idmovie 
     Axios.get(`${process.env.REACT_APP_API}/movies/${idMovie}`)
@@ -53,14 +52,36 @@ function Jumbotron() {
   const idMovie = params.idmovie
   const seatname = params.seatname
   const ticketvalues = params.ticketvalues
-
-  console.log(params);
   
+    
   const payorder =()=>{
     if(choosePayment===null){
       swal(`You haven't choose payment method!`)
     } else{
-      history.push(`/ticketresult/${idMovie}/${idCinema}/${seatname}/${ticketvalues}`)
+      if(schdulee !== undefined){
+        Axios.post(`${process.env.REACT_APP_API}/ticketresult/`, {
+          movieTittle: schdulee[0].movieTittle,
+          time: schdulee[0].time,
+          seatvalues: ticketvalues,
+          seatnames: seatname,
+          price: schdulee[0].price
+        })
+        .then((res) => {
+            if(res.data === null || res.data === undefined){
+              swal(`Something Wrong!`)
+            } else{
+              const dataTicket = res.data.data
+              console.log(dataTicket);
+              swal(`Success Order Ticket!`)
+              history.push(`/ticketresult/${idMovie}/${idCinema}/${seatname}/${ticketvalues}/${dataTicket.id}`)
+            }
+        })
+        .catch((err) => {
+            console.log(err);
+        }) 
+      } else{
+        swal('something wrong!')
+      }
     }
   }
 
@@ -143,8 +164,6 @@ function Jumbotron() {
                             <h3>IDR {ticketvalues*item.price}</h3>
                           </div>
                         </div>
-
-                        
                       </div>
                     </div>
                     </> 
@@ -172,7 +191,7 @@ function Jumbotron() {
                         <h5 className={Style['title-personalinfo']}>Phone Number</h5>
                         <div className="row">
                           <div className={[['card'], Style['card-info']].join(' ')}>
-                              <h5>+{getDataUserLogin.phoneNumber} </h5>  
+                              <h5>{getDataUserLogin.phoneNumber} </h5>  
                           </div>
                         </div>
                       
