@@ -99,7 +99,7 @@ Berkontibusi membuat komunitas open source menjadi tempat yang luar biasa untuk 
 
 ## Related Project
 - :white_check_mark: [Backend](https://github.com/kevinfaridap/backend-beginner-arkademy)
-- :rocket: [Ticktiz Ticket](https://ticktiz-ticket.netlify.app/)
+- :rocket: [Ticktiz Ticket](https://ticktiz-ticket.netlify.app/signin)
  
 
 
