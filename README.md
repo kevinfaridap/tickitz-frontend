@@ -26,13 +26,13 @@
 <!-- ABOUT THE PROJECT -->
 ## Tentang Project
 
-Ticktiz Ticket adalah aplikasi layanan pemesanan ticket film secara online yang memudahkan penggunanya untuk melihat film yang sedang tayang dan film yang akan tayang. Aplikasi ini membantu pengguna untuk melakukan pemesanan secara cepat, efektif dan aman. Aplikasi ini dibangun menggunakan reactJS, nodeJS, dan expressJS.
+Ticktiz adalah aplikasi layanan pemesanan ticket film secara online yang memudahkan penggunanya untuk melihat film yang sedang tayang dan film yang akan tayang. Aplikasi ini membantu pengguna untuk melakukan pemesanan secara cepat, efektif dan aman. Aplikasi ini dibangun menggunakan ReactJs, NodeJs, dan ExpressJs.
 
 
 
 ### Built With
 
-* [ReactJS](https://reactjs.org/)
+* [ReactJs](https://reactjs.org/)
 * [Bootstrap V.4](https://getbootstrap.com/)
 * **JWT** for Authentication
 * **Nodemailer** for Mailer
@@ -71,17 +71,16 @@ REACT_APP_SOCKET=[Backend API]
 
 <p align='center'>
   <span>
-      <image width="400" src='https://raw.githubusercontent.com/kevinfaridap/week5-frontend-beginner/master/screenshoot/home.png' />
       <image width="400" src='https://raw.githubusercontent.com/kevinfaridap/week5-frontend-beginner/master/screenshoot/signup.png' />
       <image width="400" src='https://raw.githubusercontent.com/kevinfaridap/week5-frontend-beginner/master/screenshoot/signin.png' />
-      <image width="400" src='https://raw.githubusercontent.com/kevinfaridap/week5-frontend-beginner/master/screenshoot/upcoming.png' />
-      <image width="400" src='https://raw.githubusercontent.com/kevinfaridap/week5-frontend-beginner/master/screenshoot/movie-details.png' />
-      <image width="400" src='https://raw.githubusercontent.com/kevinfaridap/week5-frontend-beginner/master/screenshoot/cinema.png' />
-      <image width="400" src='https://raw.githubusercontent.com/kevinfaridap/week5-frontend-beginner/master/screenshoot/select-seat.png' />
-      <image width="400" src='https://raw.githubusercontent.com/kevinfaridap/week5-frontend-beginner/master/screenshoot/payment.png' />    
-      <image width="400" src='https://raw.githubusercontent.com/kevinfaridap/week5-frontend-beginner/master/screenshoot/ticket-result.png' />
-      <image width="400" src='https://raw.githubusercontent.com/kevinfaridap/week5-frontend-beginner/master/screenshoot/profile.png' />
-      <image width="400" src='https://raw.githubusercontent.com/kevinfaridap/week5-frontend-beginner/master/screenshoot/admin.png' />
+      <image width="400" src='https://user-images.githubusercontent.com/74039235/119273652-0ef31680-bc36-11eb-9a66-e94bb2d4e1f5.png' />
+      <image width="400" src='https://user-images.githubusercontent.com/74039235/119273669-20d4b980-bc36-11eb-86d2-cb5f2b62812f.png' />
+      <image width="400" src='https://user-images.githubusercontent.com/74039235/119273647-0a2e6280-bc36-11eb-8db5-79a69b090451.png' />
+      <image width="400" src='https://user-images.githubusercontent.com/74039235/119273661-17e3e800-bc36-11eb-9bb7-ed4fd64c1875.png' />
+      <image width="400" src='https://user-images.githubusercontent.com/74039235/119273655-131f3400-bc36-11eb-834b-4338eb2f753d.png' />    
+      <image width="400" src='https://user-images.githubusercontent.com/74039235/119273664-1c100580-bc36-11eb-8d16-31153e01cb41.png' />
+      <image width="400" src='https://user-images.githubusercontent.com/74039235/119273674-2500d700-bc36-11eb-9ea0-dbf0a9bd96c2.png' />
+      <image width="400" src='https://user-images.githubusercontent.com/74039235/119273639-039feb00-bc36-11eb-9594-4cda5603ef66.png' />
    
    
    
