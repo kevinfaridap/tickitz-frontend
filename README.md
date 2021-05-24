@@ -49,7 +49,7 @@ Ini merupakan hal- hal yang diperlukan untuk memulai dan menginstall aplikasi in
 * [nodejs](https://nodejs.org/en/download/)
 
 
-### Installation
+### Installasi
 
 1. Clone the repo
 ```sh
@@ -71,8 +71,8 @@ REACT_APP_SOCKET=[Backend API]
 
 <p align='center'>
   <span>
-      <image width="400" src='https://raw.githubusercontent.com/kevinfaridap/week5-frontend-beginner/master/screenshoot/signup.png' />
-      <image width="400" src='https://raw.githubusercontent.com/kevinfaridap/week5-frontend-beginner/master/screenshoot/signin.png' />
+      <image width="400" src='https://user-images.githubusercontent.com/74039235/119303795-88b7ee00-bc90-11eb-950d-e219ad9a7745.png' />
+      <image width="400" src='https://user-images.githubusercontent.com/74039235/119303815-91102900-bc90-11eb-98ff-380016397786.png' />
       <image width="400" src='https://user-images.githubusercontent.com/74039235/119273652-0ef31680-bc36-11eb-9a66-e94bb2d4e1f5.png' />
       <image width="400" src='https://user-images.githubusercontent.com/74039235/119273669-20d4b980-bc36-11eb-86d2-cb5f2b62812f.png' />
       <image width="400" src='https://user-images.githubusercontent.com/74039235/119273647-0a2e6280-bc36-11eb-8db5-79a69b090451.png' />
@@ -99,7 +99,7 @@ Berkontibusi membuat komunitas open source menjadi tempat yang luar biasa untuk 
 
 ## Related Project
 - :white_check_mark: [Backend](https://github.com/kevinfaridap/backend-beginner-arkademy)
-- :rocket: [Ticktiz Ticket](https://ticktiz-ticket.netlify.app/signin)
+- :rocket: [Ticktiz [Demo Aplikasi]](https://ticktiz-ticket.netlify.app/signin)
  
 
 
