@@ -224,12 +224,12 @@ function AdminJumbotron() {
                     <div className={Style['cinema-box']}>
                       <img className={Style['img-cinema1']} src="http://localhost:8000/image/1616933213454-cinema21.png" alt=""/>
                     </div>
-                    <div className={Style['cinema-box']}>
+                    {/* <div className={Style['cinema-box']}>
                       <img className={Style['img-cinema1']} src="http://localhost:8000/image/1616933213454-cinema21.png" alt=""/>
                     </div>
                     <div className={Style['cinema-box']}>
                       <img className={Style['img-cinema1']} src="http://localhost:8000/image/1616933213454-cinema21.png" alt=""/>
-                    </div>
+                    </div> */}
                   </div>
                   {/* AKHIR PREMIERE LOC */}
 

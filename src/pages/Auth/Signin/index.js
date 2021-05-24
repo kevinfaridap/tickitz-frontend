@@ -37,7 +37,7 @@ function Signin () {
                 
                 {/* <FormSign /> */}
                 <FormSignin />
-                <h2 className={style['forget-teks']}>Forgot your password? <Link to={url}>Reset Now</Link> </h2>
+                <h2 className={style['forget-teks']}>Forgot your password? <Link to="/signin">Reset Now</Link> </h2>
                                 
                 <p className={style['or-teks']}>or</p>
                 <div className={style.or}></div> 

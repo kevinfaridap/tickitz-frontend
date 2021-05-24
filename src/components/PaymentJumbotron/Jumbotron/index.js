@@ -71,7 +71,7 @@ function Jumbotron() {
               swal(`Something Wrong!`)
             } else{
               const dataTicket = res.data.data
-              console.log(dataTicket);
+              // console.log(dataTicket);
               swal(`Success Order Ticket!`)
               history.push(`/ticketresult/${idMovie}/${idCinema}/${seatname}/${ticketvalues}/${dataTicket.id}`)
             }

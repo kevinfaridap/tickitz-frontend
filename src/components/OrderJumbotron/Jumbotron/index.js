@@ -16,6 +16,8 @@ function Jumbotron() {
 
   const [getSeatsA, setGetSeatsA] = useState()
   const [getSeatsB, setGetSeatsB] = useState()
+  const [getSeatsC, setGetSeatsC] = useState()
+  const [getSeatsD, setGetSeatsD] = useState()
   const [choosenSeat, setChoosenSeat] = useState([])
   // console.log(choosenSeat, 'kursinya');
 
@@ -54,6 +56,32 @@ function Jumbotron() {
         setGetSeatsB(dataSeatB)
       } else{
         console.log(dataSeatB);
+      }
+    })
+    .catch((err)=>{
+      console.log(err);
+    })
+
+    Axios.get(`${process.env.REACT_APP_API}/seat/getbycategory/C`)
+    .then((res)=>{
+      const dataSeatC = res.data.result
+      if(dataSeatC !== undefined){
+        setGetSeatsC(dataSeatC)
+      } else{
+        console.log(dataSeatC);
+      }
+    })
+    .catch((err)=>{
+      console.log(err);
+    })
+
+    Axios.get(`${process.env.REACT_APP_API}/seat/getbycategory/D`)
+    .then((res)=>{
+      const dataSeatD = res.data.result
+      if(dataSeatD !== undefined){
+        setGetSeatsD(dataSeatD)
+      } else{
+        console.log(dataSeatD);
       }
     })
     .catch((err)=>{
@@ -172,40 +200,131 @@ function Jumbotron() {
                         <div className={Style['line-mobile']}></div>
                         <div className={Style['img-line']}></div>
                       </div>
+
+                      {/* ===== SEAT A ===== */}
                       <div className={[["row"], ["mb-3"], Style['seat-menu']].join(' ')}>
                       {getSeatsA !== undefined? getSeatsA.map((item)=>{
                       return( 
                       <>
-                        <div className="col-1">
-                          <button
-                            className={Style['button-seat']}
-                            onClick={()=>{setChoosenSeat([...choosenSeat, item.seatName])}}
-                          > 
-                          </button>
-                        </div>
-                      </>
-                      )   
-                      }): null }
-                        {/* Hapus Sebentar */}
-                        {/* <div className={Style.seat}></div>
-                        <div className={Style['seat-mobile']}></div> */}
-                      </div>
-                    
-                      <div className={[["row"], Style['seat-menu']].join(' ')}>
-                        {getSeatsB !== undefined? getSeatsB.map((item)=>{
-                        return( 
-                        <>
-                          <div className="col-1">
+                        {item.seatStatus=='Available'? <> 
+                            <div className="col-1">
+                              <button
+                                className={Style['button-seat']}
+                                onClick={()=>{setChoosenSeat([...choosenSeat, item.seatName])}}
+                              >
+                              </button>
+                            </div>
+                          </>
+                          :
+                            <div className="col-1">
                             <button
-                              className={Style['button-seat']}
-                              onClick={()=>{setChoosenSeat([...choosenSeat, item.seatName])}}
+                              className={Style['button-seat-sold']}
+                              // onClick={()=>{setChoosenSeat([])}}
                             >
                             </button>
                           </div>
+                          }
+                      </>
+                      )   
+                      }): null }
+
+                      {/*Title A, B, C  */}
+                      <p className={Style["one-seat"]}>1</p>  
+                      <p className={Style["a-seat"]}>A</p>  
+                      <p className={Style["b-seat"]}>B</p>
+                      <p className={Style["c-seat"]}>C</p>
+                      <p className={Style["d-seat"]}>D</p>
+                      </div>
+                      {/* AKHIR SEAT A */}
+
+                      {/*== SEAT B=== */}
+                      <div className={[["row"], ['mb-3'], Style['seat-menu']].join(' ')}>
+                        {getSeatsB !== undefined? getSeatsB.map((item)=>{
+                        return( 
+                          <>
+                          {item.seatStatus=='Available'? <> 
+                            <div className="col-1">
+                              <button
+                                className={Style['button-seat']}
+                                onClick={()=>{setChoosenSeat([...choosenSeat, item.seatName])}}
+                              >
+                              </button>
+                            </div>
+                          </>
+                          :
+                            <div className="col-1">
+                            <button
+                              className={Style['button-seat-sold']}
+                              // onClick={()=>{setChoosenSeat([])}}
+                            >
+                            </button>
+                          </div>
+                          }
                         </>
                         )   
                         }): null }
                       </div>
+                      {/* Akhir Seat B */}
+
+
+                      {/*== SEAT C=== */}
+                      <div className={[["row"], ['mb-3'], Style['seat-menu']].join(' ')}>
+                        {getSeatsC !== undefined? getSeatsC.map((item)=>{
+                        return( 
+                          <>
+                          {item.seatStatus=='Available'? <> 
+                            <div className="col-1">
+                              <button
+                                className={Style['button-seat']}
+                                onClick={()=>{setChoosenSeat([...choosenSeat, item.seatName])}}
+                              >
+                              </button>
+                            </div>
+                          </>
+                          :
+                            <div className="col-1">
+                            <button
+                              className={Style['button-seat-sold']}
+                              // onClick={()=>{setChoosenSeat([])}}
+                            >
+                            </button>
+                          </div>
+                          }
+                        </>
+                        )   
+                        }): null }
+                      </div>
+                      {/* Akhir Seat C */}
+
+
+                      {/*== SEAT D === */}
+                      <div className={[["row"], Style['seat-menu']].join(' ')}>
+                        {getSeatsD !== undefined? getSeatsD.map((item)=>{
+                        return( 
+                          <>
+                          {item.seatStatus=='Available'? <> 
+                            <div className="col-1">
+                              <button
+                                className={Style['button-seat']}
+                                onClick={()=>{setChoosenSeat([...choosenSeat, item.seatName])}}
+                              >
+                              </button>
+                            </div>
+                          </>
+                          :
+                            <div className="col-1">
+                            <button
+                              className={Style['button-seat-sold']}
+                              // onClick={()=>{setChoosenSeat([])}}
+                            >
+                            </button>
+                          </div>
+                          }
+                        </>
+                        )   
+                        }): null }
+                      </div>
+                      {/* Akhir Seat D */}
                       
                       <div className="row">
                         <h4 className={Style.seatingkey}>Seating key</h4>

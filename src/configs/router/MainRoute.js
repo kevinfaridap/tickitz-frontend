@@ -13,6 +13,7 @@ import PrivateRoute from './module/PrivateRoute'
 import Admin from '../../pages/Main/Admin/Index'
 import TicketResult from '../../pages/Main/TicketResult'
 import PublicRoute from './module/PublicRoute'
+import AdminRoute from './module/AdminRoute'
 
 function MainRoute() {
   return (
@@ -28,8 +29,8 @@ function MainRoute() {
           <PrivateRoute path="/allmovies" component={AllMovies} />
           <PrivateRoute path="/profile" component={Profile}  />
           <PrivateRoute path="/orderhistory" component={OrderHistory}  />
-          <PrivateRoute path="/admin" component={Admin} />
           <PrivateRoute path="/ticketresult/:idmovie/:idcinema/:seatname/:ticketvalues/:ticketresult" component={TicketResult} />
+          <AdminRoute path="/admin" component={Admin} />
 
         </Switch>
       </BrowserRouter>

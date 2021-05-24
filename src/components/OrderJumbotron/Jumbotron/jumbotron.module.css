@@ -109,7 +109,6 @@
     border: none;
     /* margin-top: 50px; */
     /* margin-left: 80px; */
-
   }
 
   .jumbotron-1 button.button-seat:focus{
@@ -120,11 +119,97 @@
   .jumbotron-1 button.button-seat:hover{
     background-color:teal;
   }
+  
+  .jumbotron-1 button.button-seat-sold{
+    width: 26px;
+    height: 26px;
+    background: #6E7191;
+    border-radius: 4px;
+    border: none;
+  }
 
   div.seat-menu{
     margin-left: 80px;
   }
 
+  p.one-seat{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.75px;
+    color: #4E4B66;
+    position: absolute;
+    left: 9.1vw;
+    top: 12.8vw;
+  }
+
+  p.a-seat{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.75px;
+    color: #4E4B66;
+    position: absolute;
+    left: 5vw;
+  }
+
+  p.b-seat{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.75px;
+    color: #4E4B66;
+    position: absolute;
+    left: 5vw;
+    top: 18.8vw;
+  }
+
+  p.c-seat{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.75px;
+    color: #4E4B66;
+    position: absolute;
+    left: 5vw;
+    top: 22.3vw;
+  }
+
+  p.d-seat{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.75px;
+    color: #4E4B66;
+    position: absolute;
+    left: 5vw;
+    top: 25.8vw;
+  }
 
 
 /* VERSI MOBILE */

@@ -28,7 +28,7 @@ function FormSignin () {
       if(dataLogin == null){
         swal('Email and Password are incorect')
       } else  {
-        swal(`Welcome ${dataLogin.firstName}`)
+        swal(`Welcome !`)
         history.push('/')
       }
     })

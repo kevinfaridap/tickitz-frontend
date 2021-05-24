@@ -189,9 +189,12 @@
   
   
   div.small-ticket{
-    position: absolute;
+    /* position: absolute;
     top: 435px;
-    left: 850px;
+    left: 850px; */
+    position: relative;
+    top: -475px;
+    left: 620px;
   }
   h6.movie-text-2{
     font-family: Mulish;
@@ -321,7 +324,7 @@
     width: 56px;
     height: 56px;
     position: relative;
-    top: -480px;
+    top: -780px;
     left: 785px;
   }
   div.img-scan-bar-2{
@@ -329,7 +332,7 @@
     width: 56px;
     height: 56px;
     position: relative;
-    top: -475px;
+    top: -775px;
     left: 785px;
   }
   div.img-scan-bar-3{
@@ -337,7 +340,7 @@
     width: 56px;
     height: 56px;
     position: relative;
-    top: -470px;
+    top: -770px;
     left: 785px;
   }
   
@@ -349,7 +352,7 @@
     box-sizing: border-box;
     border-radius: 100%;
     position: relative;
-    top: -430px;
+    top: -730px;
     left: 550px;
   }
   

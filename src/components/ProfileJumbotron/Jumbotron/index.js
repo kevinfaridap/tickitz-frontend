@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useRef} from 'react'
 import Style from './jumbotron.module.css'
 import Axios from 'axios'
 import { Link, useHistory } from 'react-router-dom'
@@ -16,7 +16,9 @@ function Jumbotron() {
   let decode = jwt.decode(isAuthenticated)
   const idUser = decode.idUser;
   const email =decode.email
-  
+  const userimage = decode.image
+  const imageRef = useRef(null)
+
   useEffect(()=>{
     Axios.get(`${process.env.REACT_APP_API}/users/${email}`)
     .then((res)=>{
@@ -46,6 +48,47 @@ function Jumbotron() {
    swal('succes')
   }
 
+  const [formUpdateImage, setFormUpdateImage] = useState({
+    idUser: idUser,
+    image: userimage
+  })
+
+  const handleChangeImage =(e) => {
+    setFormUpdateImage({
+      ...formUpdateImage,
+      image: e.target.files[0]
+    })
+  }
+
+  const handleUpdateImage = (e) =>{
+    e.preventDefault();
+    const formData = new FormData()
+
+    formData.append('idUser', formUpdateImage.idUser)
+    formData.append('image', formUpdateImage.image)
+    imageRef.current.value = ""
+
+    Axios.put(`${process.env.REACT_APP_API}/users/updateimage/`, formData)
+   .then((res) => {
+     console.log(res.data, 'updataea image');
+      if(res.data.message === "Succes update Image"){
+        setFormUpdateImage(res.data.data.image)
+        swal(`Success Update Image`)
+        history.push(`/signin`)
+      } else if(res.data.message=== 'File too large'){
+        swal('File too large. FIle Max 2 mb!')
+      } else{
+        swal(res.data.message)
+      }
+    })
+    .catch((err) => {
+        console.log(err);
+    }) 
+  }
+
+
+  
+
 
 
     return (
@@ -61,6 +104,24 @@ function Jumbotron() {
                     <h6 className="mt-5 ml-5 lead">INFO</h6>
                     {/* <div className={Style['img-profile']}></div> */}
                     <img className={Style['img-profile']} src={item.image} alt="" />
+                    
+                    <input 
+                      type="file" 
+                      className={Style['form-img']} 
+                      name="image"
+                      id="image"
+                      title="edit"
+                      ref={imageRef}
+                      onChange={e => handleChangeImage(e)}
+                    />
+                    <button 
+                      className={Style["btn-change-imgprofile"]}
+                      type="button"
+                      onClick={handleUpdateImage}
+                    > Update Image
+                    </button>
+
+
                     <h5 className={Style['teks1']}>{item.firstName + ' ' + item.lastName }</h5>
                     <h6 className={Style['teks2']} >Premium Member </h6>
 

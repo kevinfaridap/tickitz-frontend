@@ -94,7 +94,7 @@
     font-size: 16px;
     line-height: 32px;
     color: #4E4B66;
-    margin-top: 30px;
+    margin-top: -5vw;
     margin-left: 0px;
   }
 
@@ -251,6 +251,47 @@
     
   }
 
+  input.form-img{
+    border: none;
+    font-family: Mulish;
+    /* font-size: 1vw; */
+    background-color: transparent;
+    color: transparent;
+  }
+
+  input.form-img::-webkit-file-upload-button{
+    content: '';
+    /* display: none; */
+    font-family: Mulish;
+    background-color: #4E4B66;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    left: 9.3vw;
+    
+    /* margin-top: 10px; */
+  }
+  
+
+  button.btn-change-imgprofile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    color:#F5F6F8;
+    font-family: Mulish;
+    background-color: #5F2EEA;
+    border: none;
+    border-radius: 10px;
+    height: 36px;
+  }
 
 
 
