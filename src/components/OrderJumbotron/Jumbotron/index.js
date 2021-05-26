@@ -209,7 +209,7 @@ function Jumbotron() {
                         {item.seatStatus=='Available'? <> 
                             <div className="col-1">
                               <button
-                                className={Style['button-seat']}
+                                className={`${choosenSeat.includes(item.seatName)?Style['button-available']:Style['button-seat']}`}
                                 onClick={()=>{setChoosenSeat([...choosenSeat, item.seatName])}}
                               >
                               </button>
@@ -230,6 +230,15 @@ function Jumbotron() {
 
                       {/*Title A, B, C  */}
                       <p className={Style["one-seat"]}>1</p>  
+                      <p className={Style["two-seat"]}>2</p>  
+                      <p className={Style["three-seat"]}>3</p>  
+                      <p className={Style["four-seat"]}>4</p>  
+                      <p className={Style["five-seat"]}>5</p>  
+                      <p className={Style["six-seat"]}>6</p>  
+                      <p className={Style["seven-seat"]}>7</p>  
+                      <p className={Style["eight-seat"]}>8</p>  
+                      <p className={Style["nine-seat"]}>9</p>
+                      <p className={Style["ten-seat"]}>10</p>    
                       <p className={Style["a-seat"]}>A</p>  
                       <p className={Style["b-seat"]}>B</p>
                       <p className={Style["c-seat"]}>C</p>

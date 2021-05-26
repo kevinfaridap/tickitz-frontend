@@ -14,6 +14,9 @@ function FormSignin () {
   const {loading} = useSelector(state=>state.user)
   const history = useHistory()
   
+  // dari redux
+  const userlogin = useSelector((state)=>state.user)
+
   const handleLogin = (e) => {
     e.preventDefault();
     const data = {
@@ -33,6 +36,7 @@ function FormSignin () {
       }
     })
     .catch((err)=>{
+      // console.log(userlogin, 'erorrrrrrrrrrrrrrrr');
       swal(' Failed Login !')
     })
   }
@@ -41,11 +45,11 @@ function FormSignin () {
       <div>
         <form >
           <div className={style['form-group']}>
-            <h4>Email</h4>
+            <h4 className={style['email']}>Email</h4>
             <input type="email" name='email' value={email} className={style['form-control']} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Write your email" onChange={(e) => setEmail(e.target.value)} />
           </div>
           <div className={style["form-group"]}>
-            <h4>Password</h4>
+            <h4 className={style['password']}>Password</h4>
             <input type="password" name='password' value={password} className={style['form-control']} id="exampleInputPassword1" placeholder="Write your password" onChange={(e) => setPassword(e.target.value)} />
           </div>
         

@@ -33,6 +33,8 @@
       width: 156px;
       height: 136px;
       background-image: url(./assets/Ellipse\ 11.png);
+      display: flex;
+      align-items: center;
       margin-left: auto;
       margin-right: auto;
       margin-top: 25px;
@@ -157,8 +159,87 @@
       
     }
   
-  
-  
-  
+    p.date{
+      font-family: Mulish;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.75px;
+      color: #AAAAAA; 
+      text-align: start !important;
+      padding-left: 2vw;
+    }
+
+    p.movie-title{
+      font-family: Mulish;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 38px;
+      letter-spacing: 0.75px;
+      color: #000000;
+      text-align: start !important;
+      padding-left: 2vw;
+    }
+    
+    p.time{
+      font-family: Mulish;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 14px;
+      letter-spacing: 0.75px;
+      color: #14142B;
+      text-align: end !important;
+      padding-right: 2vw;
+    }
+
+    p.seat-value{
+      font-family: Mulish;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 14px;
+      letter-spacing: 0.75px;
+      color: #14142B;
+      text-align: end !important;
+      padding-right: 2vw;
+    }
+
+    p.price{
+      font-family: Mulish;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      color: #14142B;
+      text-align: end !important;
+      padding-right: 2vw;
+    }
+    
+    div.ticket-history-box{
+      background: #FFFFFF;
+      border: 0.5px solid #DEDEDE;
+      box-sizing: border-box;
+      border-radius: 8px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      width: 40vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    div.img-ticket-header{
+      background-image: url(./assets/headline-ticket.png);
+      width: 40vw;
+      height: 77px;
+      border-radius: 16px 16px 3px 3px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 25px;
+    }
   
   } 

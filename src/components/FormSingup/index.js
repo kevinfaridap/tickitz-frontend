@@ -30,6 +30,7 @@ function FormSign() {
     e.preventDefault()
     dispatch(register(formUser))
     .then((res)=>{
+      console.log(res);
       setFormUser({
         firstName: '',
         lastName: '',
@@ -37,7 +38,7 @@ function FormSign() {
         phoneNumber: '',
         role: '',
       })
-      swal(`Registered \n Email : ${formUser.email}`)
+      swal(`Registered. Check Your Email to Continue`)
       history.push('/signin')
     })
     .catch((err)=>{
@@ -49,6 +50,7 @@ function FormSign() {
   return (
         <div>
           <form >
+            <p className={Styleformsign["sing-up-title"]}>Sign Up</p>
             <div className={Styleformsign['form-group']}>
 
                 <Input 

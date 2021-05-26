@@ -6,6 +6,9 @@ import gopay from './gopay.png'
 import ovo from './ovo.png'
 import paypal from './paypal.png'
 import visa from './visa.png'
+import cgv from './cgv.png'
+import xxi from './XXI.png'
+import cinema21 from './cinema21.png'
 
 export{
     gpay,
@@ -15,5 +18,8 @@ export{
     ovo,
     gopay,
     paypal,
-    visa
+    visa,
+    cinema21,
+    xxi,
+    cgv
 }

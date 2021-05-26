@@ -160,6 +160,13 @@
       position: relative;
   
   }
+
+  h1.fill-title{
+    margin-left: 2.5vw;
+    margin-bottom: 30px;
+    font-size: 1.5vw;
+  }
+
   main section h2.teks{
       color: white;
       font-family: 'Mulish';

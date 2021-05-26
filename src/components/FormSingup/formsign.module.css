@@ -27,11 +27,17 @@
     margin-left: -25px;
   }
 
+  p.sing-up-title{
+    font-family: 'Mulish';
+    font-weight: 800;
+    font-size: 2vw;
+    color: black;
+    text-align: left !important;
+    margin-left: -1.6vw;
+  }
+
 }
 
-form{
-  /* margin-left: 10%; */
-}
 
 .form-group label{
     color: rgba(78, 75, 102, 1);
@@ -70,4 +76,5 @@ form h4{
     font-weight: 700;
     color: white;
 }
+
 

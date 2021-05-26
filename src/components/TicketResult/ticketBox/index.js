@@ -116,11 +116,13 @@ export class ticketBox extends Component {
   state = {
     dataTicket: []
   }
-
-    componentDidMount() {
-      const ticketresult = 'ad868f0a-707d-47e9-ad26-77834c16ce92';
+  
+  componentDidMount() {
+    const ticketresult = this.props.idticket
+    console.log(ticketresult);
+      // const ticketresult = 'ad868f0a-707d-47e9-ad26-77834c16ce92';
       this.fetchData(ticketresult);
-      console.log(ticketresult);
+      // console.log(ticketresult);
       Axios.get(`${process.env.REACT_APP_API}/ticketresult/${ticketresult}`)
       .then((res)=>{
         const dataTicket = res.data.data[0]

@@ -31,6 +31,8 @@ function Jumbotron() {
     const isAuthenticated = localStorage.getItem('token')
     let decode = jwt.decode(isAuthenticated)
     const emailUserLogin = decode.email
+    
+    // console.log(decode, 'isi decode');
     Axios.get(`${process.env.REACT_APP_API}/users/${emailUserLogin}`)
     .then((res)=>{
       const dataUserLogin = res.data.data[0]
@@ -59,8 +61,13 @@ function Jumbotron() {
       swal(`You haven't choose payment method!`)
     } else{
       if(schdulee !== undefined){
+        const isAuthenticated = localStorage.getItem('token')
+        let decode = jwt.decode(isAuthenticated)
+        const idUser = decode.idUser
+        
         Axios.post(`${process.env.REACT_APP_API}/ticketresult/`, {
           movieTittle: schdulee[0].movieTittle,
+          idUser: idUser,
           time: schdulee[0].time,
           seatvalues: ticketvalues,
           seatnames: seatname,
@@ -71,9 +78,9 @@ function Jumbotron() {
               swal(`Something Wrong!`)
             } else{
               const dataTicket = res.data.data
-              // console.log(dataTicket);
+              console.log(dataTicket);
               swal(`Success Order Ticket!`)
-              history.push(`/ticketresult/${idMovie}/${idCinema}/${seatname}/${ticketvalues}/${dataTicket.id}`)
+              history.push(`/ticketresult/${dataTicket.id}`)
             }
         })
         .catch((err) => {

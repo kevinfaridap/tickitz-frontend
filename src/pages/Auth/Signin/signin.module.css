@@ -187,9 +187,19 @@
     font-size: 18px;
     margin-top: -30px;
     letter-spacing: 0.007em;
-    width: 344px;
+    /* width: 344px; */
+    text-align: left !important;
     margin-bottom: 15px;
-    margin-left: 54px;
+    margin-left: 2.5vw;
+  }
+
+  main aside h1.title-signin{
+    font-family: 'Inter';
+    line-height: 22px;
+    font-size: 2vw;
+    margin-left: 2.5vw;
+    /* margin-top: -30px; */
+    /* letter-spacing: 0.007em; */
   }
 
   main aside h2{

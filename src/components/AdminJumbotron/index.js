@@ -3,13 +3,20 @@ import Style from './admin.module.css'
 import {useDispatch} from 'react-redux'
 import {postMovies} from '../../configs/actions/movies'
 import swal from 'sweetalert'
-import {Link} from 'react-router-dom'
+import {Link, useHistory} from 'react-router-dom'
 import DatePicker from "react-datepicker";
+import {cgv, cinema21, xxi} from '../../assets/images'
 
 import "react-datepicker/dist/react-datepicker.css";
 
 function AdminJumbotron() {
+  const history= useHistory()
   const [startDate, setStartDate] = useState(new Date());
+  const [selectCinema, setSelectCinema] = useState(null)
+  const [selectDate, setSelectDate] = useState('')
+
+  const cinemaName = selectCinema
+
   const dispatch = useDispatch()
   const imageRef = useRef(null)
   const [formMovie, setFormMovie] = useState({
@@ -19,9 +26,11 @@ function AdminJumbotron() {
     duration: '',
     image: null,
     casts: '',
-    synopsis: ''
+    synopsis: '',
+    time: selectDate,
+    idCinema: cinemaName
   })
-
+  console.log(formMovie.idCinema, formMovie.time, 'ceeeekkkkkkkk', selectCinema, selectDate, cinemaName);
   const handleChange = (e) => {
     setFormMovie({
       ...formMovie,
@@ -34,7 +43,6 @@ function AdminJumbotron() {
       ...formMovie,
       image: e.target.files[0]
     })
-    // console.log(e.target.files[0]);
   }
 
   const handleButton = (e) => {
@@ -47,27 +55,37 @@ function AdminJumbotron() {
     formData.append('image', formMovie.image)
     formData.append('casts', formMovie.casts)
     formData.append('synopsis', formMovie.synopsis)
+    formData.append('time', formMovie.time)
+    formData.append('idCinema', formMovie.idCinema)
     imageRef.current.value = ""
 
-    dispatch(postMovies(formData)) 
-    .then((res)=>{
-      setFormMovie({
-        movieTittle: '',
-        genre: '',
-        directedBy: '',
-        duration: '',
-        image: null,
-        casts: '',
-        synopsis: ''
+    if(selectCinema==null){
+      swal(`You Haven't Selected Any Cinema!`)
+    } else if(selectDate==''){
+      swal(`You Haven't Selected Any Date!`)
+    } else{
+      dispatch(postMovies(formData)) 
+      .then((res)=>{
+        setFormMovie({
+          movieTittle: '',
+          genre: '',
+          directedBy: '',
+          duration: '',
+          image: null,
+          casts: '',
+          synopsis: '',
+          time: selectDate,
+          idCinema: selectCinema
+        })
+        swal('Success Insert Movie')
+        history.push('/')
       })
-      swal('Success Insert Movie')
-    })
-    .catch((err)=>{
-      // swal('Failed Post Movie, Need Token or Something Else!')
-      console.log(err);
-    })
-    // console.log(formMovie);
+      .catch((err)=>{
+        console.log(err);
+      })
+    }
   }
+  
 
     return (
       <div>
@@ -85,7 +103,8 @@ function AdminJumbotron() {
                     <div className="row">
                       <div className="col">
                         <div className={Style['poster-border']}></div>
-                        <img className={Style['movie-poster']} src="http://3.bp.blogspot.com/-LtV0B4lXT5w/WIib0ogS2bI/AAAAAAAACIc/s89hMiqnHm4Ynxx4N3QLy17mZ8lB33UVACK4B/s1600/Snowden%2Bposter%2B2.jpg" alt=""/>
+                        <div className={Style["movie-poster"]}></div>
+                        {/* <img className={Style['movie-poster']} src="http://bppl.kkp.go.id/uploads/publikasi/karya_tulis_ilmiah/default.jpg" alt=""/> */}
                       </div>
                       
                       <div className="col">
@@ -96,7 +115,7 @@ function AdminJumbotron() {
                           <input type="text" 
                           name="movieTittle"
                           className={Style['form-control']} 
-                          placeholder="kosong"  
+                          placeholder="Insert Movie Tittle"  
                           id="movieTittle"
                           value={formMovie.movieTittle}
                           onChange={e => handleChange(e)}
@@ -107,7 +126,7 @@ function AdminJumbotron() {
                           <input type="text" 
                           name="genre"
                           className={Style['form-control']} 
-                          placeholder="text here"
+                          placeholder="Insert Genre Here"
                           id="genre"
                           value={formMovie.genre}
                           onChange={e => handleChange(e)}
@@ -186,7 +205,7 @@ function AdminJumbotron() {
                             <h5 className={Style['text-synopsis']} >Synopsis</h5>
                             <input type="text" className={Style['form-synopsis']} 
                             name="synopsis"
-                            placeholder='Text synopsis here'
+                            placeholder='Insert Synopsis Here'
                             id="synopsis" 
                             value={formMovie.synopsis}
                             onChange={e => handleChange(e)}
@@ -208,9 +227,9 @@ function AdminJumbotron() {
 
                 {/* AWAL PREMIERE LOCATION */}
                 <div className="col-lg">
-                  <h3 className={Style['tittle-movie-desc']} >Premiere Location</h3>
+                  <h3 className={Style['tittle-movie-desc']} >Select Cinema</h3>
                   <div className={Style['card-profile']}>
-                    <div className="dropdown">
+                    {/* <div className="dropdown">
                       <button className={[['btn'], ['btn-light'], ['dropdown-toggle'], Style['btn-city']].join(' ')} type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Select City
                       </button>
@@ -219,36 +238,114 @@ function AdminJumbotron() {
                         <Link className="dropdown-item" to="#">Palembang</Link>
                         <Link className="dropdown-item" to="#">Something else here</Link>
                       </div>
-                    </div>
-
-                    <div className={Style['cinema-box']}>
-                      <img className={Style['img-cinema1']} src="http://localhost:8000/image/1616933213454-cinema21.png" alt=""/>
-                    </div>
-                    {/* <div className={Style['cinema-box']}>
-                      <img className={Style['img-cinema1']} src="http://localhost:8000/image/1616933213454-cinema21.png" alt=""/>
-                    </div>
-                    <div className={Style['cinema-box']}>
-                      <img className={Style['img-cinema1']} src="http://localhost:8000/image/1616933213454-cinema21.png" alt=""/>
                     </div> */}
+                    {selectCinema==null?
+                      <> 
+                        <input className={Style['input-cinema']} type="number" value="" placeholder="No Cinema Selected" disabled/>
+                      </>
+                    : null}
+                    {selectCinema==2?
+                      <> 
+                        <input className={Style['input-cinema']} type="number" value="" placeholder="Cinema CGV" disabled/>
+                      </>
+                    : null}
+                    {selectCinema==1?
+                      <> 
+                        <input className={Style['input-cinema']} type="number" value="" placeholder="Cinema 21" disabled/>
+                      </>
+                    : null}
+                    {selectCinema==4?
+                      <> 
+                        <input className={Style['input-cinema']} type="number" value="" placeholder="Cinema XXI" disabled/>
+                      </>
+                    : null}
+                    
+                    <button onClick={()=>setSelectCinema(2)} className={Style['cinema-box']} >
+                      <img className={Style['img-cinema1']} src={cgv} alt=""/>
+                    </button>
+                    <button onClick={()=>setSelectCinema(1)} className={Style['cinema-box']}>
+                      <img className={Style['img-cinema1']} src={cinema21} alt=""/>
+                    </button>
+                    <button onClick={()=>setSelectCinema(4)} className={Style['cinema-box']}>
+                      <img className={Style['img-cinema1']} src={xxi} alt=""/>
+                    </button>
+                    
                   </div>
                   {/* AKHIR PREMIERE LOC */}
 
                   {/* AWAL SHOWTIMES */}
                   <div className={Style['card-profile3']}>
-                    <h3 className={Style['title-showtime']} >Showtimes</h3>   
+                    <h3 className={Style['title-showtime']} >Select Time</h3>   
+                    {selectDate==''?
+                      <> 
+                        <input className={Style['input-date']} type="number" value="" placeholder="No Time Selected" disabled/>
+                      </>
+                    : null}
+                    {selectDate=='04.10pm'?
+                      <> 
+                        <input className={Style['input-date']} type="number" value={selectDate} placeholder={selectDate} disabled/>
+                      </>
+                    : null}
+                    {selectDate=='06.30pm'?
+                      <> 
+                        <input className={Style['input-date']} type="number" value={selectDate} placeholder={selectDate} disabled/>
+                      </>
+                    : null}
+                    {selectDate=='11.30pm'?
+                      <> 
+                        <input className={Style['input-date']} type="number" value={selectDate} placeholder={selectDate} disabled/>
+                      </>
+                    : null}
+                    {selectDate=='08.20pm'?
+                      <> 
+                        <input className={Style['input-date']} type="number" value={selectDate} placeholder={selectDate} disabled/>
+                      </>
+                    : null}
+                    {selectDate=='09.50pm'?
+                      <> 
+                        <input className={Style['input-date']} type="number" value={selectDate} placeholder={selectDate} disabled/>
+                      </>
+                    : null}
+                    <div className="row d-flex justify-content-center">
+                      <div className="col-3">
+                        <button className={Style['time']} onClick={()=>setSelectDate('04.10pm')}>
+                          <p className={Style["time-text"]}>04.10pm</p>
+                        </button>
+                      </div>
+                      <div className="col-3">
+                        <button className={Style['time']} onClick={()=>setSelectDate('06.30pm')}>
+                          <p className={Style["time-text"]}>06.30pm</p>
+                        </button>
+                      </div>
+                      <div className="col-3">
+                        <button className={Style['time']} onClick={()=>setSelectDate('08.20pm')}>
+                          <p className={Style["time-text"]}>08.20pm</p>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div className="row d-flex justify-content-center mt-4">
+                      <div className="col-3">
+                        <button className={Style['time']} onClick={()=>setSelectDate('09.50pm')}>
+                          <p className={Style["time-text"]}>09.50pm</p>
+                        </button>
+                      </div>
+                      <div className="col-3">
+                        <button className={Style['time']} onClick={()=>setSelectDate('11.30pm')}> 
+                          <p className={Style["time-text"]}>11.30pm</p>
+                        </button>
+                      </div>
+                    </div>
                     
                     
-                    <div className="dropdown">
+                    {/* <div className="dropdown">
                       <button className={[['btn'], ['btn-light'], ['dropdown-toggle'], Style['btn-date']].join(' ')} type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Select a date
                       </button>
-                      
                       <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <DatePicker selected={startDate} onChange={date => setStartDate(date)} />
-                        {/* <Link className="dropdown-item" href="#">Palembang</Link>
-                        <Link className="dropdown-item" href="#">Something else here</Link> */}
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                   {/* AKHIR SHOWTIMES */}
                 </div>

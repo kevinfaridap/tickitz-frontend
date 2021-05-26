@@ -32,7 +32,7 @@ function Signin () {
             <aside className="col ml-2">
               <div className="container">
                 <div className={style['img-mobile']}></div>
-                <h1>Sign In</h1>
+                <h1 className={style['title-signin']}>Sign In</h1>
                 <p className={style.teks1} >Sign in with your data that you entered during your registration</p>
                 
                 {/* <FormSign /> */}

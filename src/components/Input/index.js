@@ -9,7 +9,7 @@ function Input({value, name, type, placeholder, label, onChange}) {
 
     return (
         <div>
-            <label htmlFor={name}>{label} </label>
+            <label className={style['label']} htmlFor={name}>{label} </label>
             <input value={value} name={name} type={type} id={name} placeholder={placeholder} className={style['form-control']} onChange={(e)=>onChange(e)} />
         </div>
     )

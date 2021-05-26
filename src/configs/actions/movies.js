@@ -15,7 +15,7 @@ import axiosApiInstance from '../../helpers/axios'
 
 export const getAllMovies = () => {
   return(dispatch)=>{
-    axios.get('http://localhost:8000/v1/movies?page=1&limit=5')
+    axios.get(`${process.env.REACT_APP_API}/movies?page=1&limit=10`)
      .then((res)=>{
        const resData = res.data
        const dataMovie = resData.data
@@ -40,7 +40,7 @@ export const getAllMovies = () => {
 
 export const postMovies = (data) => dispatch=>{
   return new Promise((resolve, reject)=>{
-    axiosApiInstance.post('http://localhost:8000/v1/movies', data)
+    axios.post(`${process.env.REACT_APP_API}/movies`, data)
     .then((res)=>{
       const result = res.data 
       dispatch({type: 'INSERT_MOVIE'})

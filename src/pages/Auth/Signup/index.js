@@ -22,7 +22,7 @@ class Signup extends Component {
                       <div className={styleSingup.circle1}> 
                         <h5>1</h5>
                        </div>
-                      <h4>Fill your additional details</h4>
+                      <h4 className={['title-fill']}>Fill your additional details</h4>
                     </div>
 
                     <div className={`${styleSingup.row} ${styleSingup.rowCircle2}`} >
@@ -50,7 +50,7 @@ class Signup extends Component {
               <aside className="col ml-2">
                <div className={`${styleSingup.container} ${styleSingup['contain-signup']}`}>
                   <div className={styleSingup['img-mobile']}></div>
-                    <h1>Fill your additional detail</h1>
+                    <h1 className={styleSingup['fill-title']}>Fill your additional detail</h1>
                                       
                     <FormSign />
 

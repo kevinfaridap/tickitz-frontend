@@ -9,17 +9,6 @@ function CardMovies() {
   const dispatch = useDispatch()
   const {movies} = useSelector(state => state.movies)
 
-  // Pindahkan ke action
-  // const getMovies = ()=>{
-  //   Axios.get('http://localhost:8000/v1/movies?page=1&limit=10')
-  //     .then((res)=>{
-  //       const resData = res.data
-  //       const dataMovie = resData.data
-  //       dispatch({ type: 'GET_MOVIES', payload: dataMovie})
-  //     })
-  // }
-
-
   const getMovies = () => {
     dispatch(getAllMovies())
   }
@@ -43,11 +32,11 @@ function CardMovies() {
                   <div className={Style['content-box']} >
                     
                     <img className={Style['img-movie']} src={item.image} alt=""/>
-                    <h5 className="" >{item.movieTittle}</h5>
+                    <h5 className={Style["movie-name"]} >{item.movieTittle}</h5>
                     <p>{item.genre}</p>
                     
-                    <button type="button" className={[['btn'], Style['btn-upcoming']].join(' ')} onClick={() => {detailsHandling(item.idMovie)}} >Details</button>
                     {/* <button type="button" className={[['btn'], Style['btn-upcoming']].join(' ')} onClick={() => {deleteHandling(item.id_Movie)}} >Delete</button> */}
+                  <button type="button" className={[['btn'], Style['btn-upcoming']].join(' ')} onClick={() => {detailsHandling(item.idMovie)}} >Details</button>
                   </div>                  
                 </div>  
               ) 

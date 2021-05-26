@@ -111,6 +111,15 @@
     /* margin-left: 80px; */
   }
 
+  .jumbotron-1 button.button-available{
+    width: 26px;
+    height: 26px;
+    background: #5F2EEA;
+    border-radius: 4px;
+    border: none;
+    /* margin-top: 50px; */
+    /* margin-left: 80px; */
+  }
   .jumbotron-1 button.button-seat:focus{
     background-color: #5F2EEA;
     color: white;
@@ -145,6 +154,150 @@
     color: #4E4B66;
     position: absolute;
     left: 9.1vw;
+    top: 12.8vw;
+  }
+
+  p.two-seat{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.75px;
+    color: #4E4B66;
+    position: absolute;
+    left: 12.9vw;
+    top: 12.8vw;
+  }
+
+  p.three-seat{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.75px;
+    color: #4E4B66;
+    position: absolute;
+    left: 16.7vw;
+    top: 12.8vw;
+  }
+
+  p.four-seat{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.75px;
+    color: #4E4B66;
+    position: absolute;
+    left: 20.5vw;
+    top: 12.8vw;
+  }
+
+  p.five-seat{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.75px;
+    color: #4E4B66;
+    position: absolute;
+    left: 24.3vw;
+    top: 12.8vw;
+  }
+
+  p.six-seat{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.75px;
+    color: #4E4B66;
+    position: absolute;
+    left: 28.1vw;
+    top: 12.8vw;
+  }
+
+  p.seven-seat{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.75px;
+    color: #4E4B66;
+    position: absolute;
+    left: 31.9vw;
+    top: 12.8vw;
+  }
+
+  p.eight-seat{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.75px;
+    color: #4E4B66;
+    position: absolute;
+    left: 35.7vw;
+    top: 12.8vw;
+  }
+
+  p.nine-seat{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.75px;
+    color: #4E4B66;
+    position: absolute;
+    left: 39.5vw;
+    top: 12.8vw;
+  }
+
+  p.ten-seat{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.75px;
+    color: #4E4B66;
+    position: absolute;
+    left: 43.3vw;
     top: 12.8vw;
   }
 

@@ -142,7 +142,7 @@ function Jumbotron() {
                 <div className="col-lg">
                   <div className={Style['card-profile2'] }>
                     <h5 className={Style['title-card']} >Account Settings</h5>
-                    <Link to="#">
+                    <Link to="/orderhistory">
                       <h5 className={Style['title-orderhistory']} >Order History</h5>
                     </Link>
                     <div className={Style['line-4']}></div>
