@@ -24,9 +24,9 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## Tentang Project
+## About This Project
 
-Ticktiz adalah aplikasi layanan pemesanan ticket film secara online yang memudahkan penggunanya untuk melihat film yang sedang tayang dan film yang akan tayang. Aplikasi ini membantu pengguna untuk melakukan pemesanan secara cepat, efektif dan aman. Aplikasi ini dibangun menggunakan ReactJs, NodeJs, dan ExpressJs.
+Tickitz is an online ticket ordering service application that informs users to see movies that are now showing and upcoming movies. This application helps users to orders ticket quickly, effectively and easily. This application was built by ReactJs, NodeJs, and ExpressJs.
 
 
 
@@ -40,16 +40,16 @@ Ticktiz adalah aplikasi layanan pemesanan ticket film secara online yang memudah
 
 
 <!-- GETTING STARTED -->
-## Mulai Project
+## Getting Started
 
-### Pra Syarat
+### Prerequisites
 
-Ini merupakan hal- hal yang diperlukan untuk memulai dan menginstall aplikasi ini.
+This is an example of how to list things you need to use the software and how to install them
 
 * [nodejs](https://nodejs.org/en/download/)
 
 
-### Installasi
+### Installation
 
 1. Clone the repo
 ```sh
@@ -85,9 +85,9 @@ REACT_APP_SOCKET=[Backend API]
    
    
 <!-- CONTRIBUTING -->
-## Berkontribusi
+## Contributing
 
-Berkontibusi membuat komunitas open source menjadi tempat yang luar biasa untuk belajar, menginspirasi, dan berkreasi. Setiap kontribusi yang Anda berikan ** sangat dihargai **.
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -99,7 +99,7 @@ Berkontibusi membuat komunitas open source menjadi tempat yang luar biasa untuk 
 
 ## Related Project
 - :white_check_mark: [Backend](https://github.com/kevinfaridap/backend-beginner-arkademy)
-- :rocket: [Tickitz [Demo Aplikasi]](https://ticktiz-ticket.netlify.app/signin)
+- :rocket: [Tickitz [Demo Application]](https://ticktiz-ticket.netlify.app/signin)
  
 
 
