@@ -16,8 +16,8 @@ function TicketResultJumbotron() {
   // console.log(ticketresult);
   return (
     <div>
-      <div class={[['jumbotron'], ['jumbotron-fluid'], Style['ticket-result-jumbotron']].join(' ')}>
-        <div class="container">
+      <div className={[['jumbotron'], ['jumbotron-fluid'], Style['ticket-result-jumbotron']].join(' ')}>
+        <div className="container">
           <div className={Style['ticket-result-box']}>
             <h3 className={Style['ticket-result-title']}>Proof of Payment</h3>
             <TicketBox 

@@ -38,7 +38,7 @@ function Jumbotron() {
     .then((res)=>{
       // console.log(res.data.data, 'llll');
       const dataSeat = res.data.result
-      console.log(dataSeat, 'iniasdasd');
+      // console.log(dataSeat, 'iniasdasd');
       if(dataSeat !== undefined){
         setGetSeatsA(dataSeat)
       } else{
@@ -110,6 +110,17 @@ function Jumbotron() {
     history.push(`/`)
   }
 
+  const handleAddSeat =(seatname) =>{
+    if(choosenSeat.includes(seatname)){
+      
+      const seat = [...choosenSeat]
+      const seatfilter = seat.filter(item=>item!==seatname) 
+      setChoosenSeat(seatfilter)
+    }else{
+      setChoosenSeat([...choosenSeat, seatname])
+    }
+  }
+
     return (
         <div>
            {/* <!-- JUMBOTRON --> */}
@@ -122,10 +133,10 @@ function Jumbotron() {
               </div>
 
               <div className={[['row'], Style['movieAndOrder']].join(' ')}>
-              {schdulee !== undefined  ?  schdulee.map((item)=>{
+              {schdulee !== undefined  ?  schdulee.map((item, index)=>{
               return( 
               <>
-                <div className="col-md-8">
+                <div className="col-md-8" key={index}>
                   <div className={[['card'], Style['card1']].join(' ')} >
                     <div className="card-body">
                       <div className="row">    
@@ -203,20 +214,20 @@ function Jumbotron() {
 
                       {/* ===== SEAT A ===== */}
                       <div className={[["row"], ["mb-3"], Style['seat-menu']].join(' ')}>
-                      {getSeatsA !== undefined? getSeatsA.map((item)=>{
+                      {getSeatsA !== undefined? getSeatsA.map((item, index)=>{
                       return( 
                       <>
                         {item.seatStatus=='Available'? <> 
-                            <div className="col-1">
+                            <div className="col-1" key={index}>
                               <button
                                 className={`${choosenSeat.includes(item.seatName)?Style['button-available']:Style['button-seat']}`}
-                                onClick={()=>{setChoosenSeat([...choosenSeat, item.seatName])}}
+                                onClick={()=>handleAddSeat(item.seatName)}
                               >
                               </button>
                             </div>
                           </>
                           :
-                            <div className="col-1">
+                            <div className="col-1" key={index}> 
                             <button
                               className={Style['button-seat-sold']}
                               // onClick={()=>{setChoosenSeat([])}}
@@ -248,20 +259,20 @@ function Jumbotron() {
 
                       {/*== SEAT B=== */}
                       <div className={[["row"], ['mb-3'], Style['seat-menu']].join(' ')}>
-                        {getSeatsB !== undefined? getSeatsB.map((item)=>{
+                        {getSeatsB !== undefined? getSeatsB.map((item, index)=>{
                         return( 
                           <>
                           {item.seatStatus=='Available'? <> 
-                            <div className="col-1">
+                            <div className="col-1" key={index}>
                               <button
                                 className={Style['button-seat']}
-                                onClick={()=>{setChoosenSeat([...choosenSeat, item.seatName])}}
+                                onClick={()=>handleAddSeat(item.seatName)}
                               >
                               </button>
                             </div>
                           </>
                           :
-                            <div className="col-1">
+                            <div className="col-1" key={index}>
                             <button
                               className={Style['button-seat-sold']}
                               // onClick={()=>{setChoosenSeat([])}}
@@ -278,20 +289,20 @@ function Jumbotron() {
 
                       {/*== SEAT C=== */}
                       <div className={[["row"], ['mb-3'], Style['seat-menu']].join(' ')}>
-                        {getSeatsC !== undefined? getSeatsC.map((item)=>{
+                        {getSeatsC !== undefined? getSeatsC.map((item, index)=>{
                         return( 
                           <>
                           {item.seatStatus=='Available'? <> 
-                            <div className="col-1">
+                            <div className="col-1" key={index}>
                               <button
                                 className={Style['button-seat']}
-                                onClick={()=>{setChoosenSeat([...choosenSeat, item.seatName])}}
+                                onClick={()=>handleAddSeat(item.seatName)}
                               >
                               </button>
                             </div>
                           </>
                           :
-                            <div className="col-1">
+                            <div className="col-1" key={index}>
                             <button
                               className={Style['button-seat-sold']}
                               // onClick={()=>{setChoosenSeat([])}}
@@ -308,11 +319,11 @@ function Jumbotron() {
 
                       {/*== SEAT D === */}
                       <div className={[["row"], Style['seat-menu']].join(' ')}>
-                        {getSeatsD !== undefined? getSeatsD.map((item)=>{
+                        {getSeatsD !== undefined? getSeatsD.map((item, index)=>{
                         return( 
                           <>
                           {item.seatStatus=='Available'? <> 
-                            <div className="col-1">
+                            <div className="col-1" key={index}>
                               <button
                                 className={Style['button-seat']}
                                 onClick={()=>{setChoosenSeat([...choosenSeat, item.seatName])}}
@@ -321,7 +332,7 @@ function Jumbotron() {
                             </div>
                           </>
                           :
-                            <div className="col-1">
+                            <div className="col-1" key={index}>
                             <button
                               className={Style['button-seat-sold']}
                               // onClick={()=>{setChoosenSeat([])}}

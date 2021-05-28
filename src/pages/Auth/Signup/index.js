@@ -54,9 +54,9 @@ class Signup extends Component {
                                       
                     <FormSign />
 
-                    <div class={styleSingup['form-check-signup']}>
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
-                      <label class="form-check-label" for="exampleCheck1">I agree to tems & condition</label>
+                    <div className={styleSingup['form-check-signup']}>
+                      <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
+                      <label className="form-check-label" for="exampleCheck1">I agree to tems & condition</label>
                     </div>
                     <h2 className={styleSingup['signnow-teks']}>
                       Already have an account ?

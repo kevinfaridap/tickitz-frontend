@@ -147,14 +147,14 @@ function AdminJumbotron() {
                           </div>
                           <div className="col">
                             <h5 className={Style['text-duration']}>Duration (Hour/ Min)</h5>
-                            <input type="text" class={Style['form-control-sm2']} 
+                            <input type="text" className={Style['form-control-sm2']} 
                             name="duration"
                             placeholder="Hours"
                             id="duration"
                             value={formMovie.duration}
                             onChange={e => handleChange(e)}
                             />
-                            <input type="text" class={Style['form-control-sm3']} 
+                            <input type="text" className={Style['form-control-sm3']} 
                             placeholder="Min "
                             />
                             </div>

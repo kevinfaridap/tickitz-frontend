@@ -51,9 +51,9 @@ function Navbarin() {
                <ul className="navbar-nav ml-lg-5">
                   <li>
                       {/* <!-- MOBILE ONLY --> */}
-                    <div class={Style.searchMobile}>
-                        <form class={[['form-inline'], Style['form-search']].join(' ')}>
-                          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                    <div className={Style.searchMobile}>
+                        <form className={[['form-inline'], Style['form-search']].join(' ')}>
+                          <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
                         </form>
                     </div>
                     {/* <!-- ============ --> */}
@@ -111,7 +111,7 @@ function Navbarin() {
   
                   <li>
                       {/* <!-- MOBILE ONLY --> */}
-                    <div class={Style.searchMobile}>
+                    <div className={Style.searchMobile}>
                         <h5>@ 2020 Tickitz. All Rights Reserved.</h5>
                     </div>
                     {/* <!-- ============ --> */}
@@ -141,9 +141,9 @@ function Navbarin() {
             <ul className="navbar-nav ml-lg-5">
               <li>
                   {/* <!-- MOBILE ONLY --> */}
-                <div class={Style.searchMobile}>
-                    <form class={[['form-inline'], Style['form-search']].join(' ')}>
-                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                <div className={Style.searchMobile}>
+                    <form className={[['form-inline'], Style['form-search']].join(' ')}>
+                      <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
                     </form>
                 </div>
                 {/* <!-- ============ --> */}
@@ -198,7 +198,7 @@ function Navbarin() {
 
               <li>
                   {/* <!-- MOBILE ONLY --> */}
-                <div class={Style.searchMobile}>
+                <div className={Style.searchMobile}>
                     <h5>@ 2020 Tickitz. All Rights Reserved.</h5>
                 </div>
                 {/* <!-- ============ --> */}

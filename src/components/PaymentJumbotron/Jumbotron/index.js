@@ -54,7 +54,7 @@ function Jumbotron() {
   const idMovie = params.idmovie
   const seatname = params.seatname
   const ticketvalues = params.ticketvalues
-  
+  // console.log(`'`+seatname.replace(/,/g, `',seatName='`)+`'`);
     
   const payorder =()=>{
     if(choosePayment===null){
