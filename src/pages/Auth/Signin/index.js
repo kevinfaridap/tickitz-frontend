@@ -17,7 +17,7 @@ function Signin () {
 
 
   // render() {
-    let url = "https://www.google.com/";
+    // let url = "https://www.google.com/";
       return (
         <div>
           <main className="row">
@@ -46,7 +46,7 @@ function Signin () {
                 <div className="row justify-content-center">
                   <div className="col-lg-5 col-5">
                     <div className={style.box}> 
-                      <Link to={url}> 
+                      <Link to='/signup'> 
                         <div className={style.google}> </div>
                       </Link>
                       <a className={style.googleTeks} href='/signup'>Google</a> 
@@ -54,7 +54,7 @@ function Signin () {
                   </div>
                   <div className="col-lg-5 col-5">
                     <div className={style.box}> 
-                      <Link to={url}>
+                      <Link to='/signup'>
                         <div className={style.fb}> </div>
                       </Link>
                       <Link className={style.fbTeks} to='/signup'>Facebook</Link>
