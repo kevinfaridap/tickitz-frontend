@@ -14,8 +14,9 @@ function AdminJumbotron() {
   const [startDate, setStartDate] = useState(new Date());
   const [selectCinema, setSelectCinema] = useState(null)
   const [selectDate, setSelectDate] = useState('')
+  
 
-  const cinemaName = selectCinema
+  // const cinemaName = selectCinema
 
   const dispatch = useDispatch()
   const imageRef = useRef(null)
@@ -28,14 +29,25 @@ function AdminJumbotron() {
     casts: '',
     synopsis: '',
     time: selectDate,
-    idCinema: cinemaName
+    idCinema: selectCinema
   })
-  console.log(formMovie.idCinema, formMovie.time, 'ceeeekkkkkkkk', selectCinema, selectDate, cinemaName);
+  console.log(formMovie.idCinema, formMovie.time, 'ceeeekkkkkkkk', selectCinema, selectDate);
   const handleChange = (e) => {
     setFormMovie({
       ...formMovie,
       [e.target.name] : e.target.value
     })
+  }
+
+  const handleCinema = (id)=>{
+    setSelectCinema(id)
+    // Jadi perubahan nya di ambil dari destracturing/copy formMovie
+    setFormMovie({...formMovie, idCinema:id} )
+  }
+
+  const handleDate = (dateValue)=>{
+    setSelectDate(dateValue)
+    setFormMovie({...formMovie, time:dateValue})
   }
 
   const handleChangeImage =(e) => {
@@ -63,6 +75,20 @@ function AdminJumbotron() {
       swal(`You Haven't Selected Any Cinema!`)
     } else if(selectDate==''){
       swal(`You Haven't Selected Any Date!`)
+    } else if(formMovie.movieTittle==''){
+      swal("Movie Title Cannot be Empty!")
+    } else if(formMovie.genre==''){
+      swal("Movie's Genre Cannot be Empty!")
+    } else if(formMovie.directedBy==''){
+      swal("Movie's Director Cannot be Empty!")
+    } else if(formMovie.duration==''){
+      swal("Movie's Duration Cannot be Empty!")
+    } else if(formMovie.image==null){
+      swal("Movie's Image Cannot be Empty!")
+    } else if(formMovie.casts==''){
+      swal("Movie's Caster Cannot be Empty!")
+    } else if(formMovie.synopsis==''){
+      swal("Movie's Synopsis Cannot be empty!")
     } else{
       dispatch(postMovies(formData)) 
       .then((res)=>{
@@ -77,7 +103,7 @@ function AdminJumbotron() {
           time: selectDate,
           idCinema: selectCinema
         })
-        swal('Success Insert Movie')
+        swal('Success Insert Now Showing Movies!')
         history.push('/')
       })
       .catch((err)=>{
@@ -115,7 +141,7 @@ function AdminJumbotron() {
                           <input type="text" 
                           name="movieTittle"
                           className={Style['form-control']} 
-                          placeholder="Insert Movie Tittle"  
+                          placeholder="Insert Tittle of The Movie"  
                           id="movieTittle"
                           value={formMovie.movieTittle}
                           onChange={e => handleChange(e)}
@@ -126,7 +152,7 @@ function AdminJumbotron() {
                           <input type="text" 
                           name="genre"
                           className={Style['form-control']} 
-                          placeholder="Insert Genre Here"
+                          placeholder="Insert Genre of The Movie"
                           id="genre"
                           value={formMovie.genre}
                           onChange={e => handleChange(e)}
@@ -139,24 +165,24 @@ function AdminJumbotron() {
                             <h5 className={Style['text-date']}>Release Date</h5>
                             <input type="text" className={Style['form-control-sm']} 
                             name="releaseDate"
-                            placeholder="Date"
+                            placeholder="Date Release"
                             id="releaseDate"
-                            value={formMovie.releaseDate}
-                            onChange={e => handleChange(e)}
+                            value="Date Release"
+                            disabled
                             />
                           </div>
                           <div className="col">
                             <h5 className={Style['text-duration']}>Duration (Hour/ Min)</h5>
                             <input type="text" className={Style['form-control-sm2']} 
                             name="duration"
-                            placeholder="Hours"
+                            placeholder="Ex: 2 hour 1 Minutes"
                             id="duration"
                             value={formMovie.duration}
                             onChange={e => handleChange(e)}
                             />
-                            <input type="text" className={Style['form-control-sm3']} 
+                            {/* <input type="text" className={Style['form-control-sm3']} 
                             placeholder="Min "
-                            />
+                            /> */}
                             </div>
                         </div>
                       </div>
@@ -180,7 +206,7 @@ function AdminJumbotron() {
                             <h5 className={Style['text-director']} >Director</h5>
                             <input type="text" className={Style['form-detail']} 
                             name="directedBy"
-                            placeholder='Director Name' 
+                            placeholder="Insert Director of The Movie" 
                             id="directedBy"
                             value={formMovie.directedBy}
                             onChange={e => handleChange(e)}
@@ -190,7 +216,7 @@ function AdminJumbotron() {
                             <h5 className={Style['text-casts']}>Casts</h5>
                             <input type="text" className={Style['form-detail2']} 
                             name="casts"
-                            placeholder='Casters'
+                            placeholder="Insert Actor/Actress's Name"
                             id="casts"
                             value={formMovie.casts}
                             onChange={e => handleChange(e)}
@@ -205,7 +231,7 @@ function AdminJumbotron() {
                             <h5 className={Style['text-synopsis']} >Synopsis</h5>
                             <input type="text" className={Style['form-synopsis']} 
                             name="synopsis"
-                            placeholder='Insert Synopsis Here'
+                            placeholder='Insert Synopsis of The Movie'
                             id="synopsis" 
                             value={formMovie.synopsis}
                             onChange={e => handleChange(e)}
@@ -260,13 +286,13 @@ function AdminJumbotron() {
                       </>
                     : null}
                     
-                    <button onClick={()=>setSelectCinema(2)} className={Style['cinema-box']} >
+                    <button onClick={()=>handleCinema(2)} className={Style['cinema-box']} >
                       <img className={Style['img-cinema1']} src={cgv} alt=""/>
                     </button>
-                    <button onClick={()=>setSelectCinema(1)} className={Style['cinema-box']}>
+                    <button onClick={()=>handleCinema(1)} className={Style['cinema-box']}>
                       <img className={Style['img-cinema1']} src={cinema21} alt=""/>
                     </button>
-                    <button onClick={()=>setSelectCinema(4)} className={Style['cinema-box']}>
+                    <button onClick={()=>handleCinema(4)} className={Style['cinema-box']}>
                       <img className={Style['img-cinema1']} src={xxi} alt=""/>
                     </button>
                     
@@ -308,17 +334,17 @@ function AdminJumbotron() {
                     : null}
                     <div className="row d-flex justify-content-center">
                       <div className="col-3">
-                        <button className={Style['time']} onClick={()=>setSelectDate('04.10pm')}>
+                        <button className={Style['time']} onClick={()=>handleDate('04.10pm')}>
                           <p className={Style["time-text"]}>04.10pm</p>
                         </button>
                       </div>
                       <div className="col-3">
-                        <button className={Style['time']} onClick={()=>setSelectDate('06.30pm')}>
+                        <button className={Style['time']} onClick={()=>handleDate('06.30pm')}>
                           <p className={Style["time-text"]}>06.30pm</p>
                         </button>
                       </div>
                       <div className="col-3">
-                        <button className={Style['time']} onClick={()=>setSelectDate('08.20pm')}>
+                        <button className={Style['time']} onClick={()=>handleDate('08.20pm')}>
                           <p className={Style["time-text"]}>08.20pm</p>
                         </button>
                       </div>
@@ -326,12 +352,12 @@ function AdminJumbotron() {
 
                     <div className="row d-flex justify-content-center mt-4">
                       <div className="col-3">
-                        <button className={Style['time']} onClick={()=>setSelectDate('09.50pm')}>
+                        <button className={Style['time']} onClick={()=>handleDate('09.50pm')}>
                           <p className={Style["time-text"]}>09.50pm</p>
                         </button>
                       </div>
                       <div className="col-3">
-                        <button className={Style['time']} onClick={()=>setSelectDate('11.30pm')}> 
+                        <button className={Style['time']} onClick={()=>handleDate('11.30pm')}> 
                           <p className={Style["time-text"]}>11.30pm</p>
                         </button>
                       </div>

@@ -1,5 +1,12 @@
 
-
+.jumbotron-3 button.btn-join-now{
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  margin-left: 2vw;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
 
 .jumbotron-3 h4.title-upcoming{
 font-size: 18px;

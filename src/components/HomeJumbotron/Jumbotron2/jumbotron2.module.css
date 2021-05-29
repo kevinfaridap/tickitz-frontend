@@ -30,6 +30,19 @@
     height: 308px;
   }
 
+  .jumbotron-2 img.movie-4{
+    width: 16vw;
+    height: 22.5vw;
+    border-radius: 20px;
+    border: 3px solid white;
+    padding: 10px;
+  }
+
+  .jumbotron-2 p.view-all-details{
+    text-align: center;
+    font-size: 1.5vw;
+    margin-top: 3.5vw;
+  }
 
 
 

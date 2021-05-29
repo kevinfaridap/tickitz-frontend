@@ -23,22 +23,28 @@ function FormSignin () {
       email: email,
       password: password
     }
-    dispatch(login(data))
-    .then((res)=>{
-      // console.log(res.data);
-      const dataLogin = res.data
-      // console.log(dataLogin, 'isidataloginnyaaaaaaa');
-      if(dataLogin == null){
-        swal('Email and Password are incorect')
-      } else  {
-        swal(`Welcome !`)
-        history.push('/')
-      }
-    })
-    .catch((err)=>{
-      // console.log(userlogin, 'erorrrrrrrrrrrrrrrr');
-      swal(' Failed Login !')
-    })
+    if(data.email==null || data.email==''){
+      swal("Email Cannot be Empty, Insert Your Email !")
+    } else if(data.password==null || data.password==''){
+      swal("Password Cannot be Empty, Insert Your Password!")
+    } else{
+      dispatch(login(data))
+      .then((res)=>{
+        const dataLogin = res.data
+        console.log(userlogin, 'isidataloginnyaaaaaaa');
+        if(dataLogin == null){
+          swal('Email and Password are incorect')
+        } else  {
+          swal(`Success Login !`)
+          history.push('/')
+        }
+      })
+      .catch((err)=>{
+        console.log(err, 'error');
+        swal("Check Your Email or Password!")
+      })
+
+    }
   }
     
     return (

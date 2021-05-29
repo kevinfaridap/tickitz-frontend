@@ -265,7 +265,9 @@ function Jumbotron() {
                           {item.seatStatus=='Available'? <> 
                             <div className="col-1" key={index}>
                               <button
-                                className={Style['button-seat']}
+                                // className={Style['button-seat']}
+                                // onClick={()=>handleAddSeat(item.seatName)}
+                                className={`${choosenSeat.includes(item.seatName)?Style['button-available']:Style['button-seat']}`}
                                 onClick={()=>handleAddSeat(item.seatName)}
                               >
                               </button>
@@ -295,7 +297,7 @@ function Jumbotron() {
                           {item.seatStatus=='Available'? <> 
                             <div className="col-1" key={index}>
                               <button
-                                className={Style['button-seat']}
+                                className={`${choosenSeat.includes(item.seatName)?Style['button-available']:Style['button-seat']}`}
                                 onClick={()=>handleAddSeat(item.seatName)}
                               >
                               </button>
@@ -325,8 +327,8 @@ function Jumbotron() {
                           {item.seatStatus=='Available'? <> 
                             <div className="col-1" key={index}>
                               <button
-                                className={Style['button-seat']}
-                                onClick={()=>{setChoosenSeat([...choosenSeat, item.seatName])}}
+                                className={`${choosenSeat.includes(item.seatName)?Style['button-available']:Style['button-seat']}`}
+                                onClick={()=>handleAddSeat(item.seatName)}
                               >
                               </button>
                             </div>

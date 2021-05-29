@@ -55,7 +55,8 @@ function Jumbotron() {
   const seatname = params.seatname
   const ticketvalues = params.ticketvalues
   // console.log(`'`+seatname.replace(/,/g, `',seatName='`)+`'`);
-    
+  const updatedSeat = `'`+seatname.replace(/,/g, `'||seatName='`)+`'`
+
   const payorder =()=>{
     if(choosePayment===null){
       swal(`You haven't choose payment method!`)
@@ -78,9 +79,17 @@ function Jumbotron() {
               swal(`Something Wrong!`)
             } else{
               const dataTicket = res.data.data
-              console.log(dataTicket);
-              swal(`Success Order Ticket!`)
-              history.push(`/ticketresult/${dataTicket.id}`)
+              // console.log(dataTicket);
+              Axios.put(`${process.env.REACT_APP_API}/seat/soldticket/${updatedSeat}`)
+              .then((res)=>{
+                console.log(res.data);
+                swal(`Success Order Ticket!`)
+                history.push(`/ticketresult/${dataTicket.id}`)
+              })
+              .catch((err)=>{
+                console.log(err);
+                swal('Something Wrong, Try Again Later!')
+              })
             }
         })
         .catch((err) => {

@@ -477,7 +477,7 @@ function Jumbotron2() {
                     {/* <img className="view-more-line" src="./assets/Line 13.png" alt=""> */}
                   </div>
                   <div className="col">
-                    <Link href="">
+                    <Link to="">
                       <h2 className={Style.view}>View More</h2>
 
                     </Link>

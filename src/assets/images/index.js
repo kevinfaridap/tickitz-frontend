@@ -9,6 +9,10 @@ import visa from './visa.png'
 import cgv from './cgv.png'
 import xxi from './XXI.png'
 import cinema21 from './cinema21.png'
+import interselar from './interselar.jpg'
+import godzila from './godzila.jpg'
+import knivesout from './knivesout.jpg'
+import parasite from './parasite.jpg'
 
 export{
     gpay,
@@ -21,5 +25,9 @@ export{
     visa,
     cinema21,
     xxi,
-    cgv
+    cgv,
+    interselar,
+    godzila,
+    knivesout,
+    parasite
 }

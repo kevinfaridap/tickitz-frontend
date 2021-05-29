@@ -1,6 +1,7 @@
 import React from 'react'
 import Style from './jumbotron2.module.css'
 import {Link} from 'react-router-dom'
+import {interselar, godzila, parasite, knivesout} from '../../../assets/images'
 
 function Jumbotron2() {
     return (
@@ -23,19 +24,25 @@ function Jumbotron2() {
 
                     <div className={['row', ['mt-5'], Style['movie-desktop']].join(' ')}>
                       <div className="col">
-                          <div className={Style['spiderman-movie']}></div>
+                        <img className={Style['movie-4']} src={godzila} alt="" />
+                        {/* <div className={Style['spiderman-movie']}></div> */}
                       </div>
                       <div className="col">
-                          <div className={Style['lion-movie']}></div>
+                        <img className={Style['movie-4']} src={knivesout} alt="" />
+                        {/* <div className={Style['lion-movie']}></div> */}
                       </div>
                       <div className="col">
-                          <div className={Style['human-movie']}></div>
+                        <img className={Style['movie-4']} src={parasite} alt="" />
+                          {/* <div className={Style['human-movie']}></div> */}
                       </div>
                       <div className="col">
-                          <div className={Style['spiderman-movie']}></div>
+                        <img className={Style['movie-4']} src={interselar} alt="" />
+                        {/* <div className={Style['spiderman-movie']}></div> */}
                       </div>
     
                     </div>
+                    {/* <br /> */}
+                    <p className={Style['view-all-details']}>Click View All for More Upcoming Movies</p>
                     
                     {/* <!-- MOVIE MOBILE VERSION ONLY --> */}
                     <div className={['row', ['mt-5'], Style['movie-mobile']].join(' ')}>

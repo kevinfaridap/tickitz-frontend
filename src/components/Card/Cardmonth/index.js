@@ -11,7 +11,7 @@ function Cardmonth() {
                 <h4 className={Style['title-upcoming']} >Now Showing Movies</h4>
               </div>
               <div className="col">
-                <h4 className={Style['view-upcoming']} > view all</h4>
+                {/* <h4 className={Style['view-upcoming']} > view all</h4> */}
               </div>
             </div>
 

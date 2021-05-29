@@ -29,7 +29,7 @@ function Jumbotron3update() {
                     <input type="text" className="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Type your name" />
 
 
-                    <button type="submit" className={[['btn'], ['btn-primary'], ['mb-2']].join(' ')}>Join now</button>
+                    <button type="submit" className={[Style['btn-join-now'], ['btn-primary'], ['mb-2']].join(' ')}>Join now</button>
                   </form>
                 </div>
 

@@ -65,7 +65,7 @@ class Signup extends Component {
 
                     <h2 className={styleSingup['forget-teks']}>
                       Forgot your password? 
-                      <Link to="#"> Reset Now</Link> 
+                      <Link to="/signin"> Reset Now</Link> 
                     </h2>
                                     
                     <p className={styleSingup['or-teks']}>or</p>
@@ -75,18 +75,18 @@ class Signup extends Component {
                     <div className="row justify-content-center">
                       <div className="col-lg-5 col-5">
                         <div className={styleSingup.box}> 
-                          <Link to="#"> 
+                          <Link to="/signin"> 
                               <div className={styleSingup.google}> </div>
                           </Link>
-                          <Link className={styleSingup.googleTeks} to="#">Google </Link> 
+                          <Link className={styleSingup.googleTeks} to="/signin">Google </Link> 
                         </div>
                       </div>
                       <div className="col-lg-5 col-5">
                         <div className={styleSingup.box}> 
-                          <Link to="#">
+                          <Link to="/signin">
                               <div className={styleSingup.fb}> </div>
                           </Link>
-                          <Link className={styleSingup.fbTeks} to="#">Facebook</Link>
+                          <Link className={styleSingup.fbTeks} to="/signin">Facebook</Link>
                         </div>
                      </div>
                     </div>

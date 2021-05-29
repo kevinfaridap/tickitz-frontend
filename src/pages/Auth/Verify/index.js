@@ -22,7 +22,7 @@ function Verify(props) {
       .then((res) => {
         console.log(res);
         swal('Success Verify')
-        history.push("/")
+        history.push("/signin")
       })
       .catch((err) => {
           console.log(err);

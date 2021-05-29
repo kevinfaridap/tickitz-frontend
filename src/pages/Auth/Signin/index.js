@@ -37,7 +37,7 @@ function Signin () {
                 
                 {/* <FormSign /> */}
                 <FormSignin />
-                <h2 className={style['forget-teks']}>Forgot your password? <Link to="/signin">Reset Now</Link> </h2>
+                <h2 className={style['forget-teks']}>Forgot your password? <Link to="/signup">Reset Now</Link> </h2>
                                 
                 <p className={style['or-teks']}>or</p>
                 <div className={style.or}></div> 
@@ -49,7 +49,7 @@ function Signin () {
                       <Link to='/signup'> 
                         <div className={style.google}> </div>
                       </Link>
-                      <a className={style.googleTeks} href='/signup'>Google</a> 
+                      <Link className={style.googleTeks} to='/signup'>Google</Link> 
                     </div>
                   </div>
                   <div className="col-lg-5 col-5">

@@ -37,7 +37,7 @@ function Navbar() {
                 </li>
 
                 <li className="nav-item dropdown ml-lg-5 nav-right">
-                  <Link className={[Style['nav-link'], Style['dropdown-toggle']].join(' ')} href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <Link className={[Style['nav-link'], Style['dropdown-toggle']].join(' ')} to="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Location
                   </Link>
                   <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

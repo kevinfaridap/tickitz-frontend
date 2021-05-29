@@ -15,7 +15,7 @@ const dataNowMovie = nowshowingmovies.data
                 <img className={Style['img-nowshowing']} src={item.image} alt=""/>
                 <h5 className={Style['title-now-showing-movie']}>{item.tittleMovie}</h5>
                 <h6 className={Style['genre-now-showing-movie']}>{item.genreMovie}</h6>
-                <button className={Style['btn-now-showing-movie']}>Details</button>
+                <button className={Style['btn-now-showing-movie']}>Comming Soon</button>
               </div>
             </div>
             {/* <img src={item.image} alt=""/>

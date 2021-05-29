@@ -129,12 +129,17 @@
       margin-left: -120px !important;
       margin-bottom: 10px !important;
     }
+    
+    input{
+      outline: none !important;
+    }
 
     input.form-control-sm{
       width: 182px;
+      outline: none !important;
     }
     input.form-control-sm2{
-      width: 88px;
+      width: fit-content;
       position: relative;
       left: 130px;
     }

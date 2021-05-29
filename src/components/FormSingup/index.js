@@ -12,13 +12,13 @@ function FormSign() {
   const dispatch = useDispatch()
   const history = useHistory()
   const [formUser, setFormUser] = useState({
-      firstName: '',
-      lastName: '',
-      email: '',
-      phoneNumber: '',
-      role: '',
+    email: '',
+    password: ''
   })
   
+  const [passwordErr, setPasswordErr] = useState({})
+  const [emailErr, setEmailErr] = useState({})
+
   const handleChange = (e) => {
     setFormUser({
       ...formUser,
@@ -28,24 +28,58 @@ function FormSign() {
 
   const handleRegister = (e) => {
     e.preventDefault()
-    dispatch(register(formUser))
-    .then((res)=>{
-      console.log(res);
-      setFormUser({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phoneNumber: '',
-        role: '',
-      })
-      swal(`Registered. Check Your Email to Continue`)
-      history.push('/signin')
-    })
-    .catch((err)=>{
-      console.log(err);
-    })
+    const isValid = formValidation();
+    if(formUser.email===''){
+      swal("Email Cannot be Empty!")
+    } else if(formUser.password===''){
+      swal("Password Cannot be Empty!")
+    } else{
+      if(isValid){
+        Axios.post(`${process.env.REACT_APP_API}/users/register`, formUser)
+        .then((res)=>{
+          console.log(res.data.data, 'checkkk');
+          if(res.data.data==null){
+            swal(res.data.error.message)
+          } 
+            // setFormUser({
+            // firstName: '',
+            // lastName: '',
+            // email: '',
+            // phoneNumber: '',
+            //   role: '',
+            // })
+            swal(`Registered. Check Your Email to Continue`)
+            history.push('/signin')
+          
+          
+        })
+        .catch((err)=>{
+          console.log(err);
+        })
+      }
+
+    }
+
   }
   
+  const formValidation = () =>{
+    const passwordErr = {};
+    const emailErr = {};
+    let isValid = true;
+
+    if(formUser.password.trim().length < 8){
+      passwordErr.passwordShort = "Password is too short. Min 8 character";
+      isValid = false;
+    }
+
+    if(formUser.email.trim().length < 1){
+      emailErr.emailEmpty = "Email cannot be empty!"
+    }
+
+    setPasswordErr(passwordErr);
+    setEmailErr(emailErr)
+    return isValid;
+  }
 
   return (
         <div>
@@ -61,6 +95,9 @@ function FormSign() {
                   value={formUser.email}
                   onChange={(e) => handleChange(e)}
                 />
+                {Object.keys(emailErr).map((key)=>{
+                  return <div className={Styleformsign['error-validation']} style={{color: "red"}}>{emailErr[key]}</div>
+                })}
               
             </div>
             <div className={Styleformsign["form-group"]}>
@@ -73,6 +110,9 @@ function FormSign() {
                 value={formUser.password}
                 onChange={(e) => handleChange(e)}
               />
+              {Object.keys(passwordErr).map((key)=>{
+                  return <div className={Styleformsign['error-validation']} style={{color: "red"}}>{passwordErr[key]}</div>
+                })}
 
             </div>
             {/* <button type="submit" className={Styleformsign.btn} onClick={submitSignup} >Sign Up</button> */}
