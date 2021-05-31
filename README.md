@@ -98,7 +98,7 @@ Contributions are what make the open source community such an amazing place to b
 
 
 ## Related Project
-- :white_check_mark: [Backend](https://github.com/kevinfaridap/backend-beginner-arkademy)
+- :white_check_mark: [Backend](https://github.com/kevinfaridap/tickitz-backend)
 - :rocket: [Tickitz [Demo Application]](https://ticktiz-ticket.netlify.app/signin)
  
 
